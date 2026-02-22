@@ -1,0 +1,650 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TechLearn — Free Tech Education Resources</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:        #0a0e17;
+      --surface:   #111827;
+      --surface2:  #1a2235;
+      --border:    #1f2d45;
+      --accent:    #00e5ff;
+      --accent2:   #ff6b35;
+      --text:      #e2e8f0;
+      --muted:     #64748b;
+      --python:    #3b82f6;
+      --data:      #8b5cf6;
+      --web:       #10b981;
+      --cyber:     #ef4444;
+      --pm:        #f59e0b;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    /* ── GRID BACKGROUND ── */
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: relative;
+      z-index: 10;
+      padding: 3rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(0,229,255,0.04) 0%, transparent 100%);
+    }
+
+    .header-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .site-tag {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .site-tag::before {
+      content: '';
+      display: inline-block;
+      width: 20px;
+      height: 1px;
+      background: var(--accent);
+    }
+
+    h1 {
+      font-family: 'Space Mono', monospace;
+      font-size: clamp(2rem, 5vw, 3.5rem);
+      font-weight: 700;
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin-bottom: 0.75rem;
+    }
+
+    h1 span {
+      color: var(--accent);
+    }
+
+    .header-sub {
+      color: var(--muted);
+      font-size: 1rem;
+      font-weight: 300;
+      max-width: 520px;
+      line-height: 1.6;
+    }
+
+    .header-meta {
+      display: flex;
+      gap: 2rem;
+      margin-top: 2rem;
+      flex-wrap: wrap;
+    }
+
+    .meta-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+
+    .meta-stat .num {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.5rem;
+      color: var(--accent);
+      font-weight: 700;
+    }
+
+    .meta-stat .label {
+      font-size: 0.7rem;
+      text-transform: uppercase;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+    }
+
+    /* ── SEARCH + FILTER BAR ── */
+    .controls {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: rgba(10, 14, 23, 0.92);
+      backdrop-filter: blur(20px);
+      border-bottom: 1px solid var(--border);
+      padding: 1rem 0;
+    }
+
+    .controls-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      gap: 1rem;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .search-wrap {
+      position: relative;
+      flex: 1;
+      min-width: 200px;
+    }
+
+    .search-wrap svg {
+      position: absolute;
+      left: 1rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--muted);
+      pointer-events: none;
+    }
+
+    #search {
+      width: 100%;
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      padding: 0.65rem 1rem 0.65rem 2.75rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+
+    #search:focus { border-color: var(--accent); }
+    #search::placeholder { color: var(--muted); }
+
+    .filter-pills {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .pill {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      padding: 0.45rem 0.9rem;
+      border-radius: 100px;
+      border: 1px solid var(--border);
+      background: transparent;
+      color: var(--muted);
+      cursor: pointer;
+      transition: all 0.2s;
+      white-space: nowrap;
+    }
+
+    .pill:hover { border-color: var(--accent); color: var(--accent); }
+
+    .pill.active {
+      background: var(--accent);
+      border-color: var(--accent);
+      color: var(--bg);
+      font-weight: 700;
+    }
+
+    .pill[data-cat="Python Programming"].active  { background: var(--python); border-color: var(--python); }
+    .pill[data-cat="Data Science AI"].active      { background: var(--data);   border-color: var(--data);   }
+    .pill[data-cat="Web Development"].active      { background: var(--web);    border-color: var(--web);    }
+    .pill[data-cat="IT Cybersecurity"].active     { background: var(--cyber);  border-color: var(--cyber);  }
+    .pill[data-cat="Project Management Agile"].active { background: var(--pm); border-color: var(--pm);     }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 2.5rem 2rem 4rem;
+    }
+
+    /* ── SECTION HEADERS ── */
+    .category-section { margin-bottom: 3rem; }
+
+    .section-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .section-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .section-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--text);
+    }
+
+    .section-count {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      margin-left: auto;
+    }
+
+    /* ── CARDS ── */
+    .cards-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 1rem;
+    }
+
+    .resource-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.4rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
+      animation: fadeUp 0.4s ease both;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .resource-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      opacity: 0;
+      transition: opacity 0.2s;
+    }
+
+    .resource-card:hover {
+      transform: translateY(-3px);
+      border-color: rgba(0,229,255,0.3);
+      box-shadow: 0 8px 32px rgba(0,0,0,0.4);
+    }
+
+    .resource-card:hover::before { opacity: 1; }
+
+    /* Category accent lines */
+    .card-python::before  { background: var(--python); }
+    .card-data::before    { background: var(--data); }
+    .card-web::before     { background: var(--web); }
+    .card-cyber::before   { background: var(--cyber); }
+    .card-pm::before      { background: var(--pm); }
+
+    .card-top {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.5rem;
+    }
+
+    .platform-badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      background: var(--surface2);
+      color: var(--muted);
+      border: 1px solid var(--border);
+    }
+
+    .free-badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      background: rgba(16,185,129,0.1);
+      color: #10b981;
+      border: 1px solid rgba(16,185,129,0.2);
+    }
+
+    .card-title {
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #fff;
+      line-height: 1.4;
+      display: -webkit-box;
+      -webkit-line-clamp: 2;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+    }
+
+    .card-desc {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.6;
+      display: -webkit-box;
+      -webkit-line-clamp: 3;
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      flex: 1;
+    }
+
+    .card-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: auto;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border);
+    }
+
+    .card-level {
+      font-size: 0.7rem;
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+    }
+
+    .card-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--accent);
+      text-decoration: none;
+      font-family: 'Space Mono', monospace;
+      letter-spacing: 0.05em;
+      transition: gap 0.2s;
+    }
+
+    .card-link:hover { gap: 0.7rem; color: var(--accent); }
+
+    /* ── EMPTY STATE ── */
+    #empty-state {
+      display: none;
+      text-align: center;
+      padding: 5rem 2rem;
+      color: var(--muted);
+    }
+
+    #empty-state .empty-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      opacity: 0.3;
+    }
+
+    #empty-state p {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 1;
+      border-top: 1px solid var(--border);
+      padding: 2rem;
+      text-align: center;
+    }
+
+    .footer-text {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.15em;
+      color: var(--muted);
+      text-transform: uppercase;
+    }
+
+    .footer-text span { color: var(--accent); }
+
+    /* ── ANIMATIONS ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 600px) {
+      .controls-inner { flex-direction: column; align-items: stretch; }
+      .filter-pills { justify-content: center; }
+      h1 { font-size: 1.8rem; }
+      .header-meta { gap: 1.5rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <div class="site-tag">Free Tech Education Directory</div>
+      <h1>Tech<span>Learn</span></h1>
+      <p class="header-sub">Curated free courses across programming, data science, cybersecurity, web development, and project management.</p>
+      <div class="header-meta">
+        <div class="meta-stat">
+          <span class="num" id="total-count">—</span>
+          <span class="label">Resources</span>
+        </div>
+        <div class="meta-stat">
+          <span class="num" id="platform-count">—</span>
+          <span class="label">Platforms</span>
+        </div>
+        <div class="meta-stat">
+          <span class="num" id="category-count">5</span>
+          <span class="label">Categories</span>
+        </div>
+        <div class="meta-stat">
+          <span class="num" id="updated-date">—</span>
+          <span class="label">Last Updated</span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- CONTROLS -->
+  <div class="controls">
+    <div class="controls-inner">
+      <div class="search-wrap">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/>
+        </svg>
+        <input type="text" id="search" placeholder="Search courses, topics, platforms..." />
+      </div>
+      <div class="filter-pills">
+        <button class="pill active" data-cat="All">All</button>
+        <button class="pill" data-cat="Python Programming">Python</button>
+        <button class="pill" data-cat="Data Science AI">Data / AI</button>
+        <button class="pill" data-cat="Web Development">Web Dev</button>
+        <button class="pill" data-cat="IT Cybersecurity">Cybersecurity</button>
+        <button class="pill" data-cat="Project Management Agile">PM / Agile</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- MAIN -->
+  <main id="main-content">
+    <div id="empty-state">
+      <div class="empty-icon">⚡</div>
+      <p>No resources match your search.</p>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <p class="footer-text">
+      Built by <a href="https://knightdevonline.com/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;letter-spacing:0.15em;">Knight Development</a>
+      &nbsp;|&nbsp; Refreshed monthly &nbsp;|&nbsp; Data sourced via <span>permitted APIs</span> &nbsp;|&nbsp; All resources free
+    </p>
+    <p class="footer-text" style="margin-top:0.6rem;opacity:0.5;">
+      &copy; <span id="copy-year"></span> Knight Development. All rights reserved.
+    </p>
+  </footer>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const CATEGORY_COLORS = {
+      "Python Programming":       { dot: '#3b82f6', cls: 'card-python' },
+      "Data Science AI":          { dot: '#8b5cf6', cls: 'card-data'   },
+      "Web Development":          { dot: '#10b981', cls: 'card-web'    },
+      "IT Cybersecurity":         { dot: '#ef4444', cls: 'card-cyber'  },
+      "Project Management Agile": { dot: '#f59e0b', cls: 'card-pm'     },
+    };
+
+    let allResources = [];
+    let activeCategory = 'All';
+    let searchTerm = '';
+
+    // ── LOAD DATA ──
+    fetch('resources.json')
+      .then(r => r.json())
+      .then(data => {
+        allResources = data.resources;
+
+        // Update header stats
+        document.getElementById('total-count').textContent = data.total;
+        document.getElementById('updated-date').textContent = data.generated;
+        const platforms = [...new Set(data.resources.map(r => r.platform))];
+        document.getElementById('platform-count').textContent = platforms.length;
+
+        renderAll();
+      })
+      .catch(() => {
+        document.getElementById('main-content').innerHTML =
+          `<p style="color:#64748b;font-family:'Space Mono',monospace;font-size:.8rem;padding:3rem;text-align:center;">
+            Could not load resources.json — make sure it's in the same folder as this HTML file.
+          </p>`;
+      });
+
+    // ── RENDER ──
+    function renderAll() {
+      const main = document.getElementById('main-content');
+      const emptyState = document.getElementById('empty-state');
+
+      // Filter
+      let filtered = allResources.filter(r => {
+        const matchCat  = activeCategory === 'All' || r.category === activeCategory;
+        const matchSearch = !searchTerm ||
+          r.title.toLowerCase().includes(searchTerm) ||
+          r.description.toLowerCase().includes(searchTerm) ||
+          r.platform.toLowerCase().includes(searchTerm);
+        return matchCat && matchSearch;
+      });
+
+      // Group by category
+      const groups = {};
+      filtered.forEach(r => {
+        if (!groups[r.category]) groups[r.category] = [];
+        groups[r.category].push(r);
+      });
+
+      // Clear previous cards (keep empty state)
+      main.querySelectorAll('.category-section').forEach(el => el.remove());
+
+      if (filtered.length === 0) {
+        emptyState.style.display = 'block';
+        return;
+      }
+
+      emptyState.style.display = 'none';
+
+      const catOrder = [
+        'Python Programming', 'Data Science AI', 'Web Development',
+        'IT Cybersecurity', 'Project Management Agile'
+      ];
+
+      catOrder.forEach(cat => {
+        if (!groups[cat]) return;
+        const col = CATEGORY_COLORS[cat] || { dot: '#64748b', cls: '' };
+        const section = document.createElement('div');
+        section.className = 'category-section';
+        section.dataset.category = cat;
+
+        section.innerHTML = `
+          <div class="section-header">
+            <div class="section-dot" style="background:${col.dot}"></div>
+            <span class="section-title">${cat}</span>
+            <span class="section-count">${groups[cat].length} resource${groups[cat].length !== 1 ? 's' : ''}</span>
+          </div>
+          <div class="cards-grid">
+            ${groups[cat].map((r, i) => buildCard(r, col.cls, i)).join('')}
+          </div>`;
+
+        main.appendChild(section);
+      });
+    }
+
+    function buildCard(r, colorClass, index) {
+      const delay = (index % 6) * 60;
+      return `
+        <div class="resource-card ${colorClass}" style="animation-delay:${delay}ms">
+          <div class="card-top">
+            <span class="platform-badge">${r.platform}</span>
+            <span class="free-badge">FREE</span>
+          </div>
+          <div class="card-title">${escHtml(r.title)}</div>
+          <div class="card-desc">${escHtml(r.description)}</div>
+          <div class="card-footer">
+            <span class="card-level">${r.level}</span>
+            <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="card-link">
+              View Course
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <path d="M5 12h14M12 5l7 7-7 7"/>
+              </svg>
+            </a>
+          </div>
+        </div>`;
+    }
+
+    function escHtml(str) {
+      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    }
+
+    // ── FILTER PILLS ──
+    document.querySelectorAll('.pill').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
+        btn.classList.add('active');
+        activeCategory = btn.dataset.cat;
+        renderAll();
+      });
+    });
+
+    // ── COPYRIGHT YEAR ──
+    document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+    // ── SEARCH ──
+    document.getElementById('search').addEventListener('input', e => {
+      searchTerm = e.target.value.toLowerCase().trim();
+      renderAll();
+    });
+  </script>
+</body>
+</html>

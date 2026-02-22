@@ -1,0 +1,523 @@
+{
+  "generated": "2026-02-22",
+  "total": 51,
+  "categories": [
+    "Python Programming",
+    "Data Science AI",
+    "Web Development",
+    "IT Cybersecurity",
+    "Project Management Agile"
+  ],
+  "resources": [
+    {
+      "title": "Python RIGHT NOW!! (FREE Python course for everyone)",
+      "url": "https://www.youtube.com/playlist?list=PLIhvC56v63ILPDA2DQBv0IKzqsWTZxCkp",
+      "description": "You need to learn Python RIGHT NOW!! If you want a job in information technology, it is fast becoming a requirement to know the ...",
+      "platform": "YouTube",
+      "category": "Python Programming",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Python for Beginners (Full Course) | Programming Tutorial",
+      "url": "https://www.youtube.com/playlist?list=PLsyeobzWxl7poL9JTVyndKe62ieoN-MZ3",
+      "description": "Python Tutorial, Easy Python tutorial for beginner, learn Python Programming, learn python programming with example and ...",
+      "platform": "YouTube",
+      "category": "Python Programming",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Python Tutorials",
+      "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbnqBxcdjVGgT3uVR10bzTEB",
+      "description": "A collection of Python tutorials.",
+      "platform": "YouTube",
+      "category": "Python Programming",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Python Tutorial 2026 | Complete Python Course (Beginner to Advanced) | Telusko",
+      "url": "https://www.youtube.com/playlist?list=PLsyeobzWxl7omDoEYrrf3oXvXxa6MPgek",
+      "description": "Welcome to the Python Tutorial 2026 playlist — a complete step-by-step Python programming course designed for absolute ...",
+      "platform": "YouTube",
+      "category": "Python Programming",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Learn Python Step by Step | Python Programming for Everyone",
+      "url": "https://www.youtube.com/playlist?list=PLEpRcxOmTFlMdi3TxjoM4qXh_AN4a5XN4",
+      "description": "This Python content is specifically designed for beginners who are eager to learn Python programming and build a foundation in ...",
+      "platform": "YouTube",
+      "category": "Python Programming",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Python Language Full Course (2026)",
+      "url": "https://www.youtube.com/playlist?list=PLGjplNEQ1it8-0CmoljS5yeV-GlKSUEt0",
+      "description": "No description available.",
+      "platform": "YouTube",
+      "category": "Python Programming",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Python for Beginners",
+      "url": "https://www.youtube.com/playlist?list=PL98qAXLA6afuh50qD2MdAj3ofYjZR_Phn",
+      "description": "Finding it Damn Hard to Understand Python? Learn to code—the right way—with interactive lessons, quizzes & challenges.",
+      "platform": "YouTube",
+      "category": "Python Programming",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "100 Days of Code - Learn Python Programming!",
+      "url": "https://www.youtube.com/playlist?list=PLSzsOkUDsvdvGZ2fXGizY_Iz9j8-ZlLqh",
+      "description": "Learn Python Programming with the 100 Days of Code Challenge https://100daysofpython.dev/",
+      "platform": "YouTube",
+      "category": "Python Programming",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Python Tutorials",
+      "url": "https://www.youtube.com/playlist?list=PLTjRvDozrdlxj5wgH4qkvwSOdHLOCx10f",
+      "description": "No description available.",
+      "platform": "YouTube",
+      "category": "Python Programming",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Python Programming",
+      "url": "https://www.youtube.com/playlist?list=PLBlnK6fEyqRiueC_HzwFallNO76hfXBB7",
+      "description": "Welcome to our basic Python Programming course! This comprehensive introductory course is designed to equip you with all the ...",
+      "platform": "YouTube",
+      "category": "Python Programming",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "freeCodeCamp — Scientific Computing with Python",
+      "url": "https://www.freecodecamp.org/learn/",
+      "description": "Free curriculum covering Scientific Computing with Python",
+      "platform": "freeCodeCamp",
+      "category": "Python Programming",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "🔥Artificial Intelligence [2026 Updated]  | Artificial Intelligence Course | Artificial Intelligence And Machine Learning Tutorials | Simplilearn",
+      "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUULyr_ftxpHB6DumOq1Zz2hq",
+      "description": "Explore the Artificial Intelligence Training and Certification Program Start your AI learning journey here: ...",
+      "platform": "YouTube",
+      "category": "Data Science AI",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Generative AI for Data Analyst Full Course 2025 | Master AI-Powered Data Analytics | Prompt Engineering for Data Analyst",
+      "url": "https://www.youtube.com/playlist?list=PLunlGNVWDAabhyWOTjt5qx5WvzZrCFss1",
+      "description": "Welcome to the ultimate course on Generative AI for Data Analysts! This playlist is your go-to guide to mastering AI-powered data ...",
+      "platform": "YouTube",
+      "category": "Data Science AI",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Complete Data Science &amp; AI Bangla Tutorial | Python, Machine Learning, Deep Learning &amp; Artificial Intelligence | Bangladesh",
+      "url": "https://www.youtube.com/playlist?list=PLKdU0fuY4OFcot0zyVbM1-zKf_eCUK4zQ",
+      "description": "Complete Data Science & AI Bangla Tutorial | Python, Machine Learning, Deep Learning & Artificial Intelligence | Bangladesh.",
+      "platform": "YouTube",
+      "category": "Data Science AI",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Machine Learning Course With Python",
+      "url": "https://www.youtube.com/playlist?list=PLfFghEzKVmjsNtIRwErklMAN8nJmebB0I",
+      "description": "No description available.",
+      "platform": "YouTube",
+      "category": "Data Science AI",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Machine Learning with Explainable AI (XAI)",
+      "url": "https://www.youtube.com/playlist?list=PLYIE4hvbWhsCQld2zZlsrPbjShUeHrl41",
+      "description": "Welcome to Machine Learning Pro - A course that explains all the algorithms and projects with Explainable AI (XAI) methods and ...",
+      "platform": "YouTube",
+      "category": "Data Science AI",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Artificial Intelligence Tutorial For Beginners | Edureka",
+      "url": "https://www.youtube.com/playlist?list=PL9ooVrP1hQOGHNaCT7_fwe9AabjZI1RjI",
+      "description": "This \"Artificial Intelligence Tutorial For Beginners\" playlist with help you learn AI from scratch. This playlist also covers concepts of ...",
+      "platform": "YouTube",
+      "category": "Data Science AI",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Data Analytics with Projects Full Free Course  (New Updated) by WsCube Tech",
+      "url": "https://www.youtube.com/playlist?list=PLjVLYmrlmjGdRs1sGqRrTE-EMraLclJga",
+      "description": "Explore the complete Data Analytics course by WsCube Tech! From basics to advanced concepts, dive into practical projects and ...",
+      "platform": "YouTube",
+      "category": "Data Science AI",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Data Science  Ai Course",
+      "url": "https://www.youtube.com/playlist?list=PLGD6nal5zDMlVhTvnFCRHM-5m4ePumGxY",
+      "description": "No description available.",
+      "platform": "YouTube",
+      "category": "Data Science AI",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "n8n Full Course (Free Bootcamp) - Learn How to use AI Agents with Easy Tutorials",
+      "url": "https://www.youtube.com/playlist?list=PLcQVY5V2UY4K0mpuJ-oYO_LI25w5VDUD5",
+      "description": "Master n8n AI Automation – From Beginner to Pro These n8n tutorials are updated on a weekly basis (2-3 new videos) and are ...",
+      "platform": "YouTube",
+      "category": "Data Science AI",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Complete Crash Courses on Data Science, Python, ML, DL and Freelancing skills",
+      "url": "https://www.youtube.com/playlist?list=PL9XvIvvVL50EKXNwINseqf8pCPnPrg5qh",
+      "description": "Welcome to our Complete Courses on Data Science, Python, and Freelancing Skills playlist! This playlist is designed for ...",
+      "platform": "YouTube",
+      "category": "Data Science AI",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Web Development Tutorials For Beginners",
+      "url": "https://www.youtube.com/playlist?list=PLoYCgNOIyGAB_8_iq1cL8MVeun7cB6eNc",
+      "description": "If you're wanting to learn web development and learn web dev fast, this is your place! I'll cover overviews of each piece of ...",
+      "platform": "YouTube",
+      "category": "Web Development",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Web Design 101: Free Full Course",
+      "url": "https://www.youtube.com/playlist?list=PLXC_gcsKLD6n7p6tHPBxsKjN5hA_quaPI",
+      "description": "Learn how to design a website from scratch. In this course you'll learn everything you need to create a beautiful, fully functional ...",
+      "platform": "YouTube",
+      "category": "Web Development",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Full Stack Web Development Tutorial Course",
+      "url": "https://www.youtube.com/playlist?list=PLwoh6bBAszPrES-EOajos_E9gvRbL27wz",
+      "description": "Learn #FullStackWebDevelopment in 3 weeks with HTML, CSS, Bootstrap 4, ES6 React and Node Welcome to the Ultimate ...",
+      "platform": "YouTube",
+      "category": "Web Development",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Web Development Courses 🗺️",
+      "url": "https://www.youtube.com/playlist?list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3",
+      "description": "Learn to code with web design.",
+      "platform": "YouTube",
+      "category": "Web Development",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Full Stack Web Development Complete Course 2024",
+      "url": "https://www.youtube.com/playlist?list=PLSDeUiTMfxW6VChKWb26Z_mPR4f6fAmMV",
+      "description": "No description available.",
+      "platform": "YouTube",
+      "category": "Web Development",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Web Development Bootcamp Full Course - Zero to Full-Stack 🧑‍💻",
+      "url": "https://www.youtube.com/playlist?list=PLVht7UBOfJb8p7ehKW_yDfCrzAJVRHrE7",
+      "description": "Future Fullstack aims to be the world's best online web development bootcamp - taking you from zero to fullstack developer ...",
+      "platform": "YouTube",
+      "category": "Web Development",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Complete Web Dev using MERN stack || Love Babbar",
+      "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD",
+      "description": "Looking to become a Full Stack Web Developer using MERN stack? You've come to the right place! In this tutorial series, we'll ...",
+      "platform": "YouTube",
+      "category": "Web Development",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Web Development Course",
+      "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe3H6c9OGXb5_6wcc1Mca52n",
+      "description": "No description available.",
+      "platform": "YouTube",
+      "category": "Web Development",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "HTML and CSS Tutorials",
+      "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88",
+      "description": "A collection of HTML tutorials.",
+      "platform": "YouTube",
+      "category": "Web Development",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Front End Developer Learning Path",
+      "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbmMuZ3saqRIBimAKIMYkt0E",
+      "description": "If you want to become a frontend developer, this is where to start. This is our frontend developer learning path. We've curated a ...",
+      "platform": "YouTube",
+      "category": "Web Development",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Cyber Security Training for Beginners | Edureka",
+      "url": "https://www.youtube.com/playlist?list=PL9ooVrP1hQOGPQVeapGsJCktzIO4DtI4_",
+      "description": "This Edureka playlist on \"Cyber Security Training for Beginners\" will help you learn Cyber Security from scratch. You will get to ...",
+      "platform": "YouTube",
+      "category": "IT Cybersecurity",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Practical Networking Fundamentals (Home Edition) - A Free IT/Cybersecurity Course",
+      "url": "https://www.youtube.com/playlist?list=PLwwAN0Pru-1-Kj6thocL8lBDf_f2hN6Eb",
+      "description": "Welcome to Practical Networking Fundamentals! This is a course all about helping others build a strong & practical understanding ...",
+      "platform": "YouTube",
+      "category": "IT Cybersecurity",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Cyber Security Playlist [2026 Updated] | Cybersecurity Tutorial For Beginners | Cybersecurity &amp; Ethical Hacking Course | Simplilearn",
+      "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUUJfPOj5nRounXvf3n17PCft",
+      "description": "https://www.simplilearn.com/cyber-security?utm_campaign=CSandEHPlylist&utm_medium=Description&utm_source=youtube ...",
+      "platform": "YouTube",
+      "category": "IT Cybersecurity",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Google Cybersecurity Certificate",
+      "url": "https://www.youtube.com/playlist?list=PLTZYG7bZ1u6ocTMdhDwwmfjaNv134KcWn",
+      "description": "Prepare for a new career in the high-growth field of cybersecurity. No degree or experience is required. Get professional training ...",
+      "platform": "YouTube",
+      "category": "IT Cybersecurity",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "iProtect: Free Cybersecurity Course",
+      "url": "https://www.youtube.com/playlist?list=PLO4DyOcJGGi0cDe8U59MJnTCGB6AX3WCO",
+      "description": "Cybersecurity is the new literacy of the digital age. Don't wait for a costly breach to teach you the importance of awareness.",
+      "platform": "YouTube",
+      "category": "IT Cybersecurity",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "CS50&#39;s Introduction to Cybersecurity",
+      "url": "https://www.youtube.com/playlist?list=PLhQjrBD2T383Cqo5I1oRrbC1EKRAKGKUE",
+      "description": "An introduction to cybersecurity for technical and non-technical audiences alike. Learn how to secure your accounts, data, ...",
+      "platform": "YouTube",
+      "category": "IT Cybersecurity",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Cybersecurity Analyst Hands-On Training [ FREE ]",
+      "url": "https://www.youtube.com/playlist?list=PLdPG8Bjx7sGs9UDbsm0d5NmcFCHoI5iWc",
+      "description": "Embark on a Journey into Cybersecurity with Our Beginner-Friendly, Hands-On Lab Project, Hosted on Azure Cloud Dive into the ...",
+      "platform": "YouTube",
+      "category": "IT Cybersecurity",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Comprehensive HANDS-ON Cybersecurity Training Course for Beginners!",
+      "url": "https://www.youtube.com/playlist?list=PLcTyOFH6d6WJOLyfyS1abFctyTXjU3Mfv",
+      "description": "WELCOME TO YOUR PATHWAY TO CYBERSECURITY MASTERY! This comprehensive, 100% FREE training course (12 ...",
+      "platform": "YouTube",
+      "category": "IT Cybersecurity",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Free Cyber Security Course for Beginners",
+      "url": "https://www.youtube.com/playlist?list=PLOWdy-NBQHJtEa3WTodhxirwQR8SFExUy",
+      "description": "Unlock the world of cybersecurity with our Free Cyber Security Course for Beginners Playlist! This comprehensive playlist is ...",
+      "platform": "YouTube",
+      "category": "IT Cybersecurity",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Free Cyber Security &amp; Ethical Hacking Popular Courses: Beginner to Pro",
+      "url": "https://www.youtube.com/playlist?list=PLwO5-rumi8A7vbU7dcbgsZYcYl2ONWNb5",
+      "description": "No description available.",
+      "platform": "YouTube",
+      "category": "IT Cybersecurity",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Agile and SCRUM Playlist [2026 Updated] | Agile and SCRUM Tutorial For Beginners | Agile and SCRUM Course | Agile and SCRUM Training | Simplilearn",
+      "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUUJKZEL96YBV78Dd5gsHSVZ7",
+      "description": "Explore Trending Agile Courses By SImpliearn ...",
+      "platform": "YouTube",
+      "category": "Project Management Agile",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "The Agile Practice Guide Video Course",
+      "url": "https://www.youtube.com/playlist?list=PLEWFSKHjyrwy1bYSi1WsoPGDno-LKOnhV",
+      "description": "No description available.",
+      "platform": "YouTube",
+      "category": "Project Management Agile",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Google Project Management Certificate",
+      "url": "https://www.youtube.com/playlist?list=PLTZYG7bZ1u6puLWxUtqAjZkIB4dB_JFzk",
+      "description": "The Google Project Management Certificate introduces learners to project management fundamentals including various ...",
+      "platform": "YouTube",
+      "category": "Project Management Agile",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Project Management",
+      "url": "https://www.youtube.com/playlist?list=PLLy_2iUCG87CBuNhvti0h6W54ZmqrSDMJ",
+      "description": "No description available.",
+      "platform": "YouTube",
+      "category": "Project Management Agile",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Agile Methodology Training Videos",
+      "url": "https://www.youtube.com/playlist?list=PLUvruAXhiwK8SgTlXWybstT93ntI2_Vdx",
+      "description": "No description available.",
+      "platform": "YouTube",
+      "category": "Project Management Agile",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "AgilePM® Foundation eLearning course",
+      "url": "https://www.youtube.com/playlist?list=PLkfP3Wl3g435_nNULOzgral9T4lwXIboV",
+      "description": "This playlist contains all free available lessons of the AgilePM® Foundation eLearning course, by Nader K. Rad. AgilePM® is a ...",
+      "platform": "YouTube",
+      "category": "Project Management Agile",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Project Management Playlist [2026 Updated] | Project Management Tutorial For Beginners | PMP Course | PMP Training Videos | PMP Course | Simplilearn",
+      "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUULPx4heWRZFC-fxQ9zWDaEf",
+      "description": "Welcome to our comprehensive PMP Training Videos playlist! Whether you're a seasoned project manager or just starting out in ...",
+      "platform": "YouTube",
+      "category": "Project Management Agile",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "PMP Certification Training Videos | Edureka",
+      "url": "https://www.youtube.com/playlist?list=PL9ooVrP1hQOGpEy_MII3YIp7y0JfJCeDE",
+      "description": "This PMP Certification Exam Training playlist will help aspiring professionals in earning PMP® certification. Edureka is a globally ...",
+      "platform": "YouTube",
+      "category": "Project Management Agile",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Project Management Training",
+      "url": "https://www.youtube.com/playlist?list=PLQVJk9oC5JKp4RjcPoYf979XzrUYMvV5I",
+      "description": "Project management skills are in high demand! Develop your IT PM skills with CBT Nuggets: https://training.cbt.gg/zly *Not a CBT ...",
+      "platform": "YouTube",
+      "category": "Project Management Agile",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    },
+    {
+      "title": "Project Management Beginners",
+      "url": "https://www.youtube.com/playlist?list=PLsz8d8r2a994aHmh4m5txXqH9uPMNbO2F",
+      "description": "No description available.",
+      "platform": "YouTube",
+      "category": "Project Management Agile",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-02-22"
+    }
+  ]
+}
