@@ -1023,14 +1023,22 @@
       e.preventDefault();
       const data = new FormData(form);
       try {
-        await fetch('/', { method: 'POST', headers: {'Accept':'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() });
-        formWrap.style.display = 'none';
-        successMsg.style.display = 'block';
-        setTimeout(() => {
-          overlay.classList.remove('open');
-          setTimeout(() => { formWrap.style.display = ''; successMsg.style.display = 'none'; form.reset(); }, 300);
-        }, 2500);
-      } catch {
+        const response = await fetch('/', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data).toString()
+        });
+        if (response.ok) {
+          formWrap.style.display = 'none';
+          successMsg.style.display = 'block';
+          setTimeout(() => {
+            overlay.classList.remove('open');
+            setTimeout(() => { formWrap.style.display = ''; successMsg.style.display = 'none'; form.reset(); }, 300);
+          }, 2500);
+        } else {
+          alert('Something went wrong (status ' + response.status + '). Please try again or email contact@techlearnresources.com');
+        }
+      } catch(err) {
         alert('Something went wrong. Please try again or email contact@techlearnresources.com');
       }
     });
