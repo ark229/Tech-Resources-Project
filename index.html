@@ -667,6 +667,16 @@
 </head>
 <body>
 
+  <!-- Hidden form for Netlify detection at deploy time -->
+  <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="contact" />
+    <input type="text" name="bot-field" />
+    <select name="type"></select>
+    <textarea name="details"></textarea>
+    <input type="email" name="email" />
+  </form>
+
+
   <!-- HEADER -->
   <header>
     <div class="header-inner">
