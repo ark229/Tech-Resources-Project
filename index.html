@@ -565,6 +565,68 @@
       transition: color 0.2s;
     }
     .contact-modal-close:hover { color: var(--text); }
+    /* ── ABOUT MODAL ── */
+    .about-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .about-modal-overlay.open { display: flex; }
+    .about-modal {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 520px;
+      margin: 1rem;
+      position: relative;
+      animation: fadeUp 0.2s ease;
+    }
+    .about-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 1.2rem;
+      line-height: 1;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      transition: color 0.2s;
+    }
+    .about-modal-close:hover { color: var(--text); }
+    .about-modal h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 1.2rem 0;
+    }
+    .about-modal p {
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.7;
+      margin: 0 0 1rem 0;
+    }
+    .about-modal p:last-child { margin-bottom: 0; }
+    .about-modal strong { color: var(--text); }
+    .about-modal a { color: var(--accent); text-decoration: none; }
+    .about-modal a:hover { text-decoration: underline; }
+    .about-divider {
+      border: none;
+      border-top: 1px solid var(--border);
+      margin: 1.2rem 0;
+    }
+
     .contact-form-group {
       margin-bottom: 1rem;
     }
@@ -807,12 +869,36 @@
       &nbsp;|&nbsp; Refreshed quarterly &nbsp;|&nbsp; Data sourced via <span>permitted APIs</span> &nbsp;|&nbsp; All resources free
     </p>
     <p style="margin-top:0.8rem;">
-      <button class="contact-trigger" id="contactTrigger">&#9993; Suggest a resource or report an issue</button>
+      <button class="contact-trigger" id="aboutTrigger" style="margin-right:0.75rem;">&#9432; About TechLearn</button><button class="contact-trigger" id="contactTrigger">&#9993; Suggest a resource or report an issue</button>
     </p>
     <p class="footer-text" style="margin-top:0.8rem;opacity:0.5;">
       &copy; <span id="copy-year"></span> Tech Learn Resources. All rights reserved.
     </p>
   </footer>
+
+<!-- ── ABOUT MODAL ── -->
+  <div class="about-modal-overlay" id="aboutOverlay">
+    <div class="about-modal" role="dialog" aria-modal="true" aria-labelledby="aboutTitle">
+      <button class="about-modal-close" id="aboutClose" aria-label="Close">&times;</button>
+      <h2 id="aboutTitle">&#9432; &nbsp;About TechLearn Resources</h2>
+
+      <p><strong>TechLearn Resources</strong> is a free, curated directory of high-quality tech education, built for learners looking for a budget-friendly way to grow their skills.</p>
+
+      <p>Whether you're just starting out or leveling up, TechLearn brings together the best free courses from platforms like Coursera, MIT OpenCourseWare, Google, IBM SkillsBuild, Khan Academy, and more; all in one searchable place.</p>
+
+      <hr class="about-divider">
+
+      <p><strong>Why we built it</strong><br>
+      Finding free, trustworthy learning resources shouldn't be a full-time job. TechLearn was created to cut through the noise and give learners a clean, no-paywall starting point for tech education across programming, data science, UX design, cybersecurity, and career skills.</p>
+
+      <p><strong>How courses are selected</strong><br>
+      Every resource in TechLearn is hand-curated or sourced from verified, permitted APIs. We prioritize courses that are genuinely free to access or audit, come from reputable institutions or platforms, and deliver real learning value. Artificial Intelligence is used throughout the curation process, including filtering results for relevance, evaluating resource quality, and generating course descriptions automatically so every listing is clear and consistent. The directory is refreshed quarterly to keep content current.</p>
+
+      <hr class="about-divider">
+
+      <p>Do you have a course to suggest or a resource to report? Use the feedback button below. We read every submission.</p>
+    </div>
+  </div>
 
 <!-- ── CONTACT MODAL ── -->
 
@@ -1080,7 +1166,16 @@
 
 
     // ── CONTACT MODAL ──
-    const overlay    = document.getElementById('contactOverlay');
+    // ── About Modal ──
+    const aboutOverlay = document.getElementById('aboutOverlay');
+    const aboutTrigger = document.getElementById('aboutTrigger');
+    const aboutClose   = document.getElementById('aboutClose');
+    aboutTrigger.addEventListener('click', () => aboutOverlay.classList.add('open'));
+    aboutClose.addEventListener('click', () => aboutOverlay.classList.remove('open'));
+    aboutOverlay.addEventListener('click', e => { if (e.target === aboutOverlay) aboutOverlay.classList.remove('open'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') aboutOverlay.classList.remove('open'); });
+
+        const overlay    = document.getElementById('contactOverlay');
     const trigger    = document.getElementById('contactTrigger');
     const closeBtn   = document.getElementById('contactClose');
     const form       = document.getElementById('contactForm');

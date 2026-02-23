@@ -676,6 +676,38 @@ def fetch_helsinki(category: str) -> list:
 # ─────────────────────────────────────────────
 # MAIN ORCHESTRATOR
 # ─────────────────────────────────────────────
+# ─────────────────────────────────────────────
+# SOURCE 11 — KHAN ACADEMY (curated free courses)
+# All Khan Academy courses are completely free, no account required
+# ─────────────────────────────────────────────
+KHAN_CURATED = {
+    "Programming & Computer Science": [
+        {"title": "Intro to Computer Science - Python", "url": "https://www.khanacademy.org/computing/intro-to-python-fundamentals", "description": "Khan Academy's beginner Python course covering variables, functions, loops, and core programming fundamentals. Completely free.", "level": "Beginner"},
+        {"title": "Computer Programming - JavaScript and the Web", "url": "https://www.khanacademy.org/computing/computer-programming", "description": "Interactive JavaScript and web programming course covering HTML, CSS, animations, and databases. Learn by doing in the browser.", "level": "All Levels"},
+        {"title": "AP College Computer Science Principles", "url": "https://www.khanacademy.org/computing/ap-computer-science-principles", "description": "College-level computer science covering algorithms, the internet, data, and programming. Aligned to the AP CS Principles exam.", "level": "Beginner"},
+        {"title": "Computer Science Theory", "url": "https://www.khanacademy.org/computing/computer-science", "description": "Advanced CS theory covering algorithms, cryptography, information theory, and the mathematical foundations of computer science.", "level": "Advanced"},
+    ],
+    "IT / Cybersecurity": [
+        {"title": "Computers and the Internet", "url": "https://www.khanacademy.org/computing/computers-and-internet", "description": "Beginner-friendly introduction to how computers work, how the internet functions, and the basics of cybersecurity and digital citizenship.", "level": "Beginner"},
+    ],
+}
+
+def fetch_khan(category: str) -> list:
+    log.info(f"[Khan Academy] Fetching: {category}")
+    results = []
+    for item in KHAN_CURATED.get(category, []):
+        clean = clean_description(item["title"], item["description"], category)
+        results.append(build_resource(
+            title=item["title"],
+            url=item["url"],
+            description=clean,
+            platform="Khan Academy",
+            category=category,
+            level=item.get("level", "All Levels"),
+        ))
+    return results
+
+
 FETCHERS = [
     fetch_youtube,
     fetch_mit_ocw,
@@ -687,6 +719,7 @@ FETCHERS = [
     fetch_ibm,
     fetch_google,
     fetch_helsinki,
+    fetch_khan,
 ]
 
 def run_scraper():
