@@ -21,6 +21,8 @@
       --web:       #10b981;
       --cyber:     #ef4444;
       --pm:        #f59e0b;
+      --ux:        #ec4899;
+      --career:    #f97316;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -272,8 +274,10 @@
     .pill[data-cat="Programming &amp; Computer Science"].active  { background: var(--python); border-color: var(--python); }
     .pill[data-cat="Data Science AI"].active      { background: var(--data);   border-color: var(--data);   }
     .pill[data-cat="Web Development"].active      { background: var(--web);    border-color: var(--web);    }
-    .pill[data-cat="IT Cybersecurity"].active     { background: var(--cyber);  border-color: var(--cyber);  }
-    .pill[data-cat="Project Management Agile"].active { background: var(--pm); border-color: var(--pm);     }
+    .pill[data-cat="IT / Cybersecurity"].active     { background: var(--cyber);  border-color: var(--cyber);  }
+    .pill[data-cat="Project Management / Agile / Career Skills"].active { background: var(--career); border-color: var(--career); }
+    .pill[data-cat="UX Design"].active            { background: var(--ux);     border-color: var(--ux);     }
+    .pill[data-cat="Project Management / Agile / Career Skills"].active { background: var(--career); border-color: var(--career); }
 
     /* ── MAIN CONTENT ── */
     main {
@@ -371,6 +375,8 @@
     .card-web::before     { background: var(--web); }
     .card-cyber::before   { background: var(--cyber); }
     .card-pm::before      { background: var(--pm); }
+    .card-ux::before      { background: var(--ux); }
+    .card-career::before  { background: var(--career); }
 
     .card-top {
       display: flex;
@@ -663,6 +669,54 @@
       text-align: center;
     }
     .audit-banner strong { color: #10b981; }
+
+    .ibm-banner {
+      background: rgba(16,185,129,0.08);
+      border: 1px solid rgba(16,185,129,0.2);
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      margin-bottom: 1rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.05em;
+      color: #10b981;
+      text-align: center;
+      display: none;
+    }
+    .ibm-banner strong { color: #10b981; }
+    .ibm-banner a { color: #10b981; }
+
+    /* ── BACK TO TOP ── */
+    .back-to-top {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      width: 42px;
+      height: 42px;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 50%;
+      color: var(--accent);
+      font-size: 1.1rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(10px);
+      transition: opacity 0.3s ease, transform 0.3s ease, border-color 0.2s, visibility 0.3s;
+      z-index: 500;
+    }
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+      transform: translateY(0);
+    }
+    .back-to-top:hover {
+      border-color: var(--accent);
+      background: rgba(0,229,255,0.08);
+    }
   </style>
 </head>
 <body>
@@ -694,7 +748,7 @@
             <span class="label">Platforms</span>
           </div>
           <div class="meta-stat">
-            <span class="num" id="category-count">5</span>
+            <span class="num" id="category-count">6</span>
             <span class="label">Categories</span>
           </div>
           <div class="meta-stat">
@@ -724,8 +778,9 @@
         <button class="pill" data-cat="Programming &amp; Computer Science">Programming</button>
         <button class="pill" data-cat="Data Science AI">Data / AI</button>
         <button class="pill" data-cat="Web Development">Web Dev</button>
-        <button class="pill" data-cat="IT Cybersecurity">Cybersecurity</button>
-        <button class="pill" data-cat="Project Management Agile">PM / Agile</button>
+        <button class="pill" data-cat="UX Design">UX Design</button>
+        <button class="pill" data-cat="IT / Cybersecurity">IT / Cyber</button>
+        <button class="pill" data-cat="Project Management / Agile / Career Skills">PM / Career</button>
       </div>
       <span class="result-count" id="result-count"></span>
     </div>
@@ -734,6 +789,9 @@
   <!-- MAIN -->
   <div class="audit-banner" id="auditBanner" style="display:none;">
     &#9432; &nbsp;Courses marked <strong>FREE</strong> on <strong>Coursera</strong> and <strong>edX</strong> are free to <strong>audit</strong>. A paid upgrade may be required to earn a certificate.
+  </div>
+  <div class="ibm-banner" id="ibmBanner">
+    &#9432; &nbsp;<strong>IBM SkillsBuild</strong> courses require a <strong>free account</strong> to access individual course content. <a href="https://skillsbuild.org/sign-up" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;">Create your free account here.</a>
   </div>
   <main id="main-content">
     <div id="empty-state">
@@ -805,6 +863,10 @@
     </div>
   </div>
 
+
+  <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
+    &#8679;
+  </button>
 </body>
 </html>
 
@@ -814,8 +876,9 @@
       "Programming & Computer Science":       { dot: '#3b82f6', cls: 'card-python' },
       "Data Science AI":          { dot: '#8b5cf6', cls: 'card-data'   },
       "Web Development":          { dot: '#10b981', cls: 'card-web'    },
-      "IT Cybersecurity":         { dot: '#ef4444', cls: 'card-cyber'  },
-      "Project Management Agile": { dot: '#f59e0b', cls: 'card-pm'     },
+      "IT / Cybersecurity":         { dot: '#ef4444', cls: 'card-cyber'  },
+      "Project Management / Agile / Career Skills": { dot: '#f97316', cls: 'card-career' },
+      "UX Design":                  { dot: '#ec4899', cls: 'card-ux'     },
     };
 
     let allResources = [];
@@ -905,8 +968,8 @@
       emptyState.style.display = 'none';
 
       const catOrder = [
-        'Programming & Computer Science', 'Data Science AI', 'Web Development',
-        'IT Cybersecurity', 'Project Management Agile'
+        'Programming & Computer Science', 'Data Science AI', 'Web Development', 'UX Design',
+        'IT / Cybersecurity', 'Project Management / Agile / Career Skills'
       ];
 
       catOrder.forEach(cat => {
@@ -977,6 +1040,8 @@
       e.target.classList.toggle('active-filter', activePlatform !== 'All');
       document.getElementById('auditBanner').style.display =
         (['Coursera','edX'].includes(activePlatform)) ? 'block' : 'none';
+      document.getElementById('ibmBanner').style.display =
+        (activePlatform === 'IBM SkillsBuild') ? 'block' : 'none';
       renderAll();
     });
 
@@ -988,6 +1053,14 @@
 
     // ── COPYRIGHT YEAR ──
     document.getElementById('copy-year').textContent = new Date().getFullYear();
+    // ── BACK TO TOP ──
+    const backToTop = document.getElementById('backToTop');
+    window.addEventListener('scroll', () => {
+      backToTop.classList.toggle('visible', window.scrollY > 400);
+    });
+    backToTop.addEventListener('click', () => {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
 
     // ── TOOLTIP POSITIONING (fixed, viewport-aware) ──
     document.addEventListener('mouseover', e => {
