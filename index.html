@@ -59,6 +59,20 @@
       max-width: 1200px;
       margin: 0 auto;
       padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 2rem;
+    }
+    .header-text { flex: 1; }
+    .header-logo {
+      flex-shrink: 0;
+      width: clamp(280px, 28vw, 420px);
+      opacity: 0.93;
+      filter: drop-shadow(0 0 40px rgba(0,229,255,0.35));
+    }
+    @media (max-width: 700px) {
+      .header-logo { display: none; }
     }
 
     .site-tag {
@@ -211,7 +225,51 @@
       font-weight: 700;
     }
 
-    .pill[data-cat="Python Programming"].active  { background: var(--python); border-color: var(--python); }
+    /* ── PLATFORM DROPDOWN ── */
+    .platform-select {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      color: var(--text);
+      padding: 0.65rem 2.2rem 0.65rem 1rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      outline: none;
+      transition: border-color 0.2s;
+      appearance: none;
+      -webkit-appearance: none;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%2364748b' stroke-width='2'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.75rem center;
+      white-space: nowrap;
+      min-width: 160px;
+    }
+    .platform-select:focus { border-color: var(--accent); }
+    .platform-select option { background: #111827; color: var(--text); }
+    .platform-select.active-filter { border-color: var(--accent); color: var(--accent); }
+
+    /* ── SEARCH HIGHLIGHT ── */
+    mark {
+      background: rgba(0,229,255,0.2);
+      color: var(--accent);
+      border-radius: 2px;
+      padding: 0 1px;
+    }
+
+    /* ── RESULT COUNT ── */
+    .result-count {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      color: var(--muted);
+      letter-spacing: 0.05em;
+      white-space: nowrap;
+      margin-left: auto;
+    }
+    .result-count span { color: var(--accent); }
+
+    .pill[data-cat="Programming &amp; Computer Science"].active  { background: var(--python); border-color: var(--python); }
     .pill[data-cat="Data Science AI"].active      { background: var(--data);   border-color: var(--data);   }
     .pill[data-cat="Web Development"].active      { background: var(--web);    border-color: var(--web);    }
     .pill[data-cat="IT Cybersecurity"].active     { background: var(--cyber);  border-color: var(--cyber);  }
@@ -278,6 +336,15 @@
       transition: transform 0.2s, border-color 0.2s, box-shadow 0.2s;
       animation: fadeUp 0.4s ease both;
       position: relative;
+      overflow: visible;
+    }
+    /* clip only the accent line, not the whole card */
+    .resource-card::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      border-radius: 12px;
+      pointer-events: none;
       overflow: hidden;
     }
 
@@ -438,6 +505,164 @@
       h1 { font-size: 1.8rem; }
       .header-meta { gap: 1.5rem; }
     }
+
+    /* ── CONTACT MODAL ── */
+    .contact-modal-overlay {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0,0,0,0.7);
+      backdrop-filter: blur(4px);
+      z-index: 1000;
+      align-items: center;
+      justify-content: center;
+    }
+    .contact-modal-overlay.open {
+      display: flex;
+    }
+    .contact-modal {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 2rem;
+      width: 100%;
+      max-width: 480px;
+      margin: 1rem;
+      position: relative;
+      animation: fadeUp 0.2s ease;
+    }
+    .contact-modal h2 {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.85rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin: 0 0 0.4rem 0;
+    }
+    .contact-modal p {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin: 0 0 1.5rem 0;
+    }
+    .contact-modal-close {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: none;
+      border: none;
+      color: var(--muted);
+      cursor: pointer;
+      font-size: 1.2rem;
+      line-height: 1;
+      padding: 0.2rem 0.4rem;
+      border-radius: 4px;
+      transition: color 0.2s;
+    }
+    .contact-modal-close:hover { color: var(--text); }
+    .contact-form-group {
+      margin-bottom: 1rem;
+    }
+    .contact-form-group label {
+      display: block;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-bottom: 0.4rem;
+    }
+    .contact-form-group select,
+    .contact-form-group input,
+    .contact-form-group textarea {
+      width: 100%;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      color: var(--text);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      padding: 0.6rem 0.8rem;
+      box-sizing: border-box;
+      transition: border-color 0.2s;
+      outline: none;
+    }
+    .contact-form-group select:focus,
+    .contact-form-group input:focus,
+    .contact-form-group textarea:focus {
+      border-color: var(--accent);
+    }
+    .contact-form-group textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+    .contact-submit {
+      width: 100%;
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.75rem;
+      cursor: pointer;
+      font-weight: 700;
+      transition: opacity 0.2s;
+      margin-top: 0.5rem;
+    }
+    .contact-submit:hover { opacity: 0.85; }
+    .contact-success {
+      display: none;
+      text-align: center;
+      padding: 1rem 0;
+    }
+    .contact-success svg { color: #10b981; margin-bottom: 0.75rem; }
+    .contact-success h3 {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.8rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--text);
+      margin: 0 0 0.5rem 0;
+    }
+    .contact-success p {
+      font-size: 0.78rem;
+      color: var(--muted);
+      margin: 0;
+    }
+    .contact-trigger {
+      background: none;
+      border: 1px solid var(--border);
+      color: var(--muted);
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      padding: 0.35rem 0.8rem;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: color 0.2s, border-color 0.2s;
+    }
+    .contact-trigger:hover {
+      color: var(--accent);
+      border-color: var(--accent);
+    }
+
+    /* ── AUDIT BANNER ── */
+    .audit-banner {
+      background: rgba(16,185,129,0.08);
+      border: 1px solid rgba(16,185,129,0.2);
+      border-radius: 8px;
+      padding: 0.6rem 1rem;
+      margin-bottom: 1rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.62rem;
+      letter-spacing: 0.05em;
+      color: #10b981;
+      text-align: center;
+    }
+    .audit-banner strong { color: #10b981; }
   </style>
 </head>
 <body>
@@ -445,27 +670,30 @@
   <!-- HEADER -->
   <header>
     <div class="header-inner">
-      <div class="site-tag">Free Tech Education Directory</div>
-      <h1>Tech<span>Learn</span></h1>
-      <p class="header-sub">Curated free courses across programming, data science, cybersecurity, web development, and project management.</p>
-      <div class="header-meta">
-        <div class="meta-stat">
-          <span class="num" id="total-count">—</span>
-          <span class="label">Resources</span>
-        </div>
-        <div class="meta-stat">
-          <span class="num" id="platform-count">—</span>
-          <span class="label">Platforms</span>
-        </div>
-        <div class="meta-stat">
-          <span class="num" id="category-count">5</span>
-          <span class="label">Categories</span>
-        </div>
-        <div class="meta-stat">
-          <span class="num" id="updated-date">—</span>
-          <span class="label">Last Updated</span>
+      <div class="header-text">
+        <div class="site-tag">Free Tech Education Directory</div>
+        <h1>Tech<span>Learn</span></h1>
+        <p class="header-sub">Curated free courses across programming, data science, cybersecurity, web development, and project management.</p>
+        <div class="header-meta">
+          <div class="meta-stat">
+            <span class="num" id="total-count">—</span>
+            <span class="label">Resources</span>
+          </div>
+          <div class="meta-stat">
+            <span class="num" id="platform-count">—</span>
+            <span class="label">Platforms</span>
+          </div>
+          <div class="meta-stat">
+            <span class="num" id="category-count">5</span>
+            <span class="label">Categories</span>
+          </div>
+          <div class="meta-stat">
+            <span class="num" id="updated-date">—</span>
+            <span class="label">Last Updated</span>
+          </div>
         </div>
       </div>
+      <img src="techLearnLogo.png" alt="TechLearn Logo" class="header-logo" />
     </div>
   </header>
 
@@ -478,18 +706,25 @@
         </svg>
         <input type="text" id="search" placeholder="Search courses, topics, platforms..." />
       </div>
+      <select id="platform-filter" class="platform-select">
+        <option value="All">All Platforms</option>
+      </select>
       <div class="filter-pills">
         <button class="pill active" data-cat="All">All</button>
-        <button class="pill" data-cat="Python Programming">Python</button>
+        <button class="pill" data-cat="Programming &amp; Computer Science">Programming</button>
         <button class="pill" data-cat="Data Science AI">Data / AI</button>
         <button class="pill" data-cat="Web Development">Web Dev</button>
         <button class="pill" data-cat="IT Cybersecurity">Cybersecurity</button>
         <button class="pill" data-cat="Project Management Agile">PM / Agile</button>
       </div>
+      <span class="result-count" id="result-count"></span>
     </div>
   </div>
 
   <!-- MAIN -->
+  <div class="audit-banner" id="auditBanner" style="display:none;">
+    &#9432; &nbsp;Courses marked <strong>FREE</strong> on <strong>Coursera</strong> and <strong>edX</strong> are free to <strong>audit</strong>. A paid upgrade may be required to earn a certificate.
+  </div>
   <main id="main-content">
     <div id="empty-state">
       <div class="empty-icon">⚡</div>
@@ -503,15 +738,70 @@
       Built by <a href="https://knightdevonline.com/" target="_blank" rel="noopener noreferrer" style="color:var(--accent);text-decoration:none;letter-spacing:0.15em;">Knight Development</a>
       &nbsp;|&nbsp; Refreshed monthly &nbsp;|&nbsp; Data sourced via <span>permitted APIs</span> &nbsp;|&nbsp; All resources free
     </p>
-    <p class="footer-text" style="margin-top:0.6rem;opacity:0.5;">
+    <p style="margin-top:0.8rem;">
+      <button class="contact-trigger" id="contactTrigger">&#9993; Suggest a resource or report an issue</button>
+    </p>
+    <p class="footer-text" style="margin-top:0.8rem;opacity:0.5;">
       &copy; <span id="copy-year"></span> Knight Development. All rights reserved.
     </p>
   </footer>
 
+<!-- ── CONTACT MODAL ── -->
+
+  <div class="contact-modal-overlay" id="contactOverlay">
+    <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+      <button class="contact-modal-close" id="contactClose" aria-label="Close">&times;</button>
+
+      <div id="contactFormWrap">
+        <h2 id="contactTitle">Send Feedback</h2>
+        <p>Suggest a new category, platform, topic, or report a broken link.</p>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none;"><input name="bot-field" /></p>
+
+          <div class="contact-form-group">
+            <label for="feedbackType">Type of feedback</label>
+            <select name="type" id="feedbackType" required>
+              <option value="" disabled selected>Select one...</option>
+              <option value="broken-link">Broken Link</option>
+              <option value="new-category">Suggest a Category</option>
+              <option value="new-platform">Suggest a Platform</option>
+              <option value="new-topic">Suggest a Topic / Course</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+
+          <div class="contact-form-group">
+            <label for="feedbackDetail">Details</label>
+            <textarea name="details" id="feedbackDetail" placeholder="e.g. the broken URL, course name, or platform you'd like to see..." required></textarea>
+          </div>
+
+          <div class="contact-form-group">
+            <label for="feedbackEmail">Your email <span style="opacity:0.5;">(required)</span></label>
+            <input type="email" name="email" id="feedbackEmail" placeholder="you@example.com" />
+          </div>
+
+          <button type="submit" class="contact-submit">Send Feedback</button>
+        </form>
+      </div>
+
+      <div class="contact-success" id="contactSuccess">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/>
+        </svg>
+        <h3>Message Sent!</h3>
+        <p>Thanks for your feedback — we'll review it soon.</p>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
+
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
   <script>
     const CATEGORY_COLORS = {
-      "Python Programming":       { dot: '#3b82f6', cls: 'card-python' },
+      "Programming & Computer Science":       { dot: '#3b82f6', cls: 'card-python' },
       "Data Science AI":          { dot: '#8b5cf6', cls: 'card-data'   },
       "Web Development":          { dot: '#10b981', cls: 'card-web'    },
       "IT Cybersecurity":         { dot: '#ef4444', cls: 'card-cyber'  },
@@ -520,6 +810,7 @@
 
     let allResources = [];
     let activeCategory = 'All';
+    let activePlatform  = 'All';
     let searchTerm = '';
 
     // ── LOAD DATA ──
@@ -531,8 +822,17 @@
         // Update header stats
         document.getElementById('total-count').textContent = data.total;
         document.getElementById('updated-date').textContent = data.generated;
-        const platforms = [...new Set(data.resources.map(r => r.platform))];
+        const platforms = [...new Set(data.resources.map(r => r.platform))].sort();
         document.getElementById('platform-count').textContent = platforms.length;
+
+        // Populate platform dropdown
+        const sel = document.getElementById('platform-filter');
+        platforms.forEach(p => {
+          const opt = document.createElement('option');
+          opt.value = p;
+          opt.textContent = p;
+          sel.appendChild(opt);
+        });
 
         renderAll();
       })
@@ -543,6 +843,14 @@
           </p>`;
       });
 
+    // ── HIGHLIGHT helper ──
+    function highlight(text, term) {
+      if (!term) return escHtml(text);
+      const escaped = escHtml(text);
+      const escapedTerm = term.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      return escaped.replace(new RegExp(`(${escapedTerm})`, 'gi'), '<mark>$1</mark>');
+    }
+
     // ── RENDER ──
     function renderAll() {
       const main = document.getElementById('main-content');
@@ -550,13 +858,24 @@
 
       // Filter
       let filtered = allResources.filter(r => {
-        const matchCat  = activeCategory === 'All' || r.category === activeCategory;
-        const matchSearch = !searchTerm ||
+        const matchCat      = activeCategory === 'All' || r.category === activeCategory;
+        const matchPlatform = activePlatform  === 'All' || r.platform === activePlatform;
+        const matchSearch   = !searchTerm ||
           r.title.toLowerCase().includes(searchTerm) ||
           r.description.toLowerCase().includes(searchTerm) ||
-          r.platform.toLowerCase().includes(searchTerm);
-        return matchCat && matchSearch;
+          r.platform.toLowerCase().includes(searchTerm) ||
+          r.category.toLowerCase().includes(searchTerm);
+        return matchCat && matchPlatform && matchSearch;
       });
+
+      // Update result count
+      const countEl = document.getElementById('result-count');
+      const total = allResources.length;
+      if (filtered.length === total && !searchTerm && activePlatform === 'All' && activeCategory === 'All') {
+        countEl.innerHTML = `<span>${total}</span> resources`;
+      } else {
+        countEl.innerHTML = `<span>${filtered.length}</span> of ${total}`;
+      }
 
       // Group by category
       const groups = {};
@@ -576,7 +895,7 @@
       emptyState.style.display = 'none';
 
       const catOrder = [
-        'Python Programming', 'Data Science AI', 'Web Development',
+        'Programming & Computer Science', 'Data Science AI', 'Web Development',
         'IT Cybersecurity', 'Project Management Agile'
       ];
 
@@ -606,13 +925,13 @@
       return `
         <div class="resource-card ${colorClass}" style="animation-delay:${delay}ms">
           <div class="card-top">
-            <span class="platform-badge">${r.platform}</span>
+            <span class="platform-badge">${escHtml(r.platform)}</span>
             <span class="free-badge">FREE</span>
           </div>
-          <div class="card-title">${escHtml(r.title)}</div>
-          <div class="card-desc">${escHtml(r.description)}</div>
+          <div class="card-title">${highlight(r.title, searchTerm)}</div>
+          <div class="card-desc">${highlight(r.description, searchTerm)}</div>
           <div class="card-footer">
-            <span class="card-level">${r.level}</span>
+            <span class="card-level">${escHtml(r.level)}</span>
             <a href="${r.url}" target="_blank" rel="noopener noreferrer" class="card-link">
               View Course
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
@@ -623,11 +942,16 @@
         </div>`;
     }
 
+    function decodeHtml(str) {
+      const txt = document.createElement('textarea');
+      txt.innerHTML = str;
+      return txt.value;
+    }
     function escHtml(str) {
-      return str.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+      return decodeHtml(String(str)).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
     }
 
-    // ── FILTER PILLS ──
+    // ── CATEGORY PILLS ──
     document.querySelectorAll('.pill').forEach(btn => {
       btn.addEventListener('click', () => {
         document.querySelectorAll('.pill').forEach(p => p.classList.remove('active'));
@@ -637,14 +961,68 @@
       });
     });
 
-    // ── COPYRIGHT YEAR ──
-    document.getElementById('copy-year').textContent = new Date().getFullYear();
+    // ── PLATFORM DROPDOWN ──
+    document.getElementById('platform-filter').addEventListener('change', e => {
+      activePlatform = e.target.value;
+      e.target.classList.toggle('active-filter', activePlatform !== 'All');
+      document.getElementById('auditBanner').style.display =
+        (['Coursera','edX'].includes(activePlatform)) ? 'block' : 'none';
+      renderAll();
+    });
 
     // ── SEARCH ──
     document.getElementById('search').addEventListener('input', e => {
       searchTerm = e.target.value.toLowerCase().trim();
       renderAll();
     });
+
+    // ── COPYRIGHT YEAR ──
+    document.getElementById('copy-year').textContent = new Date().getFullYear();
+
+    // ── TOOLTIP POSITIONING (fixed, viewport-aware) ──
+    document.addEventListener('mouseover', e => {
+      const wrap = e.target.closest('.free-badge-wrap');
+      if (!wrap) return;
+      const tooltip = wrap.querySelector('.audit-tooltip');
+      if (!tooltip) return;
+      const rect = wrap.getBoundingClientRect();
+      let top = rect.bottom + 8;
+      let left = rect.right - 210;
+      if (top + 90 > window.innerHeight) top = rect.top - 98;
+      if (left < 8) left = 8;
+      if (left + 210 > window.innerWidth - 8) left = window.innerWidth - 218;
+      tooltip.style.top = top + 'px';
+      tooltip.style.left = left + 'px';
+    });
+
+
+    // ── CONTACT MODAL ──
+    const overlay    = document.getElementById('contactOverlay');
+    const trigger    = document.getElementById('contactTrigger');
+    const closeBtn   = document.getElementById('contactClose');
+    const form       = document.getElementById('contactForm');
+    const formWrap   = document.getElementById('contactFormWrap');
+    const successMsg = document.getElementById('contactSuccess');
+
+    trigger.addEventListener('click', () => overlay.classList.add('open'));
+    closeBtn.addEventListener('click', () => overlay.classList.remove('open'));
+    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('open'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.classList.remove('open'); });
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        await fetch('/', { method: 'POST', headers: {'Accept':'application/x-www-form-urlencoded'}, body: new URLSearchParams(data).toString() });
+        formWrap.style.display = 'none';
+        successMsg.style.display = 'block';
+        setTimeout(() => {
+          overlay.classList.remove('open');
+          setTimeout(() => { formWrap.style.display = ''; successMsg.style.display = 'none'; form.reset(); }, 300);
+        }, 2500);
+      } catch {
+        alert('Something went wrong. Please try again or email contact@techlearnresources.com');
+      }
+    });
+
   </script>
-</body>
-</html>
