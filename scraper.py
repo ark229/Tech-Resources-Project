@@ -13,7 +13,6 @@ Platforms covered:
   - Microsoft Learn (public API)
   - IBM SkillsBuild (web scraping permitted)
   - AWS Skill Builder (public catalog)
-  - Coursera (public catalog API)
   - Stanford Online (public course listings)
 
 Categories:
@@ -21,7 +20,8 @@ Categories:
   - Data Science / AI
   - Web Development
   - IT / Cybersecurity
-  - Project Management / Agile
+  - UX Design
+  - Project Management / Agile / Career Skills
 """
 
 import os
@@ -439,55 +439,45 @@ def fetch_aws(category: str) -> list:
 
 
 # ─────────────────────────────────────────────
-# SOURCE 6 — COURSERA (curated free-to-audit courses)
 # Public API returns 405 — using curated list of verified auditable courses
 # ─────────────────────────────────────────────
-COURSERA_CURATED = {
+# ─────────────────────────────────────────────
+# SOURCE 6 — edX (curated free-to-audit courses)
+# All courses free to audit — certificate requires payment
+# ─────────────────────────────────────────────
+EDX_CURATED = {
     "Programming & Computer Science": [
-        {"title": "Python for Everybody Specialization", "url": "https://www.coursera.org/specializations/python", "description": "Learn to program and analyze data with Python from University of Michigan. Free to audit."},
-        {"title": "Crash Course on Python — Google", "url": "https://www.coursera.org/learn/python-crash-course", "description": "Google's beginner Python course covering automation, scripting, and practical programming. Free to audit."},
-        {"title": "Python Basics — University of Michigan", "url": "https://www.coursera.org/learn/python-basics", "description": "Core Python programming concepts including data types, loops, functions, and file handling. Free to audit."},
-        {"title": "Using Python to Interact with the Operating System", "url": "https://www.coursera.org/learn/python-operating-system", "description": "Google's course on using Python for OS automation, file handling, regular expressions, and process management. Free to audit."},
+        {"title": "Programming for Everybody (Getting Started with Python)", "url": "https://www.edx.org/learn/python/the-university-of-michigan-programming-for-everybody-getting-started-with-python", "description": "University of Michigan's beginner Python course covering variables, loops, functions, and basic programming. Free to audit.", "level": "Beginner"},
+        {"title": "Python Data Structures — University of Michigan", "url": "https://www.edx.org/learn/python/the-university-of-michigan-python-data-structures", "description": "The second Python for Everybody course covering strings, lists, dictionaries, and tuples. Free to audit.", "level": "Beginner"},
+        {"title": "CS50's Introduction to Computer Science", "url": "https://www.edx.org/learn/computer-science/harvard-university-cs50-s-introduction-to-computer-science", "description": "Harvard's legendary intro CS course covering algorithms, data structures, web development, and more. Free to audit.", "level": "Beginner"},
+        {"title": "CS50's Introduction to Programming with Python", "url": "https://www.edx.org/learn/python/harvard-university-cs50-s-introduction-to-programming-with-python", "description": "Harvard's Python-focused CS50 course covering functions, libraries, file I/O, and object-oriented programming. Free to audit.", "level": "Beginner"},
     ],
     "Data Science AI": [
-        {"title": "IBM Data Science Professional Certificate", "url": "https://www.coursera.org/professional-certificates/ibm-data-science", "description": "Comprehensive data science program covering Python, SQL, machine learning, and data visualization. Free to audit."},
-        {"title": "Machine Learning Specialization — Andrew Ng", "url": "https://www.coursera.org/specializations/machine-learning-introduction", "description": "Stanford and DeepLearning.AI's foundational ML course covering supervised, unsupervised, and reinforcement learning. Free to audit."},
-        {"title": "Deep Learning Specialization — Andrew Ng", "url": "https://www.coursera.org/specializations/deep-learning", "description": "Master deep learning, neural networks, and AI applications with hands-on projects. Free to audit."},
-        {"title": "Google Data Analytics Certificate", "url": "https://www.coursera.org/professional-certificates/google-data-analytics", "description": "Google's professional data analytics program covering analysis, visualization, and SQL. Free to audit."},
+        {"title": "CS50's Introduction to Artificial Intelligence with Python", "url": "https://www.edx.org/learn/artificial-intelligence/harvard-university-cs50-s-introduction-to-artificial-intelligence-with-python", "description": "Harvard's AI course covering search algorithms, machine learning, neural networks, and NLP using Python. Free to audit.", "level": "Intermediate"},
     ],
     "Web Development": [
-        {"title": "HTML, CSS, and Javascript for Web Developers", "url": "https://www.coursera.org/learn/html-css-javascript-for-web-developers", "description": "Johns Hopkins University course on frontend web development fundamentals. Free to audit."},
-        {"title": "Full-Stack Web Development with React", "url": "https://www.coursera.org/specializations/full-stack-react", "description": "Build complete web applications using React, Node.js, and MongoDB from Hong Kong University. Free to audit."},
-        {"title": "Meta Front-End Developer Certificate", "url": "https://www.coursera.org/professional-certificates/meta-front-end-developer", "description": "Meta's professional front-end development program covering React, HTML, CSS, and JavaScript. Free to audit."},
+        {"title": "CS50's Web Programming with Python and JavaScript", "url": "https://www.edx.org/learn/web-development/harvard-university-cs50-s-web-programming-with-python-and-javascript", "description": "Harvard's full-stack web development course covering Django, JavaScript, React, Git, and databases. Free to audit.", "level": "Intermediate"},
+        {"title": "IBM: Developing Front End Apps with React", "url": "https://www.edx.org/learn/react-native/ibm-developing-front-end-apps-with-react", "description": "IBM's hands-on React course covering components, state management, hooks, and building interactive web applications. Free to audit.", "level": "Intermediate"},
     ],
     "IT / Cybersecurity": [
-        {"title": "Google Cybersecurity Certificate", "url": "https://www.coursera.org/professional-certificates/google-cybersecurity", "description": "Google's professional cybersecurity program covering threat detection, network security, and incident response. Free to audit."},
-        {"title": "IBM Cybersecurity Analyst Certificate", "url": "https://www.coursera.org/professional-certificates/ibm-cybersecurity-analyst", "description": "IBM's cybersecurity analyst training covering security tools, threat intelligence, and compliance. Free to audit."},
-        {"title": "Introduction to Cyber Security Specialization", "url": "https://www.coursera.org/specializations/intro-cyber-security", "description": "NYU's foundational cybersecurity specialization covering cyber attacks, defenses, and cryptography. Free to audit."},
-    ],
-    "UX Design": [
-        {"title": "Google UX Design Certificate", "url": "https://www.coursera.org/professional-certificates/google-ux-design", "description": "Google's professional UX design certificate covering the full design process: empathize, define, ideate, prototype, and test. Free to audit."},
-        {"title": "UI / UX Design Specialization", "url": "https://www.coursera.org/specializations/ui-ux-design", "description": "CalArts specialization covering interface design, visual design, and UX research fundamentals. Free to audit."},
+        {"title": "CS50's Introduction to Cybersecurity", "url": "https://www.edx.org/learn/cybersecurity/harvard-university-cs50-s-introduction-to-cybersecurity", "description": "Harvard's accessible cybersecurity course for technical and non-technical learners covering threats, defense, and best practices. Free to audit.", "level": "Beginner"},
     ],
     "Project Management / Agile / Career Skills": [
-        {"title": "Google Project Management Certificate", "url": "https://www.coursera.org/professional-certificates/google-project-management", "description": "Google's professional project management program covering Agile, Scrum, and traditional PM methods. Free to audit."},
-        {"title": "Agile with Atlassian Jira", "url": "https://www.coursera.org/learn/agile-atlassian-jira", "description": "Practical Agile project management using Jira from Atlassian. Covers sprints, backlogs, and Kanban. Free to audit."},
-        {"title": "Engineering Project Management Specialization", "url": "https://www.coursera.org/specializations/engineering-project-management", "description": "Rice University's project management specialization covering scope, schedule, risk, and Agile methods. Free to audit."},
-        {"title": "Foundations of Digital Marketing and E-commerce", "url": "https://www.coursera.org/learn/foundations-of-digital-marketing-and-e-commerce", "description": "Google's digital marketing course covering SEO, web analytics, social media, and e-commerce fundamentals. Free to audit."},
     ],
 }
 
-def fetch_coursera(category: str) -> list:
-    log.info(f"[Coursera] Fetching: {category}")
+def fetch_edx(category: str) -> list:
+    log.info(f"[edX] Fetching: {category}")
     results = []
-    for item in COURSERA_CURATED.get(category, []):
+    for item in EDX_CURATED.get(category, []):
         clean = clean_description(item["title"], item["description"], category)
         results.append(build_resource(
             title=item["title"],
             url=item["url"],
             description=clean,
-            platform="Coursera",
+            platform="edX",
             category=category,
+            level=item.get("level", "All Levels"),
         ))
     return results
 
@@ -503,7 +493,6 @@ STANFORD_CURATED = {
     ],
     "Data Science AI": [
         {"title": "Machine Learning — CS229", "url": "https://see.stanford.edu/course/cs229", "description": "Stanford's renowned machine learning course covering supervised learning, unsupervised learning, neural networks, and AI foundations."},
-        {"title": "Machine Learning Specialization", "url": "https://www.coursera.org/specializations/machine-learning-introduction", "description": "Stanford and DeepLearning.AI's comprehensive ML specialization covering supervised, unsupervised, and reinforcement learning. Free to audit.", "platform_override": "Coursera", "level": "Intermediate"},
         {"title": "Statistical Learning with R", "url": "https://www.edx.org/learn/statistics/stanford-university-statistical-learning", "description": "Comprehensive introduction to statistical learning and data mining with R, based on the textbook ISLR. Free to audit.", "platform_override": "edX", "level": "Beginner"},
     ],
     "Web Development": [
@@ -511,11 +500,9 @@ STANFORD_CURATED = {
         {"title": "Generative AI: Technology, Business and Society", "url": "https://online.stanford.edu/courses/xfm100-generative-ai-technology-business-and-society-program-preview", "description": "Stanford's program exploring generative AI's impact on technology, business, and society. Covers practical applications and implications."},
     ],
     "IT / Cybersecurity": [
-        {"title": "Cryptography I", "url": "https://www.coursera.org/learn/crypto", "description": "Stanford's cryptography course covering symmetric and asymmetric encryption, message authentication, and security protocols. Free to audit.", "platform_override": "Coursera", "level": "All Levels"},
         {"title": "Introduction to Internet of Things", "url": "https://online.stanford.edu/courses/xee100-introduction-internet-things", "description": "Stanford's beginner-friendly introduction to IoT devices, sensors, connectivity, and embedded systems design. Free.", "level": "Beginner"},
     ],
     "Project Management / Agile / Career Skills": [
-        {"title": "Organizational Analysis — Stanford", "url": "https://www.coursera.org/learn/organizational-analysis", "description": "Stanford course on organizational design and management practices applicable to tech project leadership. Free to audit on Coursera."},
         {"title": "Generative AI: Technology, Business and Society", "url": "https://online.stanford.edu/courses/xfm100-generative-ai-technology-business-and-society-program-preview", "description": "Stanford's program on managing AI initiatives across technology and business contexts, covering strategy and governance."},
     ],
 }
@@ -593,31 +580,28 @@ def fetch_ibm(category: str) -> list:
 
 
 # ─────────────────────────────────────────────
+# ─────────────────────────────────────────────
 # SOURCE 9 — GOOGLE (curated free courses)
-# JS-rendered sites; using verified static course URLs
+# Google Skillshop + Google ML Education — all completely free
 # ─────────────────────────────────────────────
 GOOGLE_CURATED = {
-    "Programming & Computer Science": [
-        {"title": "Crash Course on Python", "url": "https://www.coursera.org/learn/python-crash-course", "description": "Google's beginner Python course covering variables, data structures, loops, functions, and automation scripting. Free to audit on Coursera."},
-    ],
     "Data Science AI": [
-        {"title": "Google Data Analytics Certificate", "url": "https://grow.google/certificates/data-analytics/", "description": "Google's professional data analytics program covering spreadsheets, SQL, Tableau, and R for data-driven decision making."},
-        {"title": "Google Advanced Data Analytics Certificate", "url": "https://grow.google/certificates/advanced-data-analytics/", "description": "Advanced Google program covering Python, statistics, regression, machine learning, and data storytelling for analysts."},
-        {"title": "Google AI Essentials", "url": "https://grow.google/certificates/ai-essentials/", "description": "Google's free foundational AI course covering how to use AI tools responsibly and effectively in the workplace."},
-    ],
-    "Web Development": [
-        {"title": "Google UX Design Certificate", "url": "https://grow.google/certificates/ux-design/", "description": "Google's UX design program covering user research, wireframing, prototyping, and designing accessible web experiences."},
-    ],
-    "IT / Cybersecurity": [
-        {"title": "Google Cybersecurity Certificate", "url": "https://grow.google/certificates/cybersecurity/", "description": "Google's professional cybersecurity program covering threat detection, network security, incident response, and Python automation."},
-        {"title": "Google IT Support Certificate", "url": "https://grow.google/certificates/it-support/", "description": "Google's foundational IT program covering networking, operating systems, security, and troubleshooting. Earns a Coursera certificate."},
-    ],
-    "UX Design": [
-        {"title": "Google UX Design Certificate", "url": "https://grow.google/certificates/ux-design/", "description": "Google's career certificate covering UX foundations, wireframing, prototyping, and user research. Free to audit on Coursera."},
+        {"title": "Google Introduction to Machine Learning", "url": "https://developers.google.com/machine-learning/intro-to-ml", "description": "Google's beginner introduction to machine learning concepts, supervised learning, and how ML models are trained. Completely free.", "level": "Beginner"},
+        {"title": "Machine Learning Problem Framing", "url": "https://developers.google.com/machine-learning/problem-framing", "description": "Google's guide to framing real-world problems as machine learning tasks, including defining goals and evaluating feasibility.", "level": "All Levels"},
+        {"title": "Google Machine Learning Crash Course", "url": "https://developers.google.com/machine-learning/crash-course", "description": "Google's fast-paced, practical ML course covering linear regression, neural networks, training, and evaluation with TensorFlow. Completely free.", "level": "Intermediate"},
+        {"title": "Managing Machine Learning Projects", "url": "https://developers.google.com/machine-learning/managing-ml-projects", "description": "Google's guide to planning, scoping, and managing machine learning projects from problem definition to deployment.", "level": "All Levels"},
+        {"title": "Decision Forests", "url": "https://developers.google.com/machine-learning/decision-forests", "description": "Google's advanced course on decision tree algorithms, random forests, and gradient boosted trees for classification and regression.", "level": "Advanced"},
+        {"title": "Recommendation Systems", "url": "https://developers.google.com/machine-learning/recommendation", "description": "Google's advanced guide to building recommendation systems including collaborative filtering, content-based, and deep neural network approaches.", "level": "Advanced"},
+        {"title": "Clustering", "url": "https://developers.google.com/machine-learning/clustering", "description": "Google's advanced course on unsupervised clustering algorithms including k-means, hierarchical clustering, and quality metrics.", "level": "Advanced"},
+        {"title": "Generative Adversarial Networks (GANs)", "url": "https://developers.google.com/machine-learning/gan", "description": "Google's advanced course on GANs covering generator and discriminator networks, training challenges, and real-world applications.", "level": "Advanced"},
     ],
     "Project Management / Agile / Career Skills": [
-        {"title": "Google Project Management Certificate", "url": "https://grow.google/certificates/project-management/", "description": "Google's professional PM program covering Agile, Scrum, project planning, risk management, and stakeholder communication."},
-        {"title": "Google Digital Marketing & E-commerce Certificate", "url": "https://grow.google/certificates/digital-marketing-ecommerce/", "description": "Google's program covering campaign management, analytics, and project execution for digital marketing initiatives."},
+        {"title": "Get Started Using Google Analytics", "url": "https://skillshop.docebosaas.com/learn/courses/8108/get-started-using-google-analytics", "description": "Google Skillshop's beginner course on setting up and navigating Google Analytics 4, understanding properties, and basic reporting.", "level": "Beginner"},
+        {"title": "Manage GA Data and Learn to Read Reports", "url": "https://skillshop.docebosaas.com/learn/courses/7538/Use%20Google%20Analytics%20for%20Your%20Business", "description": "Google Skillshop course on using Google Analytics for business decisions, reading key reports, and understanding audience data.", "level": "Beginner"},
+        {"title": "Dive Deeper Into GA4 Data and Reports", "url": "https://skillshop.docebosaas.com/learn/courses/18104/dive-deeper-into-ga4-data-and-reports", "description": "Intermediate Google Analytics 4 course covering advanced reports, explorations, custom dimensions, and deeper data analysis.", "level": "Intermediate"},
+        {"title": "Use GA with Other Tools and Data Sources", "url": "https://skillshop.docebosaas.com/learn/courses/18105/go-further-with-advanced-features-in-google-analytics", "description": "Advanced Google Analytics course covering integrations with Google Ads, BigQuery, and other data sources for cross-platform analysis.", "level": "Intermediate"},
+        {"title": "Google Analytics Certification", "url": "https://skillshop.docebosaas.com/learn/courses/14810/google-analytics-certification", "description": "Google's official GA4 certification course and exam. Earn a free, shareable Google Analytics certification credential.", "level": "Intermediate"},
+        {"title": "AI-Powered Performance Ads Certification", "url": "https://skillshop.docebosaas.com/learn/courses/8510/ai-powered-performance-ads-certification", "description": "Google Skillshop's certification course on using AI-powered tools in Google Ads campaigns for performance marketing.", "level": "Beginner"},
     ],
 }
 
@@ -632,6 +616,7 @@ def fetch_google(category: str) -> list:
             description=clean,
             platform="Google",
             category=category,
+            level=item.get("level", "All Levels"),
         ))
     return results
 
@@ -725,18 +710,95 @@ def fetch_khan(category: str) -> list:
     return results
 
 
+# ─────────────────────────────────────────────
+# SOURCE 12 — SAYLOR ACADEMY (curated free courses with free certificates)
+# All courses 100% free with free completion certificates
+# ─────────────────────────────────────────────
+SAYLOR_CURATED = {
+    "Programming & Computer Science": [
+        {"title": "CS101: Introduction to Computer Science I", "url": "https://learn.saylor.org/course/view.php?id=1146", "description": "Saylor Academy's introduction to programming fundamentals covering algorithms, problem solving, and core CS concepts. Free certificate.", "level": "Beginner"},
+        {"title": "CS102: Introduction to Computer Science II", "url": "https://learn.saylor.org/course/view.php?id=64", "description": "Continuation of CS fundamentals covering object-oriented programming, data structures, and algorithm analysis. Free certificate.", "level": "Intermediate"},
+        {"title": "CS105: Introduction to Python", "url": "https://learn.saylor.org/course/view.php?id=439", "description": "Saylor Academy's beginner Python programming course covering syntax, data types, control flow, and functions. Free certificate.", "level": "Beginner"},
+        {"title": "CS107: C++ Programming", "url": "https://learn.saylor.org/course/view.php?id=65", "description": "Introduction to C++ programming covering variables, loops, functions, pointers, and object-oriented concepts. Free certificate.", "level": "Beginner"},
+        {"title": "CS120: Bitcoin for Developers I", "url": "https://learn.saylor.org/course/view.php?id=500", "description": "Introduction to Bitcoin and blockchain development covering cryptographic foundations, transactions, and protocol fundamentals. Free certificate.", "level": "Beginner"},
+        {"title": "CS201: Elementary Data Structures", "url": "https://learn.saylor.org/course/view.php?id=1307", "description": "Foundational data structures including arrays, linked lists, stacks, queues, trees, and basic algorithm complexity. Free certificate.", "level": "Beginner"},
+        {"title": "CS202: Discrete Structures", "url": "https://learn.saylor.org/course/view.php?id=67", "description": "Mathematical foundations of computer science covering logic, sets, combinatorics, graphs, and proofs. Free certificate.", "level": "Beginner"},
+        {"title": "CS301: Computer Architecture", "url": "https://learn.saylor.org/course/view.php?id=71", "description": "Deep dive into how computers work covering CPU design, memory hierarchy, instruction sets, and performance optimization. Free certificate.", "level": "Intermediate"},
+        {"title": "PRDV401: Introduction to JavaScript I", "url": "https://learn.saylor.org/course/view.php?id=502", "description": "Beginner JavaScript course covering variables, functions, DOM manipulation, and basic web interactivity. Free certificate.", "level": "Beginner"},
+        {"title": "PRDV402: Introduction to JavaScript II", "url": "https://learn.saylor.org/course/view.php?id=750", "description": "Continuation of JavaScript covering arrays, objects, error handling, and more advanced programming patterns. Free certificate.", "level": "Beginner"},
+        {"title": "PRDV420: Introduction to R Programming", "url": "https://learn.saylor.org/course/view.php?id=671", "description": "Introduction to R programming for data analysis covering syntax, data frames, visualization, and statistical computing. Free certificate.", "level": "Intermediate"},
+        {"title": "PHIL102: Introduction to Critical Thinking and Logic", "url": "https://learn.saylor.org/course/view.php?id=1255", "description": "Foundational course on logical reasoning, argument analysis, fallacies, and critical thinking skills essential for CS and beyond. Free certificate.", "level": "Beginner"},
+    ],
+    "Data Science AI": [
+        {"title": "CS205: Building with Artificial Intelligence", "url": "https://learn.saylor.org/course/view.php?id=777", "description": "Intermediate course on building AI applications covering machine learning workflows, model selection, and practical AI implementation. Free certificate.", "level": "Intermediate"},
+        {"title": "CS207: Fundamentals of Machine Learning", "url": "https://learn.saylor.org/course/view.php?id=1267", "description": "Beginner introduction to machine learning covering supervised and unsupervised learning, model evaluation, and core algorithms. Free certificate.", "level": "Beginner"},
+        {"title": "CS250: Python for Data Science", "url": "https://learn.saylor.org/course/view.php?id=504", "description": "Intermediate course on using Python for data science covering NumPy, Pandas, data cleaning, and visualization. Free certificate.", "level": "Intermediate"},
+        {"title": "BUS204: Business Statistics", "url": "https://learn.saylor.org/course/view.php?id=1247", "description": "Introduction to business statistics covering descriptive statistics, probability, hypothesis testing, and regression analysis. Free certificate.", "level": "Beginner"},
+        {"title": "BUS250: Introduction to Business Intelligence and Analytics", "url": "https://learn.saylor.org/course/view.php?id=869", "description": "Beginner course covering BI tools, data warehousing, dashboards, and using analytics for business decision making. Free certificate.", "level": "Beginner"},
+        {"title": "BUS607: Data-Driven Decision-Making", "url": "https://learn.saylor.org/course/view.php?id=737", "description": "Advanced course on applying data analytics to strategic business decisions, including frameworks and case studies. Free certificate.", "level": "Advanced"},
+        {"title": "BUS610: Advanced Business Intelligence and Analytics", "url": "https://learn.saylor.org/course/view.php?id=741", "description": "Advanced BI course covering data mining, predictive analytics, and enterprise-level analytics strategy. Free certificate.", "level": "Advanced"},
+        {"title": "BUS611: Data Management", "url": "https://learn.saylor.org/course/view.php?id=725", "description": "Advanced course on data governance, database management, data quality, and enterprise data strategy. Free certificate.", "level": "Advanced"},
+        {"title": "BUS612: Data-Driven Communications", "url": "https://learn.saylor.org/course/view.php?id=759", "description": "Advanced course on communicating data insights effectively through storytelling, visualization, and presentation strategies. Free certificate.", "level": "Advanced"},
+        {"title": "PRDV200: Communicating with Data", "url": "https://learn.saylor.org/course/view.php?id=868", "description": "Beginner course on presenting data clearly and effectively using charts, visuals, and data storytelling techniques. Free certificate.", "level": "Beginner"},
+        {"title": "PRDV430: AI for Business Applications", "url": "https://learn.saylor.org/course/view.php?id=1254", "description": "Intermediate course on applying AI tools to business workflows, automation, and decision support. Free certificate.", "level": "Intermediate"},
+        {"title": "PRDV433: Enhancing Spreadsheets with Generative AI", "url": "https://learn.saylor.org/course/view.php?id=1312", "description": "Beginner course on using generative AI tools to enhance spreadsheet productivity, automate tasks, and analyze data. Free certificate.", "level": "Beginner"},
+    ],
+    "IT / Cybersecurity": [
+        {"title": "CS260: Introduction to Cryptography and Network Security", "url": "https://learn.saylor.org/course/view.php?id=805", "description": "Intermediate course covering cryptographic algorithms, network security protocols, authentication, and practical security applications. Free certificate.", "level": "Intermediate"},
+        {"title": "CS406: Information Security", "url": "https://learn.saylor.org/course/view.php?id=453", "description": "Intermediate information security course covering risk management, access control, security policies, and defensive strategies. Free certificate.", "level": "Intermediate"},
+        {"title": "BUS206: Management Information Systems", "url": "https://learn.saylor.org/course/view.php?id=41", "description": "Introduction to MIS covering how organizations use information systems, IT infrastructure, and technology strategy. Free certificate.", "level": "Beginner"},
+        {"title": "BUS303: Strategic Information Technology", "url": "https://learn.saylor.org/course/view.php?id=1270", "description": "Intermediate course on aligning IT strategy with business goals, enterprise architecture, and digital transformation planning. Free certificate.", "level": "Intermediate"},
+        {"title": "BUS642: Applications of Management Information Systems", "url": "https://learn.saylor.org/course/view.php?id=1283", "description": "Advanced course on applying MIS in real organizations covering ERP, CRM, business intelligence, and emerging tech. Free certificate.", "level": "Advanced"},
+        {"title": "PRDV201: Information Literacy", "url": "https://learn.saylor.org/course/view.php?id=893", "description": "Beginner course on finding, evaluating, and using digital information responsibly — essential skills for any tech professional. Free certificate.", "level": "Beginner"},
+    ],
+    "Project Management / Agile / Career Skills": [
+        {"title": "BUS402: Introduction to Project Management", "url": "https://learn.saylor.org/course/view.php?id=1147", "description": "Intermediate introduction to project management covering scope, schedule, cost, risk, and stakeholder management fundamentals. Free certificate.", "level": "Intermediate"},
+        {"title": "BUS604: Innovation and Sustainability", "url": "https://learn.saylor.org/course/view.php?id=688", "description": "Advanced course on driving innovation within organizations while maintaining sustainable business practices. Free certificate.", "level": "Advanced"},
+        {"title": "BUS605: Strategic Project Management", "url": "https://learn.saylor.org/course/view.php?id=736", "description": "Advanced project management course covering portfolio management, program governance, and strategic alignment. Free certificate.", "level": "Advanced"},
+        {"title": "BUS632: Digital Marketing and Advertising", "url": "https://learn.saylor.org/course/view.php?id=1266", "description": "Advanced course on digital marketing strategies, advertising platforms, SEO, and campaign management. Free certificate.", "level": "Advanced"},
+        {"title": "BUS653: Innovation and Entrepreneurship Launch", "url": "https://learn.saylor.org/course/view.php?id=1301", "description": "Advanced course on launching new ventures covering ideation, validation, business modeling, and entrepreneurial strategy. Free certificate.", "level": "Advanced"},
+        {"title": "BUS654: Entrepreneurship Seminar", "url": "https://learn.saylor.org/course/view.php?id=1305", "description": "Advanced entrepreneurship seminar covering funding, scaling, legal considerations, and building sustainable businesses. Free certificate.", "level": "Advanced"},
+        {"title": "PRDV224: Leadership and Teams", "url": "https://learn.saylor.org/course/view.php?id=1286", "description": "Beginner course on leadership fundamentals, team dynamics, communication, and conflict resolution for professionals. Free certificate.", "level": "Beginner"},
+        {"title": "PRDV227: Introduction to Business Planning and Strategy", "url": "https://learn.saylor.org/course/view.php?id=1298", "description": "Beginner course on creating business plans, defining strategy, and understanding market analysis and competitive positioning. Free certificate.", "level": "Beginner"},
+        {"title": "PRDV003: Word Processing", "url": "https://learn.saylor.org/course/view.php?id=890", "description": "Beginner course on professional word processing skills including document formatting, templates, and advanced features. Free certificate.", "level": "Beginner"},
+        {"title": "PRDV004: Spreadsheets", "url": "https://learn.saylor.org/course/view.php?id=1263", "description": "Beginner spreadsheet course covering formulas, functions, charts, and organizing data for business use. Free certificate.", "level": "Beginner"},
+        {"title": "PRDV006: Spreadsheets II - Formatting and Functions", "url": "https://learn.saylor.org/course/view.php?id=876", "description": "Beginner course expanding spreadsheet skills with advanced formatting, logical functions, and data validation. Free certificate.", "level": "Beginner"},
+        {"title": "PRDV007: Spreadsheets III - Presenting Data", "url": "https://learn.saylor.org/course/view.php?id=877", "description": "Beginner course on creating professional charts, pivot tables, and data presentations in spreadsheets. Free certificate.", "level": "Beginner"},
+        {"title": "PRDV002: Professional Writing", "url": "https://learn.saylor.org/course/view.php?id=729", "description": "Beginner course on professional business writing including emails, reports, proposals, and clear workplace communication. Free certificate.", "level": "Beginner"},
+        {"title": "PRDV102: Resume Writing", "url": "https://learn.saylor.org/course/view.php?id=864", "description": "Beginner course on crafting effective resumes, tailoring applications, and presenting skills to employers. Free certificate.", "level": "Beginner"},
+        {"title": "PRDV103: Interviewing Skills", "url": "https://learn.saylor.org/course/view.php?id=873", "description": "Beginner course on interview preparation, answering common questions, and presenting yourself confidently to employers. Free certificate.", "level": "Beginner"},
+    ],
+}
+
+def fetch_saylor(category: str) -> list:
+    log.info(f"[Saylor Academy] Fetching: {category}")
+    results = []
+    for item in SAYLOR_CURATED.get(category, []):
+        clean = clean_description(item["title"], item["description"], category)
+        results.append(build_resource(
+            title=item["title"],
+            url=item["url"],
+            description=clean,
+            platform="Saylor Academy",
+            category=category,
+            level=item.get("level", "All Levels"),
+        ))
+    return results
+
+
 FETCHERS = [
     fetch_youtube,
     fetch_mit_ocw,
     fetch_freecodecamp,
     fetch_microsoft_learn,
     fetch_aws,
-    fetch_coursera,
+    fetch_edx,
     fetch_stanford,
     fetch_ibm,
     fetch_google,
     fetch_helsinki,
     fetch_khan,
+    fetch_saylor,
 ]
 
 def run_scraper():

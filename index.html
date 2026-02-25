@@ -408,6 +408,28 @@
       border: 1px solid rgba(16,185,129,0.2);
     }
 
+    .audit-badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      background: rgba(245,158,11,0.1);
+      color: #f59e0b;
+      border: 1px solid rgba(245,158,11,0.2);
+    }
+
+    .cert-badge {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.6rem;
+      letter-spacing: 0.1em;
+      padding: 0.25rem 0.6rem;
+      border-radius: 4px;
+      background: rgba(139,92,246,0.1);
+      color: #8b5cf6;
+      border: 1px solid rgba(139,92,246,0.2);
+    }
+
     .card-title {
       font-size: 0.95rem;
       font-weight: 600;
@@ -852,7 +874,7 @@
 
   <!-- MAIN -->
   <div class="audit-banner" id="auditBanner" style="display:none;">
-    &#9432; &nbsp;Courses marked <strong>FREE</strong> on <strong>Coursera</strong> and <strong>edX</strong> are free to <strong>audit</strong>. A paid upgrade may be required to earn a certificate.
+    &#9432; &nbsp;Courses on <strong>edX</strong> are free to <strong>audit</strong> for a limited time. A paid upgrade is required to earn a certificate or access graded assignments.
   </div>
   <div class="ibm-banner" id="ibmBanner">
     &#9432; &nbsp;<strong>IBM SkillsBuild</strong> courses require a <strong>free account</strong> to access individual course content. <a href="https://skillsbuild.org/sign-up" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;">Create your free account here.</a>
@@ -886,7 +908,7 @@
 
       <p><strong>TechLearn Resources</strong> is a free, curated directory of high-quality tech education, built for learners looking for a budget-friendly way to grow their skills.</p>
 
-      <p>Whether you're just starting out or leveling up, TechLearn brings together the best free courses from platforms like Coursera, MIT OpenCourseWare, Google, IBM SkillsBuild, Khan Academy, and more; all in one searchable place.</p>
+      <p>Whether you're just starting out or leveling up, TechLearn brings together the best free courses from platforms like MIT OpenCourseWare, edX, IBM SkillsBuild, Khan Academy, AWS Skill Builder, and more; all in one searchable place.</p>
 
       <hr class="about-divider">
 
@@ -1088,6 +1110,8 @@
           <div class="card-top">
             <span class="platform-badge">${escHtml(r.platform)}</span>
             <span class="free-badge">FREE</span>
+            ${r.platform === 'edX' ? '<span class="audit-badge">AUDIT ONLY</span>' : ''}
+            ${r.platform === 'Saylor Academy' || r.title === 'AI-Powered Performance Ads Certification' || r.title === 'Google Analytics Certification' || r.title === 'Foundational C# with Microsoft' ? '<span class="cert-badge">FREE CERT</span>' : ''}
           </div>
           <div class="card-title">${highlight(r.title, searchTerm)}</div>
           <div class="card-desc">${highlight(r.description, searchTerm)}</div>
@@ -1127,7 +1151,7 @@
       activePlatform = e.target.value;
       e.target.classList.toggle('active-filter', activePlatform !== 'All');
       document.getElementById('auditBanner').style.display =
-        (['Coursera','edX'].includes(activePlatform)) ? 'block' : 'none';
+        (activePlatform === 'edX') ? 'block' : 'none';
       document.getElementById('ibmBanner').style.display =
         (activePlatform === 'IBM SkillsBuild') ? 'block' : 'none';
       renderAll();
