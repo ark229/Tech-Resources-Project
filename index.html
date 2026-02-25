@@ -883,6 +883,9 @@
   <div class="audit-banner" id="auditBanner" style="display:none;">
     &#9432; &nbsp;Courses on <strong>edX</strong> are free to <strong>audit</strong> for a limited time. A paid upgrade is required to earn a certificate or access graded assignments.
   </div>
+  <div class="audit-banner" id="udemyBanner" style="display:none;">
+    &#9432; &nbsp;Courses on <strong>Udemy</strong> listed here are <strong>permanently free</strong> with no expiration. However, free Udemy courses do <strong>not</strong> include a certificate of completion.
+  </div>
   <div class="ibm-banner" id="ibmBanner">
     &#9432; &nbsp;<strong>IBM SkillsBuild</strong> courses require a <strong>free account</strong> to access individual course content. <a href="https://skillsbuild.org/sign-up" target="_blank" rel="noopener" style="color:var(--accent);text-decoration:underline;">Create your free account here.</a>
   </div>
@@ -1159,6 +1162,8 @@
       e.target.classList.toggle('active-filter', activePlatform !== 'All');
       document.getElementById('auditBanner').style.display =
         (activePlatform === 'edX') ? 'block' : 'none';
+      document.getElementById('udemyBanner').style.display =
+        (activePlatform === 'Udemy') ? 'block' : 'none';
       document.getElementById('ibmBanner').style.display =
         (activePlatform === 'IBM SkillsBuild') ? 'block' : 'none';
       renderAll();

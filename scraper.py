@@ -320,6 +320,15 @@ MS_SUBJECT_MAP = {
     "Project Management / Agile / Career Skills":  "business-applications",
 }
 
+
+# Curated Microsoft Learn modules guaranteed to appear
+MS_CURATED = {
+    "Data Science AI": [
+        {"title": "Get Started with SQL Server 2025", "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-sql-server-2022/", "description": "Microsoft Learn's beginner introduction to SQL Server 2025 covering installation, tools, databases, and basic querying. Completely free.", "level": "Beginner"},
+        {"title": "Introduction to Transact-SQL", "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-transact-sql/", "description": "Microsoft Learn's beginner guide to Transact-SQL covering SELECT statements, filtering, sorting, and working with SQL Server data. Completely free.", "level": "Beginner"},
+    ],
+}
+
 def fetch_microsoft_learn(category: str) -> list:
     log.info(f"[Microsoft Learn] Fetching: {category}")
     results  = []
@@ -372,6 +381,17 @@ def fetch_microsoft_learn(category: str) -> list:
                 break
     except Exception as e:
         log.error(f"[Microsoft Learn] Error for '{category}': {e}")
+    # Append curated courses
+    for item in MS_CURATED.get(category, []):
+        clean = clean_description(item["title"], item["description"], category)
+        results.append(build_resource(
+            title=item["title"],
+            url=item["url"],
+            description=clean,
+            platform="Microsoft Learn",
+            category=category,
+            level=item.get("level", "All Levels"),
+        ))
     return results
 
 
@@ -786,6 +806,53 @@ def fetch_saylor(category: str) -> list:
     return results
 
 
+# ─────────────────────────────────────────────
+# SOURCE 13 — UDEMY (curated permanently free courses)
+# All courses are permanently free — no certificate on completion
+# ─────────────────────────────────────────────
+UDEMY_CURATED = {
+    "Programming & Computer Science": [
+        {"title": "Microsoft SQL Crash Course for Absolute Beginners", "url": "https://www.udemy.com/course/complete-microsoft-sql-server-beginner-expert/", "description": "Beginner crash course on Microsoft SQL Server covering database fundamentals, queries, joins, and data manipulation. Free on Udemy.", "level": "Beginner"},
+        {"title": "Build a Quiz App with HTML, CSS, and JavaScript", "url": "https://www.udemy.com/course/build-a-quiz-app-with-html-css-and-javascript/", "description": "Hands-on beginner project course building a fully functional quiz app using vanilla HTML, CSS, and JavaScript. Free on Udemy.", "level": "Beginner"},
+        {"title": "Introduction to Databases and SQL Querying", "url": "https://www.udemy.com/course/introduction-to-databases-and-sql-querying/", "description": "Beginner introduction to relational databases and SQL covering SELECT, WHERE, joins, and basic data retrieval. Free on Udemy.", "level": "Beginner"},
+        {"title": "Get to Know HTML: Learn HTML Basics", "url": "https://www.udemy.com/course/html-online-course/", "description": "Beginner HTML course covering tags, structure, forms, tables, and building your first web pages. Free on Udemy.", "level": "Beginner"},
+        {"title": "Code Your First Game: Arcade Classic in JavaScript on Canvas", "url": "https://www.udemy.com/course/code-your-first-game/", "description": "Build a classic arcade game from scratch using JavaScript and the HTML5 Canvas API. Great first project for beginners. Free on Udemy.", "level": "Beginner"},
+        {"title": "Programming 101", "url": "https://www.udemy.com/course/programming-101/", "description": "Beginner introduction to programming fundamentals covering variables, logic, loops, functions, and problem-solving concepts. Free on Udemy.", "level": "Beginner"},
+        {"title": "Git & GitHub Crash Course: Create a Repository From Scratch", "url": "https://www.udemy.com/course/git-and-github-crash-course-creating-a-repository-from-scratch/", "description": "Beginner crash course on Git version control and GitHub covering commits, branches, merging, and remote repositories. Free on Udemy.", "level": "Beginner"},
+    ],
+    "Web Development": [
+        {"title": "CSS Flexbox - Mastering the Basics", "url": "https://www.udemy.com/course/css-flexbox-mastering-the-basics/", "description": "Beginner CSS Flexbox course covering flex containers, alignment, responsive layouts, and practical design patterns. Free on Udemy.", "level": "Beginner"},
+        {"title": "How To Build A Website Using WordPress", "url": "https://www.udemy.com/course/how-to-build-a-website-using-wordpress/", "description": "Beginner course on building professional websites with WordPress covering themes, plugins, pages, and customization. Free on Udemy.", "level": "Beginner"},
+    ],
+    "IT / Cybersecurity": [
+        {"title": "Amazon Web Services (AWS) - Zero to Hero", "url": "https://www.udemy.com/course/amazon-web-services-aws-v/", "description": "Beginner-friendly AWS overview covering core cloud services, EC2, S3, IAM, and getting started with Amazon Web Services. Free on Udemy.", "level": "All Levels"},
+    ],
+    "UX Design": [
+        {"title": "How to Design & Prototype in Adobe XD", "url": "https://www.udemy.com/course/adobe-xd-experience-design/", "description": "Hands-on Adobe XD course covering UI design, wireframing, prototyping, and creating interactive user experience mockups. Free on Udemy.", "level": "All Levels"},
+        {"title": "Canva Essentials with Ronny and Diana", "url": "https://www.udemy.com/course/canva-free-course/", "description": "Beginner Canva course covering design fundamentals, templates, branding, social media graphics, and presentations. Free on Udemy.", "level": "All Levels"},
+    ],
+    "Project Management / Agile / Career Skills": [
+        {"title": "Presentation Skills Secrets: Delivering the Talk of Your Life", "url": "https://www.udemy.com/course/presentation-skills-secrets/", "description": "Practical course on delivering compelling presentations covering structure, storytelling, confidence, and audience engagement. Free on Udemy.", "level": "All Levels"},
+        {"title": "How to Use SMART Goals: Achieve More in Less Time", "url": "https://www.udemy.com/course/goal-setting/", "description": "Beginner course on setting and achieving SMART goals with frameworks for productivity, planning, and personal effectiveness. Free on Udemy.", "level": "All Levels"},
+    ],
+}
+
+def fetch_udemy(category: str) -> list:
+    log.info(f"[Udemy] Fetching: {category}")
+    results = []
+    for item in UDEMY_CURATED.get(category, []):
+        clean = clean_description(item["title"], item["description"], category)
+        results.append(build_resource(
+            title=item["title"],
+            url=item["url"],
+            description=clean,
+            platform="Udemy",
+            category=category,
+            level=item.get("level", "All Levels"),
+        ))
+    return results
+
+
 FETCHERS = [
     fetch_youtube,
     fetch_mit_ocw,
@@ -799,6 +866,7 @@ FETCHERS = [
     fetch_helsinki,
     fetch_khan,
     fetch_saylor,
+    fetch_udemy,
 ]
 
 def run_scraper():
