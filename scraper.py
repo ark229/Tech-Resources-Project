@@ -257,7 +257,7 @@ def fetch_mit_ocw(category: str) -> list:
 # ─────────────────────────────────────────────
 FCC_CURATED = {
     "Programming & Computer Science": [
-        {"title": "Scientific Computing with Python", "url": "https://www.freecodecamp.org/learn/python-v9/", "description": "freeCodeCamp's free Python certification covering variables, functions, data structures, OOP, and algorithms through project-based learning."},
+        {"title": "Python Certification", "url": "https://www.freecodecamp.org/learn/python-v9/", "description": "freeCodeCamp's free Python certification covering variables, functions, data structures, OOP, and algorithms through project-based learning."},
         {"title": "Relational Databases", "url": "https://www.freecodecamp.org/learn/relational-databases-v9/", "description": "Learn PostgreSQL, Bash scripting, and relational database design through interactive projects in a Linux environment."},
     ],
     "Data Science AI": [
@@ -266,10 +266,10 @@ FCC_CURATED = {
     ],
     "Web Development": [
         {"title": "Responsive Web Design", "url": "https://www.freecodecamp.org/learn/responsive-web-design-v9/", "description": "freeCodeCamp's free web design certification covering HTML, CSS, Flexbox, Grid, and accessibility best practices."},
-        {"title": "JavaScript Algorithms and Data Structures", "url": "https://www.freecodecamp.org/learn/javascript-v9/", "description": "freeCodeCamp's free JavaScript certification covering ES6, OOP, functional programming, and algorithm challenges."},
+        {"title": "JavaScript Certification", "url": "https://www.freecodecamp.org/learn/javascript-v9/", "description": "freeCodeCamp's free JavaScript certification covering ES6, OOP, functional programming, and algorithm challenges."},
         {"title": "Front End Development Libraries", "url": "https://www.freecodecamp.org/learn/front-end-development-libraries-v9/", "description": "Learn Bootstrap, jQuery, Sass, React, and Redux through freeCodeCamp's free front-end certification program."},
         {"title": "Back End Development and APIs", "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis-v9/", "description": "freeCodeCamp's free back-end certification covering Node.js, Express, MongoDB, and building REST APIs."},
-        {"title": "Full Stack Developer", "url": "https://www.freecodecamp.org/learn/full-stack-developer-v9/", "description": "freeCodeCamp's comprehensive full-stack certification covering front-end, back-end, databases, and deployment."},
+        {"title": "Certified Full-Stack Developer", "url": "https://www.freecodecamp.org/learn/full-stack-developer-v9/", "description": "freeCodeCamp's comprehensive full-stack certification covering front-end, back-end, databases, and deployment."},
     ],
     "IT / Cybersecurity": [
         {"title": "Information Security", "url": "https://www.freecodecamp.org/learn/information-security/", "description": "freeCodeCamp's free information security certification covering HelmetJS, penetration testing, and secure application development."},
@@ -280,6 +280,7 @@ FCC_CURATED = {
     ],
     "Project Management / Agile / Career Skills": [
         {"title": "Coding Interview Prep", "url": "https://www.freecodecamp.org/learn/coding-interview-prep/", "description": "freeCodeCamp's comprehensive interview preparation covering algorithms, data structures, and project-based challenges."},
+        {"title": "Rosetta Code", "url": "https://www.freecodecamp.org/learn/rosetta-code/", "description": "freeCodeCamp's collection of classic programming challenges from the Rosetta Code project, solving the same problems in multiple ways. Intermediate level.", "level": "Intermediate"},
         {"title": "The Odin Project", "url": "https://www.freecodecamp.org/learn/the-odin-project/", "description": "Full-stack web development curriculum covering project planning, Git workflow, and agile development practices."},
     ],
 }

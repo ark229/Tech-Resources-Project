@@ -1121,7 +1121,7 @@
             <span class="platform-badge">${escHtml(r.platform)}</span>
             <span class="free-badge">FREE</span>
             ${r.platform === 'edX' ? '<span class="audit-badge">AUDIT ONLY</span>' : ''}
-            ${r.platform === 'Saylor Academy' || r.title === 'AI-Powered Performance Ads Certification' || r.title === 'Google Analytics Certification' || r.title === 'Foundational C# with Microsoft' ? '<span class="cert-badge">FREE CERT</span>' : ''}
+            ${(r.platform === 'Saylor Academy' || r.title === 'AI-Powered Performance Ads Certification' || r.title === 'Google Analytics Certification' || r.title === 'Foundational C# with Microsoft' || r.title === 'Python Certification' || r.title === 'Relational Databases' || r.title === 'Responsive Web Design' || r.title === 'JavaScript Certification' || r.title === 'Front End Development Libraries' || r.title === 'Back End Development and APIs' || r.title === 'Certified Full-Stack Developer') ? '<span class="cert-badge">FREE CERT</span>' : ''}
           </div>
           <div class="card-title">${highlight(r.title, searchTerm)}</div>
           <div class="card-desc">${highlight(r.description, searchTerm)}</div>
