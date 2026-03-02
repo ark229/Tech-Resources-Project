@@ -854,6 +854,48 @@ def fetch_udemy(category: str) -> list:
     return results
 
 
+# ─────────────────────────────────────────────
+# SOURCE 14 — ANTHROPIC (curated free courses with free certificates)
+# All courses free — certificate of completion included
+# ─────────────────────────────────────────────
+ANTHROPIC_CURATED = {
+    "Programming & Computer Science": [
+        {"title": "Building with the Claude API", "url": "https://anthropic.skilljar.com/claude-with-the-anthropic-api", "description": "Anthropic's comprehensive course covering the full spectrum of working with Claude models via the API, including prompting, tool use, and advanced integrations. Free certificate.", "level": "Intermediate"},
+        {"title": "Introduction to Model Context Protocol", "url": "https://anthropic.skilljar.com/introduction-to-model-context-protocol", "description": "Learn to build MCP servers and clients from scratch using Python. Covers tools, resources, and prompts to connect Claude with external services. Free certificate.", "level": "Intermediate"},
+        {"title": "Model Context Protocol: Advanced Topics", "url": "https://anthropic.skilljar.com/model-context-protocol-advanced-topics", "description": "Advanced MCP implementation patterns including sampling, notifications, file system access, and transport mechanisms for production server development. Free certificate.", "level": "Advanced"},
+        {"title": "Claude Code in Action", "url": "https://anthropic.skilljar.com/claude-code-in-action", "description": "Learn to integrate Claude Code into your development workflow for AI-assisted coding, debugging, and software engineering tasks. Free certificate.", "level": "Intermediate"},
+        {"title": "Introduction to Agent Skills", "url": "https://anthropic.skilljar.com/introduction-to-agent-skills", "description": "Learn to build, configure, and share Skills in Claude Code — reusable markdown instructions that Claude applies automatically to the right tasks. Free certificate.", "level": "Intermediate"},
+    ],
+    "Data Science AI": [
+        {"title": "Claude 101", "url": "https://anthropic.skilljar.com/claude-101", "description": "Anthropic's official beginner course on using Claude for everyday work tasks, core features, and resources for deeper learning. Free certificate.", "level": "Beginner"},
+        {"title": "Claude with Amazon Bedrock", "url": "https://anthropic.skilljar.com/claude-in-amazon-bedrock", "description": "Anthropic's official training on running Claude through AWS Amazon Bedrock, covering setup, API usage, and cloud deployment. Free certificate.", "level": "Intermediate"},
+        {"title": "Claude with Google Cloud's Vertex AI", "url": "https://anthropic.skilljar.com/claude-with-google-vertex", "description": "Comprehensive course on working with Claude models through Google Cloud's Vertex AI platform including configuration and deployment. Free certificate.", "level": "Intermediate"},
+    ],
+    "Project Management / Agile / Career Skills": [
+        {"title": "AI Fluency: Framework & Foundations", "url": "https://anthropic.skilljar.com/ai-fluency-framework-foundations", "description": "Learn to collaborate with AI systems effectively, efficiently, ethically, and safely. Anthropic's foundational AI fluency framework for professionals. Free certificate.", "level": "All Levels"},
+        {"title": "AI Fluency for Students", "url": "https://anthropic.skilljar.com/ai-fluency-for-students", "description": "Empowers students to develop AI fluency skills that enhance learning, career planning, and academic success through responsible AI collaboration. Free certificate.", "level": "All Levels"},
+        {"title": "AI Fluency for Educators", "url": "https://anthropic.skilljar.com/ai-fluency-for-educators", "description": "Empowers faculty, instructional designers, and educational leaders to apply AI fluency into their teaching practice and institutional strategy. Free certificate.", "level": "All Levels"},
+        {"title": "AI Fluency for Nonprofits", "url": "https://anthropic.skilljar.com/ai-fluency-for-nonprofits", "description": "Empowers nonprofit professionals to develop AI fluency to increase organizational impact and efficiency while staying true to their mission. Free certificate.", "level": "All Levels"},
+        {"title": "Teaching AI Fluency", "url": "https://anthropic.skilljar.com/teaching-ai-fluency", "description": "Empowers academic faculty and instructional designers to teach and assess AI fluency in instructor-led settings. Free certificate.", "level": "All Levels"},
+    ],
+}
+
+def fetch_anthropic(category: str) -> list:
+    log.info(f"[Anthropic] Fetching: {category}")
+    results = []
+    for item in ANTHROPIC_CURATED.get(category, []):
+        clean = clean_description(item["title"], item["description"], category)
+        results.append(build_resource(
+            title=item["title"],
+            url=item["url"],
+            description=clean,
+            platform="Anthropic",
+            category=category,
+            level=item.get("level", "All Levels"),
+        ))
+    return results
+
+
 FETCHERS = [
     fetch_youtube,
     fetch_mit_ocw,
@@ -868,6 +910,7 @@ FETCHERS = [
     fetch_khan,
     fetch_saylor,
     fetch_udemy,
+    fetch_anthropic,
 ]
 
 def run_scraper():
