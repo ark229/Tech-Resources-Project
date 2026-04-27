@@ -817,16 +817,148 @@
       color: inherit;
       display: inline-block;
     }  
+
+    /* ── NEWSLETTER SIGNUP ── */
+    .newsletter-wrap {
+      margin-top: 1.5rem;
+      padding-top: 1.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .newsletter-label {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.65rem;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 0.5rem;
+    }
+    .newsletter-sub {
+      font-size: 0.8rem;
+      color: var(--muted);
+      margin-bottom: 0.85rem;
+    }
+    .newsletter-row {
+      display: flex;
+      gap: 0.5rem;
+      max-width: 420px;
+      margin: 0 auto;
+    }
+    .newsletter-input {
+      flex: 1;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.55rem 0.9rem;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .newsletter-input:focus { border-color: var(--accent); }
+    .newsletter-input::placeholder { color: var(--muted); }
+    .newsletter-btn {
+      background: var(--accent);
+      color: #000;
+      border: none;
+      border-radius: 6px;
+      padding: 0.55rem 1.1rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: opacity 0.2s;
+    }
+    .newsletter-btn:hover { opacity: 0.85; }
+    .newsletter-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .newsletter-msg {
+      font-size: 0.78rem;
+      margin-top: 0.5rem;
+      display: none;
+    }
+    .newsletter-msg.success { color: var(--accent); display: block; }
+    .newsletter-msg.error   { color: #f87171; display: block; }
+
+    /* ── HEADER NEWSLETTER ── */
+    .header-signup {
+      margin-top: 1.25rem;
+      padding-top: 1.1rem;
+      border-top: 1px solid var(--border);
+    }
+    .header-signup-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      white-space: nowrap;
+    }
+    .header-signup-desc {
+      font-size: 0.75rem;
+      color: var(--muted);
+      margin-top: 0.4rem;
+      line-height: 1.5;
+    }
+    .header-signup-row {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      flex-wrap: wrap;
+    }
+    .header-signup-input {
+      background: rgba(255,255,255,0.04);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.45rem 0.85rem;
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      outline: none;
+      width: 220px;
+      transition: border-color 0.2s;
+    }
+    .header-signup-input:focus { border-color: var(--accent); }
+    .header-signup-input::placeholder { color: var(--muted); }
+    .header-signup-btn {
+      background: transparent;
+      border: 1px solid var(--accent);
+      color: var(--accent);
+      border-radius: 6px;
+      padding: 0.45rem 1rem;
+      font-family: 'Space Mono', monospace;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: background 0.2s, color 0.2s;
+    }
+    .header-signup-btn:hover { background: var(--accent); color: #000; }
+    .header-signup-btn:disabled { opacity: 0.5; cursor: not-allowed; }
+    .header-signup-msg {
+      font-size: 0.75rem;
+      margin-top: 0.45rem;
+      display: none;
+    }
+    .header-signup-msg.success { color: var(--accent); display: block; }
+    .header-signup-msg.error   { color: #f87171; display: block; }
   </style>
 </head>
 <body>
 
-  <!-- Hidden form for Netlify detection at deploy time -->
+  <!-- Hidden forms for Netlify detection at deploy time -->
   <form name="contact" data-netlify="true" netlify-honeypot="bot-field" hidden>
     <input type="hidden" name="form-name" value="contact" />
     <input type="text" name="bot-field" />
     <select name="type"></select>
     <textarea name="details"></textarea>
+    <input type="email" name="email" />
+  </form>
+  <form name="newsletter" data-netlify="true" netlify-honeypot="bot-field" hidden>
+    <input type="hidden" name="form-name" value="newsletter" />
+    <input type="text" name="bot-field" />
     <input type="email" name="email" />
   </form>
 
@@ -857,6 +989,17 @@
             <span class="num" id="updated-date">—</span>
             <span class="label">Last Updated</span>
           </div>
+        </div>
+        <div class="header-signup">
+          <form class="header-signup-row" id="headerSignupForm" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="newsletter" />
+            <input type="text" name="bot-field" style="display:none;" />
+            <span class="header-signup-title">Join Our Newsletter</span>
+            <input type="email" name="email" class="header-signup-input" id="headerSignupEmail" placeholder="your@email.com" required />
+            <button type="submit" class="header-signup-btn" id="headerSignupBtn">Notify Me</button>
+          </form>
+          <p class="header-signup-desc">Get notified when new free courses are added. No spam. Unsubscribe anytime.</p>
+          <p class="header-signup-msg" id="headerSignupMsg"></p>
         </div>
       </div>
       <img src="techLearnLogo.png" alt="TechLearn Logo" class="header-logo" />
@@ -914,6 +1057,17 @@
     <p style="margin-top:0.8rem;">
       <button class="contact-trigger" id="aboutTrigger" style="margin-right:0.75rem;">&#9432; About TechLearn</button><button class="contact-trigger" id="contactTrigger">&#9993; Suggest a resource or report an issue</button>
     </p>
+    <div class="newsletter-wrap">
+      <p class="newsletter-label">&#9993; &nbsp;Stay in the loop</p>
+      <p class="newsletter-sub">Get notified when new free courses are added. No spam. Unsubscribe anytime.</p>
+      <form class="newsletter-row" id="newsletterForm" name="newsletter" method="POST" data-netlify="true" netlify-honeypot="bot-field">
+        <input type="hidden" name="form-name" value="newsletter" />
+        <input type="text" name="bot-field" style="display:none;" />
+        <input type="email" name="email" class="newsletter-input" id="newsletterEmail" placeholder="your@email.com" required />
+        <button type="submit" class="newsletter-btn" id="newsletterBtn">Notify Me</button>
+      </form>
+      <p class="newsletter-msg" id="newsletterMsg"></p>
+    </div>
     <p class="footer-text" style="margin-top:0.8rem;opacity:0.5;">
       &copy; <span id="copy-year"></span> Tech Learn Resources. All rights reserved.
     </p>
@@ -996,6 +1150,75 @@
   <button class="back-to-top" id="backToTop" aria-label="Back to top" title="Back to top">
     &#8679;
   </button>
+  <script>
+    // ── NEWSLETTER FORM ──
+    document.getElementById('newsletterForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('newsletterBtn');
+      const msg = document.getElementById('newsletterMsg');
+      const email = document.getElementById('newsletterEmail').value;
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      msg.className = 'newsletter-msg';
+      msg.style.display = 'none';
+
+      try {
+        const formData = new FormData();
+        formData.append('form-name', 'newsletter');
+        formData.append('email', email);
+
+        const resp = await fetch('/', { method: 'POST', body: formData });
+        if (resp.ok) {
+          msg.textContent = '✓ You're on the list! We'll email you when new courses are added.';
+          msg.className = 'newsletter-msg success';
+          document.getElementById('newsletterEmail').value = '';
+          btn.textContent = 'Subscribed!';
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (err) {
+        msg.textContent = 'Something went wrong. Please try again or email contact@techlearnresources.com';
+        msg.className = 'newsletter-msg error';
+        btn.disabled = false;
+        btn.textContent = 'Notify Me';
+      }
+    });
+
+    // ── HEADER SIGNUP FORM ──
+    document.getElementById('headerSignupForm').addEventListener('submit', async function(e) {
+      e.preventDefault();
+      const btn = document.getElementById('headerSignupBtn');
+      const msg = document.getElementById('headerSignupMsg');
+      const email = document.getElementById('headerSignupEmail').value;
+
+      btn.disabled = true;
+      btn.textContent = 'Sending...';
+      msg.className = 'header-signup-msg';
+
+      try {
+        const formData = new FormData();
+        formData.append('form-name', 'newsletter');
+        formData.append('email', email);
+
+        const resp = await fetch('/', { method: 'POST', body: formData });
+        if (resp.ok) {
+          msg.textContent = "✓ You're on the list!";
+          msg.className = 'header-signup-msg success';
+          document.getElementById('headerSignupEmail').value = '';
+          btn.textContent = 'Subscribed!';
+        } else {
+          throw new Error('Server error');
+        }
+      } catch (err) {
+        msg.textContent = 'Something went wrong — try again or email contact@techlearnresources.com';
+        msg.className = 'header-signup-msg error';
+        btn.disabled = false;
+        btn.textContent = 'Notify Me';
+      }
+    });
+  </script>
+
 </body>
 </html>
 
