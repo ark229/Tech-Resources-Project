@@ -14,6 +14,7 @@ Platforms covered:
   - IBM SkillsBuild (web scraping permitted)
   - AWS Skill Builder (public catalog)
   - Stanford Online (public course listings)
+  - Harvard University (open courseware)
 
 Categories:
   - Python / Programming
@@ -27,6 +28,7 @@ Categories:
 import os
 import json
 import time
+import random
 import logging
 import schedule
 import requests
@@ -80,28 +82,41 @@ log.info(f"Anthropic key loaded: {'YES' if CONFIG['anthropic_api_key'] else 'NO 
 # CLAUDE API — DESCRIPTION CLEANER
 # ─────────────────────────────────────────────
 def clean_description(title: str, raw_description: str, category: str) -> str:
-    """Uses Claude API to generate a clean, concise 2-sentence description."""
-    try:
-        client = anthropic.Anthropic(api_key=CONFIG["anthropic_api_key"])
-        prompt = (
-            f"You are helping catalog free tech education resources. "
-            f"Given the course title and raw description below, write a clean, "
-            f"engaging 2-sentence summary (max 50 words) suitable for a resource "
-            f"directory. Focus on what the learner will gain. Be concise and clear.\n\n"
-            f"Category: {category}\n"
-            f"Title: {title}\n"
-            f"Raw Description: {raw_description}\n\n"
-            f"Return only the 2-sentence summary, nothing else."
-        )
-        message = client.messages.create(
-            model="claude-sonnet-4-6",
-            max_tokens=150,
-            messages=[{"role": "user", "content": prompt}]
-        )
-        return message.content[0].text.strip()
-    except Exception as e:
-        log.warning(f"Claude API error for '{title}': {e}")
-        return raw_description[:200] if raw_description else "No description available."
+    """Uses Claude API to generate a clean, concise 2-sentence description.
+    Retries up to 4 times with exponential backoff on 529 overload errors.
+    """
+    client = anthropic.Anthropic(api_key=CONFIG["anthropic_api_key"], max_retries=0)
+    prompt = (
+        f"You are helping catalog free tech education resources. "
+        f"Given the course title and raw description below, write a clean, "
+        f"engaging 2-sentence summary (max 50 words) suitable for a resource "
+        f"directory. Focus on what the learner will gain. Be concise and clear.\n\n"
+        f"Category: {category}\n"
+        f"Title: {title}\n"
+        f"Raw Description: {raw_description}\n\n"
+        f"Return only the 2-sentence summary, nothing else."
+    )
+    max_retries = 4
+    for attempt in range(max_retries):
+        try:
+            time.sleep(2)  # polite delay before every Claude call
+            message = client.messages.create(
+                model="claude-sonnet-4-6",
+                max_tokens=150,
+                messages=[{"role": "user", "content": prompt}]
+            )
+            return message.content[0].text.strip()
+        except Exception as e:
+            error_str = str(e)
+            is_overloaded = "529" in error_str or "overloaded" in error_str.lower()
+            if is_overloaded and attempt < max_retries - 1:
+                wait = (2 ** (attempt + 2)) + random.uniform(1, 3)  # ~5s, ~9s, ~19s
+                log.warning(f"Claude API overloaded for '{title}' — retrying in {wait:.1f}s (attempt {attempt + 1}/{max_retries})")
+                time.sleep(wait)
+            else:
+                log.warning(f"Claude API error for '{title}': {e}")
+                return raw_description[:200] if raw_description else "No description available."
+    return raw_description[:200] if raw_description else "No description available."
 
 
 # ─────────────────────────────────────────────
@@ -896,6 +911,50 @@ def fetch_anthropic(category: str) -> list:
     return results
 
 
+# ─────────────────────────────────────────────
+# SOURCE 15 — HARVARD UNIVERSITY (curated open courseware)
+# Free and open access — no login or enrollment required
+# ─────────────────────────────────────────────
+HARVARD_CURATED = {
+    "Data Science AI": [
+        {"title": "Introduction to Generative AI (Class 1, Spring 2024)", "url": "https://generative-ai-course.hks.harvard.edu/1-how-genai-works/class-1", "description": "Harvard Kennedy School course exploring the foundational mechanics of generative AI, including how large language models work and what makes them capable of producing human-like text, images, and code.", "level": "Beginner"},
+        {"title": "Deep Neural Networks (Class 2, Spring 2024)", "url": "https://generative-ai-course.hks.harvard.edu/1-how-genai-works/class-2", "description": "Harvard Kennedy School session diving into the architecture behind deep neural networks, explaining how layered learning systems enable machines to recognize patterns and generate content at scale.", "level": "Intermediate"},
+        {"title": "The AI Alignment Problem (Class 3, Spring 2024)", "url": "https://generative-ai-course.hks.harvard.edu/1-how-genai-works/class-3", "description": "Harvard Kennedy School session examining the challenge of ensuring advanced AI systems act in alignment with human values, covering both technical and ethical dimensions.", "level": "Intermediate"},
+        {"title": "Prompt Engineering (Class 4, Spring 2024)", "url": "https://generative-ai-course.hks.harvard.edu/2-using-genai/class-4", "description": "Harvard Kennedy School session on crafting effective prompts to get useful, accurate, and creative outputs from generative AI tools across professional use cases.", "level": "Beginner"},
+        {"title": "Beyond Chatbots (Class 5, Spring 2024)", "url": "https://generative-ai-course.hks.harvard.edu/2-using-genai/class-5", "description": "Harvard Kennedy School session discovering how generative AI extends beyond conversational chatbots into content generation, code assistance, data analysis, and complex decision support.", "level": "Beginner"},
+        {"title": "When and How to Use Generative AI (Class 6, Spring 2024)", "url": "https://generative-ai-course.hks.harvard.edu/2-using-genai/class-6", "description": "Harvard Kennedy School session developing practical judgment for when generative AI is the right tool and how to deploy it effectively and responsibly.", "level": "Beginner"},
+        {"title": "Using AI Tools in Practice: A Case Study (Class 7, Spring 2024)", "url": "https://generative-ai-course.hks.harvard.edu/2-using-genai/class-7", "description": "Harvard Kennedy School session applying generative AI concepts through a real-world case study demonstrating how AI tools integrate into professional workflows and decision-making.", "level": "Intermediate"},
+        {"title": "Risks of Generative AI (Class 8, Spring 2024)", "url": "https://generative-ai-course.hks.harvard.edu/society/class-8", "description": "Harvard Kennedy School session critically assessing the risks of generative AI including bias, hallucination, misuse, and unintended societal consequences.", "level": "Intermediate"},
+        {"title": "Intellectual Property (Class 9, Spring 2024)", "url": "https://generative-ai-course.hks.harvard.edu/society/class-9", "description": "Harvard Kennedy School session exploring the complex intellectual property questions raised by generative AI, including copyright and rights of creators whose work is used in training data.", "level": "Intermediate"},
+        {"title": "The Future of Work (Class 10, Spring 2024)", "url": "https://generative-ai-course.hks.harvard.edu/society/class-10", "description": "Harvard Kennedy School session examining how generative AI is reshaping labor markets, job roles, and workplace dynamics, and how to think strategically about workforce adaptation.", "level": "Intermediate"},
+        {"title": "Misinformation and Disinformation (Class 11, Spring 2024)", "url": "https://generative-ai-course.hks.harvard.edu/society/class-11", "description": "Harvard Kennedy School session investigating how generative AI amplifies misinformation and disinformation, with frameworks for understanding AI's role in the information ecosystem.", "level": "Intermediate"},
+    ],
+    "Programming & Computer Science": [
+        {"title": "Artificial Intelligence Lecture (CS50, Spring 2026)", "url": "https://cs50.harvard.edu/x/weeks/ai/", "description": "Harvard's CS50 lecture covering how AI is applied in computer science, including machine learning concepts, neural networks, and practical AI applications.", "level": "Intermediate"},
+        {"title": "Large Language Models and The End of Programming (CS50 Tech Talk, 2023)", "url": "https://www.youtube.com/watch?v=JhCl-GeT4jw", "description": "Harvard CS50 Tech Talk exploring how large language models are fundamentally changing the nature of programming and what this means for developers and educators.", "level": "All Levels"},
+    ],
+    "Project Management / Agile / Career Skills": [
+        {"title": "Generative AI in Teaching and Learning", "url": "https://www.youtube.com/playlist?list=PL_kRkvxqHjkqjnhAdSdejAkyQf1TnPkNM", "description": "Harvard-curated playlist featuring insights on how educators and institutions are integrating generative AI into teaching and learning environments.", "level": "All Levels"},
+        {"title": "Teaching with AI in the Classroom", "url": "https://www.hbsp.harvard.edu/educator-training/teaching-with-ai", "description": "Harvard Business School Publishing educator training offering practical strategies for incorporating AI tools into classroom instruction and course design.", "level": "All Levels"},
+    ],
+}
+
+def fetch_harvard(category: str) -> list:
+    log.info(f"[Harvard University] Fetching: {category}")
+    results = []
+    for item in HARVARD_CURATED.get(category, []):
+        clean = clean_description(item["title"], item["description"], category)
+        results.append(build_resource(
+            title=item["title"],
+            url=item["url"],
+            description=clean,
+            platform="Harvard University",
+            category=category,
+            level=item.get("level", "All Levels"),
+        ))
+    return results
+
+
 FETCHERS = [
     fetch_youtube,
     fetch_mit_ocw,
@@ -911,6 +970,7 @@ FETCHERS = [
     fetch_saylor,
     fetch_udemy,
     fetch_anthropic,
+    fetch_harvard,
 ]
 
 def run_scraper():

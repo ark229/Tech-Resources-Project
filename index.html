@@ -1226,6 +1226,10 @@
 
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
   <script>
+    const CATEGORY_DISPLAY = {
+      "Data Science AI": "Data Science / AI",
+    };
+
     const CATEGORY_COLORS = {
       "Programming & Computer Science":       { dot: '#3b82f6', cls: 'card-python' },
       "Data Science AI":          { dot: '#8b5cf6', cls: 'card-data'   },
@@ -1336,7 +1340,7 @@
         section.innerHTML = `
           <div class="section-header">
             <div class="section-dot" style="background:${col.dot}"></div>
-            <span class="section-title">${cat}</span>
+            <span class="section-title">${CATEGORY_DISPLAY[cat] || cat}</span>
             <span class="section-count">${groups[cat].length} resource${groups[cat].length !== 1 ? 's' : ''}</span>
           </div>
           <div class="cards-grid">
