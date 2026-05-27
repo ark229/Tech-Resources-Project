@@ -32,6 +32,7 @@
       --pm:        #f59e0b;
       --ux:        #ec4899;
       --career:    #f97316;
+      --gold:      #ffc107;
     }
 
     * { box-sizing: border-box; margin: 0; padding: 0; }
@@ -118,6 +119,16 @@
 
     h1 span {
       color: var(--accent);
+    }
+
+    h1 .colon {
+      color: var(--gold);
+      font-size: inherit;
+    }
+
+    h1 .techlearn {
+      color: var(--accent);
+      font-size: 0.82em;
     }
 
     .header-sub {
@@ -1041,7 +1052,7 @@
       <div class="header-text">
         <div class="site-tag">Free Tech Education Directory</div>
         <a href="/" class="logo-link">
-          <h1>Tech<span>Learn</span></h1>
+          <h1>TLR<span class="colon">:</span><span class="techlearn">TechLearn</span></h1>
         </a>
         <p class="header-sub">Curated free courses across programming, data science, cybersecurity, web development, project management, and more!</p>
         <div class="header-meta">
@@ -1085,7 +1096,7 @@
         <div class="piq-strip-icon">P</div>
         <div>
           <div class="piq-strip-label">New from TechLearn Resources</div>
-          <div class="piq-strip-title">PathwayIQ: Your Tech Career Roadmap &nbsp;<span>Coming Soon to Android</span></div>
+          <div class="piq-strip-title">PathwayIQ: Your Tech Career Roadmap &nbsp;<span>Coming Soon to Android and iOS</span></div>
         </div>
       </div>
       <a href="https://pathwayiq.app" target="_blank" rel="noopener" class="piq-strip-btn">
