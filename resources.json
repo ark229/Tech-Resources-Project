@@ -1,10 +1,10 @@
 {
-  "generated": "2026-05-06",
-  "total": 466,
+  "generated": "2026-05-31",
+  "total": 518,
   "categories": [
     "Programming & Computer Science",
     "Data Science AI",
-    "Web Development",
+    "Web Development / Cloud",
     "UX Design",
     "IT / Cybersecurity",
     "Project Management / Agile / Career Skills"
@@ -91,7 +91,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "💻 AP Computer Science A Full Course Walkthrough | Java Programming Study Guide &amp; Review Playlist",
+      "title": "\ud83d\udcbb AP Computer Science A Full Course Walkthrough | Java Programming Study Guide &amp; Review Playlist",
       "url": "https://www.youtube.com/playlist?list=PLI3_KPCoxoPgcTDlfWACTL0e2ftrrpexM",
       "description": "Master Java programming concepts aligned with the AP Computer Science A curriculum through this comprehensive walkthrough. This study guide covers everything you need to confidently tackle the AP exam while building real programming skills in Java.",
       "platform": "YouTube",
@@ -403,7 +403,7 @@
     {
       "title": "Python Certification",
       "url": "https://www.freecodecamp.org/learn/python-v9/",
-      "description": "Master Python fundamentals—including variables, functions, data structures, OOP, and algorithms—through hands-on, project-based learning. Earn a free certification from freeCodeCamp while building real-world programming skills.",
+      "description": "Master Python fundamentals\u2014including variables, functions, data structures, OOP, and algorithms\u2014through hands-on, project-based learning. Earn a free certification from freeCodeCamp while building real-world programming skills.",
       "platform": "freeCodeCamp",
       "category": "Programming & Computer Science",
       "level": "All Levels",
@@ -503,7 +503,7 @@
     {
       "title": "Programming for Everybody (Getting Started with Python)",
       "url": "https://www.edx.org/learn/python/the-university-of-michigan-programming-for-everybody-getting-started-with-python",
-      "description": "Learn the fundamentals of Python programming, including variables, loops, and functions, in this beginner-friendly course from the University of Michigan. No prior experience needed—gain the core skills to start writing your own programs with confidence.",
+      "description": "Learn the fundamentals of Python programming, including variables, loops, and functions, in this beginner-friendly course from the University of Michigan. No prior experience needed\u2014gain the core skills to start writing your own programs with confidence.",
       "platform": "edX",
       "category": "Programming & Computer Science",
       "level": "Beginner",
@@ -511,9 +511,9 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Python Data Structures — University of Michigan",
+      "title": "Python Data Structures \u2014 University of Michigan",
       "url": "https://www.edx.org/learn/python/the-university-of-michigan-python-data-structures",
-      "description": "Master Python's core data structures—strings, lists, dictionaries, and tuples—in this University of Michigan course. Build essential programming skills that form the foundation for data manipulation and analysis in Python.",
+      "description": "Master Python's core data structures\u2014strings, lists, dictionaries, and tuples\u2014in this University of Michigan course. Build essential programming skills that form the foundation for data manipulation and analysis in Python.",
       "platform": "edX",
       "category": "Programming & Computer Science",
       "level": "Beginner",
@@ -541,7 +541,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Code in Place — Stanford",
+      "title": "Code in Place \u2014 Stanford",
       "url": "https://codeinplace.stanford.edu/",
       "description": "Learn Python programming from scratch with Stanford's renowned CS106A instructors in this beginner-friendly course. Gain foundational coding skills through hands-on lessons designed to make programming accessible to absolute beginners.",
       "platform": "Stanford Online",
@@ -551,7 +551,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Computer Science 101 — Stanford",
+      "title": "Computer Science 101 \u2014 Stanford",
       "url": "https://www.edx.org/learn/computer-science/stanford-university-computer-science-101",
       "description": "Learn the core concepts of computer science, including programming fundamentals and computational thinking, through Stanford's renowned introductory course. Freely available to audit on edX, it's an ideal starting point for beginners exploring the world of computing.",
       "platform": "edX",
@@ -583,7 +583,7 @@
     {
       "title": "Explore Emerging Tech",
       "url": "https://students.yourlearning.ibm.com/activity/PLAN-AB0C4887AB43",
-      "description": "Discover five cutting-edge technologies reshaping industries and unlocking exciting career possibilities in this beginner-friendly course. No prior tech experience needed—just curiosity and a willingness to explore the innovations driving tomorrow's world.",
+      "description": "Discover five cutting-edge technologies reshaping industries and unlocking exciting career possibilities in this beginner-friendly course. No prior tech experience needed\u2014just curiosity and a willingness to explore the innovations driving tomorrow's world.",
       "platform": "IBM SkillsBuild",
       "category": "Programming & Computer Science",
       "level": "Beginner",
@@ -663,7 +663,7 @@
     {
       "title": "Intro to Computer Science - Python",
       "url": "https://www.khanacademy.org/computing/intro-to-python-fundamentals",
-      "description": "Learn the fundamentals of programming using Python, covering essential concepts like variables, functions, and loops. This beginner-friendly course from Khan Academy gives you a solid foundation in computer science — completely free.",
+      "description": "Learn the fundamentals of programming using Python, covering essential concepts like variables, functions, and loops. This beginner-friendly course from Khan Academy gives you a solid foundation in computer science \u2014 completely free.",
       "platform": "Khan Academy",
       "category": "Programming & Computer Science",
       "level": "Beginner",
@@ -673,7 +673,7 @@
     {
       "title": "Computer Programming - JavaScript and the Web",
       "url": "https://www.khanacademy.org/computing/computer-programming",
-      "description": "Master the fundamentals of web programming with JavaScript, HTML, and CSS through hands-on, browser-based exercises. Build dynamic, interactive web experiences—including animations and database integration—by learning directly through practice.",
+      "description": "Master the fundamentals of web programming with JavaScript, HTML, and CSS through hands-on, browser-based exercises. Build dynamic, interactive web experiences\u2014including animations and database integration\u2014by learning directly through practice.",
       "platform": "Khan Academy",
       "category": "Programming & Computer Science",
       "level": "All Levels",
@@ -683,7 +683,7 @@
     {
       "title": "AP College Computer Science Principles",
       "url": "https://www.khanacademy.org/computing/ap-computer-science-principles",
-      "description": "Explore foundational computer science concepts including algorithms, data, programming, and how the internet works—all at a college level. This course is aligned to the AP Computer Science Principles exam, helping students earn potential college credit.",
+      "description": "Explore foundational computer science concepts including algorithms, data, programming, and how the internet works\u2014all at a college level. This course is aligned to the AP Computer Science Principles exam, helping students earn potential college credit.",
       "platform": "Khan Academy",
       "category": "Programming & Computer Science",
       "level": "Beginner",
@@ -793,7 +793,7 @@
     {
       "title": "PRDV402: Introduction to JavaScript II",
       "url": "https://learn.saylor.org/course/view.php?id=750",
-      "description": "Build on your JavaScript foundations by exploring arrays, objects, and error handling in this intermediate-level course. You'll develop more advanced programming skills to write cleaner, more sophisticated JavaScript code—and earn a free certificate upon completion.",
+      "description": "Build on your JavaScript foundations by exploring arrays, objects, and error handling in this intermediate-level course. You'll develop more advanced programming skills to write cleaner, more sophisticated JavaScript code\u2014and earn a free certificate upon completion.",
       "platform": "Saylor Academy",
       "category": "Programming & Computer Science",
       "level": "Beginner",
@@ -833,7 +833,7 @@
     {
       "title": "Build a Quiz App with HTML, CSS, and JavaScript",
       "url": "https://www.udemy.com/course/build-a-quiz-app-with-html-css-and-javascript/",
-      "description": "Learn to build a fully functional quiz app from scratch using HTML, CSS, and JavaScript—no frameworks required. This hands-on beginner project strengthens your core web development skills through practical, real-world coding experience.",
+      "description": "Learn to build a fully functional quiz app from scratch using HTML, CSS, and JavaScript\u2014no frameworks required. This hands-on beginner project strengthens your core web development skills through practical, real-world coding experience.",
       "platform": "Udemy",
       "category": "Programming & Computer Science",
       "level": "Beginner",
@@ -923,7 +923,7 @@
     {
       "title": "Claude Code in Action",
       "url": "https://anthropic.skilljar.com/claude-code-in-action",
-      "description": "Master AI-assisted coding by integrating Claude Code into your development workflow. This hands-on course covers debugging and software engineering tasks, empowering you to boost productivity with cutting-edge AI tools—and earn a free certificate upon completion.",
+      "description": "Master AI-assisted coding by integrating Claude Code into your development workflow. This hands-on course covers debugging and software engineering tasks, empowering you to boost productivity with cutting-edge AI tools\u2014and earn a free certificate upon completion.",
       "platform": "Anthropic",
       "category": "Programming & Computer Science",
       "level": "Intermediate",
@@ -933,7 +933,7 @@
     {
       "title": "Introduction to Agent Skills",
       "url": "https://anthropic.skilljar.com/introduction-to-agent-skills",
-      "description": "Master the creation of reusable Skills in Claude Code—markdown-based instructions that Claude automatically applies to relevant tasks. You'll learn to build, configure, and share these powerful automation tools to streamline your AI-assisted workflows.",
+      "description": "Master the creation of reusable Skills in Claude Code\u2014markdown-based instructions that Claude automatically applies to relevant tasks. You'll learn to build, configure, and share these powerful automation tools to streamline your AI-assisted workflows.",
       "platform": "Anthropic",
       "category": "Programming & Computer Science",
       "level": "Intermediate",
@@ -961,7 +961,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "🔥Artificial Intelligence [2026 Updated]  | Artificial Intelligence Course | Artificial Intelligence And Machine Learning Tutorials | Simplilearn",
+      "title": "\ud83d\udd25Artificial Intelligence [2026 Updated]  | Artificial Intelligence Course | Artificial Intelligence And Machine Learning Tutorials | Simplilearn",
       "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUULyr_ftxpHB6DumOq1Zz2hq",
       "description": "Gain a solid foundation in Artificial Intelligence and Machine Learning through this comprehensive, up-to-date course from Simplilearn. Learn core AI concepts, techniques, and real-world applications to build practical skills for today's data-driven industries.",
       "platform": "YouTube",
@@ -1071,7 +1071,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Complete Machine Learning Bangla Course (মেশিন লার্নিং) | Artificial Intelligence | Data Science Tutorials",
+      "title": "Complete Machine Learning Bangla Course (\u09ae\u09c7\u09b6\u09bf\u09a8 \u09b2\u09be\u09b0\u09cd\u09a8\u09bf\u0982) | Artificial Intelligence | Data Science Tutorials",
       "url": "https://www.youtube.com/playlist?list=PLKdU0fuY4OFfWY36nDJDlI26jXwInSm8f",
       "description": "Master machine learning concepts including deep learning, neural networks, and NLP through comprehensive Bangla-language tutorials designed for beginners. This course makes AI and data science education accessible to Bengali speakers, building practical skills from the ground up.",
       "platform": "YouTube",
@@ -1131,7 +1131,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Python for Machine Learning, AI &amp; Data Science – Complete Course in Pashto",
+      "title": "Python for Machine Learning, AI &amp; Data Science \u2013 Complete Course in Pashto",
       "url": "https://www.youtube.com/playlist?list=PLqpzJYkkZjeKNXRffN2rxJrqnlzW6efKc",
       "description": "Learn Python programming with a focus on Machine Learning, AI, and Data Science through comprehensive instruction delivered in Pashto. This complete course equips Pashto-speaking learners with the essential coding skills and concepts needed to break into the data science and AI fields.",
       "platform": "YouTube",
@@ -1161,7 +1161,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Data Science Free Courses - For Beginners 🔥 Data Scientist Career Path &amp; Crash Course  [Tutorials Updated 2023]",
+      "title": "Data Science Free Courses - For Beginners \ud83d\udd25 Data Scientist Career Path &amp; Crash Course  [Tutorials Updated 2023]",
       "url": "https://www.youtube.com/playlist?list=PLdKd-j64gDcDi1L1TUt_yGitDMsQ-UeYJ",
       "description": "Kickstart your data science career from scratch, regardless of your background or current job situation. This beginner-friendly crash course covers an up-to-date 2023 curriculum and includes 100% job placement assistance to help you land a data scientist role.",
       "platform": "YouTube",
@@ -1241,7 +1241,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "AI for Kids in Urdu – Complete Learning Path",
+      "title": "AI for Kids in Urdu \u2013 Complete Learning Path",
       "url": "https://www.youtube.com/playlist?list=PL9XvIvvVL50EC1RwXTKqdRAwYcXygxNlT",
       "description": "Designed for young learners, this course introduces the fundamentals of Artificial Intelligence in Urdu, making complex concepts accessible and enjoyable for kids. Children will build a solid foundation in AI through fun, simple lessons tailored to their age and language.",
       "platform": "YouTube",
@@ -1423,7 +1423,7 @@
     {
       "title": "AI in special education",
       "url": "https://learn.microsoft.com/en-us/training/paths/ai-in-special-education/?WT.mc_id=api_CatalogApi",
-      "description": "Explore how Microsoft AI tools can reduce administrative burdens and enhance accessibility in special education settings. Learn to apply AI responsibly—with a focus on privacy, transparency, and student-centered values—to strengthen family communication and inform thoughtful practice.",
+      "description": "Explore how Microsoft AI tools can reduce administrative burdens and enhance accessibility in special education settings. Learn to apply AI responsibly\u2014with a focus on privacy, transparency, and student-centered values\u2014to strengthen family communication and inform thoughtful practice.",
       "platform": "Microsoft Learn",
       "category": "Data Science AI",
       "level": "Beginner",
@@ -1553,7 +1553,7 @@
     {
       "title": "Responsible use of artificial intelligence in education",
       "url": "https://learn.microsoft.com/en-us/training/paths/responsible-use-of-artificial-intelligence-in-education/?WT.mc_id=api_CatalogApi",
-      "description": "Explore Microsoft's Responsible AI framework and learn how to apply its six core ethical principles—including fairness and privacy—within educational settings. Gain hands-on experience translating these principles into practice, equipping you to implement responsible AI systems in any learning environment.",
+      "description": "Explore Microsoft's Responsible AI framework and learn how to apply its six core ethical principles\u2014including fairness and privacy\u2014within educational settings. Gain hands-on experience translating these principles into practice, equipping you to implement responsible AI systems in any learning environment.",
       "platform": "Microsoft Learn",
       "category": "Data Science AI",
       "level": "Beginner",
@@ -1623,7 +1623,7 @@
     {
       "title": "Get Started with SQL Server 2025",
       "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-sql-server-2022/",
-      "description": "Learn the fundamentals of SQL Server 2025 through Microsoft's beginner-friendly course, covering installation, essential tools, and database basics. By the end, you'll be able to write basic queries and confidently navigate SQL Server environments—all at no cost.",
+      "description": "Learn the fundamentals of SQL Server 2025 through Microsoft's beginner-friendly course, covering installation, essential tools, and database basics. By the end, you'll be able to write basic queries and confidently navigate SQL Server environments\u2014all at no cost.",
       "platform": "Microsoft Learn",
       "category": "Data Science AI",
       "level": "Beginner",
@@ -1633,7 +1633,7 @@
     {
       "title": "Introduction to Transact-SQL",
       "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-transact-sql/",
-      "description": "Learn the fundamentals of Transact-SQL through Microsoft's beginner-friendly guide, covering essential concepts like SELECT statements, filtering, and sorting data. Gain practical skills for querying and managing data in SQL Server environments—completely free.",
+      "description": "Learn the fundamentals of Transact-SQL through Microsoft's beginner-friendly guide, covering essential concepts like SELECT statements, filtering, and sorting data. Gain practical skills for querying and managing data in SQL Server environments\u2014completely free.",
       "platform": "Microsoft Learn",
       "category": "Data Science AI",
       "level": "Beginner",
@@ -1741,7 +1741,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Machine Learning — CS229",
+      "title": "Machine Learning \u2014 CS229",
       "url": "https://see.stanford.edu/course/cs229",
       "description": "Master the foundations of machine learning through Stanford's renowned CS229 course, covering supervised and unsupervised learning, neural networks, and core AI principles. Gain the theoretical depth and practical skills needed to tackle real-world machine learning challenges with confidence.",
       "platform": "Stanford Online",
@@ -1813,7 +1813,7 @@
     {
       "title": "Google Introduction to Machine Learning",
       "url": "https://developers.google.com/machine-learning/intro-to-ml",
-      "description": "Gain a solid foundation in machine learning concepts through Google's beginner-friendly course. Learn the essentials of supervised learning and how ML models are trained—completely free.",
+      "description": "Gain a solid foundation in machine learning concepts through Google's beginner-friendly course. Learn the essentials of supervised learning and how ML models are trained\u2014completely free.",
       "platform": "Google",
       "category": "Data Science AI",
       "level": "Beginner",
@@ -1833,7 +1833,7 @@
     {
       "title": "Google Machine Learning Crash Course",
       "url": "https://developers.google.com/machine-learning/crash-course",
-      "description": "Learn machine learning fundamentals—including linear regression, neural networks, and model evaluation—through Google's fast-paced, hands-on curriculum. Gain practical experience using TensorFlow with this completely free course designed to build real-world ML skills quickly.",
+      "description": "Learn machine learning fundamentals\u2014including linear regression, neural networks, and model evaluation\u2014through Google's fast-paced, hands-on curriculum. Gain practical experience using TensorFlow with this completely free course designed to build real-world ML skills quickly.",
       "platform": "Google",
       "category": "Data Science AI",
       "level": "Intermediate",
@@ -1903,7 +1903,7 @@
     {
       "title": "Building AI",
       "url": "https://buildingai.elementsofai.com/",
-      "description": "Learn practical AI-building techniques through the University of Helsinki's follow-up course, covering Python basics and essential machine learning methods. Gain hands-on skills to start developing your own AI applications—completely free.",
+      "description": "Learn practical AI-building techniques through the University of Helsinki's follow-up course, covering Python basics and essential machine learning methods. Gain hands-on skills to start developing your own AI applications\u2014completely free.",
       "platform": "Helsinki MOOC",
       "category": "Data Science AI",
       "level": "All Levels",
@@ -1993,7 +1993,7 @@
     {
       "title": "BUS250: Introduction to Business Intelligence and Analytics",
       "url": "https://learn.saylor.org/course/view.php?id=869",
-      "description": "Gain a foundational understanding of Business Intelligence, including data warehousing, BI tools, and interactive dashboards. Learn how to leverage analytics to drive smarter business decisions—no prior experience required, and a free certificate is included upon completion.",
+      "description": "Gain a foundational understanding of Business Intelligence, including data warehousing, BI tools, and interactive dashboards. Learn how to leverage analytics to drive smarter business decisions\u2014no prior experience required, and a free certificate is included upon completion.",
       "platform": "Saylor Academy",
       "category": "Data Science AI",
       "level": "Beginner",
@@ -2003,7 +2003,7 @@
     {
       "title": "BUS607: Data-Driven Decision-Making",
       "url": "https://learn.saylor.org/course/view.php?id=737",
-      "description": "Master the art of applying data analytics to strategic business decisions using proven frameworks and real-world case studies. Gain the skills to drive impactful, evidence-based decisions in any organizational setting—and earn a free certificate upon completion.",
+      "description": "Master the art of applying data analytics to strategic business decisions using proven frameworks and real-world case studies. Gain the skills to drive impactful, evidence-based decisions in any organizational setting\u2014and earn a free certificate upon completion.",
       "platform": "Saylor Academy",
       "category": "Data Science AI",
       "level": "Advanced",
@@ -2053,7 +2053,7 @@
     {
       "title": "PRDV430: AI for Business Applications",
       "url": "https://learn.saylor.org/course/view.php?id=1254",
-      "description": "Learn how to apply AI tools to real-world business workflows, automation, and decision-making processes. This intermediate course equips you with practical skills to leverage AI for smarter, more efficient business operations—and includes a free certificate upon completion.",
+      "description": "Learn how to apply AI tools to real-world business workflows, automation, and decision-making processes. This intermediate course equips you with practical skills to leverage AI for smarter, more efficient business operations\u2014and includes a free certificate upon completion.",
       "platform": "Saylor Academy",
       "category": "Data Science AI",
       "level": "Intermediate",
@@ -2215,7 +2215,7 @@
       "url": "https://www.youtube.com/playlist?list=PLXC_gcsKLD6n7p6tHPBxsKjN5hA_quaPI",
       "description": "Learn how to design websites from scratch with this comprehensive free course. You'll gain the skills needed to build beautiful, fully functional websites, making it ideal for complete beginners looking to break into web design.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2225,7 +2225,7 @@
       "url": "https://www.youtube.com/playlist?list=PLoYCgNOIyGAB_8_iq1cL8MVeun7cB6eNc",
       "description": "Learn the fundamentals of web development through beginner-friendly tutorials designed to get you up to speed quickly. This course provides clear overviews of essential web dev concepts, giving you a solid foundation to start building websites with confidence.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2235,7 +2235,7 @@
       "url": "https://www.youtube.com/playlist?list=PLwoh6bBAszPrES-EOajos_E9gvRbL27wz",
       "description": "Master full-stack web development in just 3 weeks by learning essential front-end technologies including HTML, CSS, Bootstrap 4, and React (ES6). You'll also gain hands-on back-end experience with Node.js, giving you the skills to build complete, modern web applications.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2245,17 +2245,17 @@
       "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe3H6c9OGXb5_6wcc1Mca52n",
       "description": "Gain foundational web development skills through this comprehensive course covering essential tools and technologies. Build practical knowledge to design, develop, and deploy websites and web applications effectively.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Web Development Courses 🗺️",
+      "title": "Web Development Courses \ud83d\uddfa\ufe0f",
       "url": "https://www.youtube.com/playlist?list=PLZPZq0r_RZOPP5Yjt6IqgytMRY5uLt4y3",
       "description": "Master the fundamentals of web development and design through hands-on coding practice. Gain the skills to build and style modern websites from the ground up.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2265,7 +2265,7 @@
       "url": "https://www.youtube.com/playlist?list=PLDzeHZWIZsTo0wSBcg4-NMIbC0L8evLrD",
       "description": "Learn full stack web development using the MERN stack (MongoDB, Express, React, and Node.js) through a comprehensive tutorial series. Build real-world skills to become a proficient full stack developer from the ground up.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2275,7 +2275,7 @@
       "url": "https://www.youtube.com/playlist?list=PLSDeUiTMfxW6VChKWb26Z_mPR4f6fAmMV",
       "description": "This comprehensive full stack web development course equips learners with both front-end and back-end skills needed to build complete web applications from scratch. Students will gain hands-on experience with modern tools and technologies essential for launching a career in web development in 2024.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2285,27 +2285,27 @@
       "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbmMuZ3saqRIBimAKIMYkt0E",
       "description": "Master the essential skills needed to launch a career as a front-end developer through a carefully curated learning path. Follow a structured curriculum designed to take you from beginner to job-ready, covering the core technologies and concepts of modern web development.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Web Development Bootcamp Full Course - Zero to Full-Stack 🧑‍💻",
+      "title": "Web Development Bootcamp Full Course - Zero to Full-Stack \ud83e\uddd1\u200d\ud83d\udcbb",
       "url": "https://www.youtube.com/playlist?list=PLVht7UBOfJb8p7ehKW_yDfCrzAJVRHrE7",
       "description": "Master web development from the ground up in this comprehensive bootcamp designed to take complete beginners to confident full-stack developers. You'll gain the skills needed to build modern, fully functional web applications from front-end to back-end.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Sigma Web Development Course - Web Development Tutorials in Hindi 🗿",
+      "title": "Sigma Web Development Course - Web Development Tutorials in Hindi \ud83d\uddff",
       "url": "https://www.youtube.com/playlist?list=PLu0W_9lII9agq5TrH9XLIKQvv0iaF2X3w",
       "description": "Learn web development from scratch through comprehensive tutorials delivered entirely in Hindi, making the content accessible to Hindi-speaking learners. This course covers essential web development concepts and skills, empowering you to build modern websites and applications with confidence.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2315,7 +2315,7 @@
       "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbn21gs5UnLhCQ82f923WCgM",
       "description": "Master the core skills needed to launch a career as a backend developer through a carefully curated learning path. Gain hands-on experience with server-side programming, databases, and APIs in a structured, beginner-friendly curriculum.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2325,7 +2325,7 @@
       "url": "https://www.youtube.com/playlist?list=PLQEaRBV9gAFsistSzOgnD4cWgFGRVda4X",
       "description": "Master full-stack web development with hands-on projects using Node.js, Express, React, and MongoDB, plus SpringBoot and AI integration. Gain job-ready skills in system design and modern development practices to confidently build real-world applications from scratch.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2335,7 +2335,7 @@
       "url": "https://www.youtube.com/playlist?list=PLWKjhJtqVAbnSe1qUNMG7AbPmjIG54u88",
       "description": "Learn the foundational building blocks of web development with hands-on HTML and CSS tutorials. By the end, you'll be able to structure and style web pages with confidence.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2345,7 +2345,7 @@
       "url": "https://www.youtube.com/playlist?list=PLbtI3_MArDOkxh7XzixN2G4NAGIVqTFon",
       "description": "Master both frontend and backend web development through a structured, comprehensive curriculum. Gain the skills needed to build complete, fully functional web applications from the ground up.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2355,7 +2355,7 @@
       "url": "https://www.youtube.com/playlist?list=PLfqMhTWNBTe0PY9xunOzsP5kmYIz2Hu7i",
       "description": "Learn the core building blocks of web development, including HTML, CSS, and JavaScript, while working on hands-on projects. Gain practical experience with Git and GitHub for version control and collaborative coding workflows.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2365,7 +2365,7 @@
       "url": "https://www.youtube.com/playlist?list=PLHquSSTADIunFowM99XPe-B-0e0yZ0wAb",
       "description": "Here is a 2-sentence summary:\n\nGain a comprehensive introduction to web design and development, covering the essential skills needed to build modern websites from scratch. This full course equips learners with practical knowledge of key web technologies to launch a career or personal projects in 2025.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2375,7 +2375,7 @@
       "url": "https://www.youtube.com/playlist?list=PLGeDL5FZ9nGb6sTN88mLmiFWEgHcdrmJi",
       "description": "Explore the fundamentals of web development, gaining essential skills in building and designing websites and web applications. This course covers key concepts and tools to help you launch your journey as a confident web developer.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2385,7 +2385,7 @@
       "url": "https://www.youtube.com/playlist?list=PL78RhpUUKSwfYr_bKHq7SWfTCBGad_xxP",
       "description": "Master front-end web development from beginner to advanced level in 45 hours of structured learning. Gain hands-on experience building 13 real-world projects, equipping you with the practical skills needed to launch a career in web development.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2395,7 +2395,7 @@
       "url": "https://www.youtube.com/playlist?list=PL9ooVrP1hQOGTHk2auXsk3cyqRBbbsQ6l",
       "description": "The raw description is empty, so there is no content available to summarize for this course. Please provide the course description so I can write an accurate and engaging summary for the resource directory.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2405,7 +2405,7 @@
       "url": "https://www.youtube.com/playlist?list=PLyD_O3ETH1Po926YrBVTFL-JaydhAQbGs",
       "description": "Here is a 2-sentence summary:\n\nGain a comprehensive introduction to web development, covering the essential skills and tools needed to build modern websites and applications. This full course provides a structured learning path for beginners looking to launch their journey into the world of web development.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2415,7 +2415,7 @@
       "url": "https://www.youtube.com/playlist?list=PL9MdYAXTCmZb6eCaZOjQZ85D8GZQFq9sm",
       "description": "Discover the core basics and fundamentals of web design without writing a single line of code. This free full course equips beginners with the essential knowledge to start creating visually appealing websites confidently.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2423,9 +2423,9 @@
     {
       "title": "Web Development Tutorials For Beginners In Hindi: HTML, CSS, JavaScript &amp; More",
       "url": "https://www.youtube.com/playlist?list=PLu0W_9lII9agiCUZYRsvtGTXdxkzPyItg",
-      "description": "Learn how to build websites from scratch using core web technologies including HTML, CSS, and JavaScript — all taught in Hindi. Perfect for beginners looking to kickstart their web development journey with accessible, step-by-step guidance.",
+      "description": "Learn how to build websites from scratch using core web technologies including HTML, CSS, and JavaScript \u2014 all taught in Hindi. Perfect for beginners looking to kickstart their web development journey with accessible, step-by-step guidance.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2435,7 +2435,7 @@
       "url": "https://www.youtube.com/playlist?list=PLNMnAEqLBwmqKGMJOtVcvGE-QrAte_95q",
       "description": "Master full-stack web development using the MERN stack (MongoDB, Express, React, and Node.js). This comprehensive course equips learners with the skills to build modern, dynamic websites and web applications from the ground up.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2445,7 +2445,7 @@
       "url": "https://www.youtube.com/playlist?list=PLVnJhHoKgEmqJul8qc11jibcZXiPTgbR5",
       "description": "Learn the fundamentals of web development through beginner-friendly tutorials delivered in Filipino/Tagalog. This series is perfect for complete beginners looking to build a solid foundation in web development using their native language.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2453,9 +2453,9 @@
     {
       "title": "FULL STACK WEB DEVELOPMENT COURSE BY USING MERN",
       "url": "https://www.youtube.com/playlist?list=PLLUjkbOx5di5y1nGhbivWj0OLPU7u-3qA",
-      "description": "Master full-stack web development using the powerful MERN stack — MongoDB, Express, React, and Node.js. This comprehensive course guides learners through building complete, production-ready web applications from front-end to back-end.",
+      "description": "Master full-stack web development using the powerful MERN stack \u2014 MongoDB, Express, React, and Node.js. This comprehensive course guides learners through building complete, production-ready web applications from front-end to back-end.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2465,7 +2465,7 @@
       "url": "https://www.youtube.com/playlist?list=PLzdWZT-ZJD09_3tZhnl7AGCb3U3CTBfoQ",
       "description": "Learn the fundamentals of web development from the ground up, building essential skills in HTML, CSS, and JavaScript. This beginner-friendly course equips you with the tools to start creating your own websites confidently.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2475,7 +2475,7 @@
       "url": "https://www.youtube.com/playlist?list=PL6QREj8te1P7d4j3k8Snfa187o-IjXuJx",
       "description": "Learn to build stunning 3D web experiences using Three.js and JavaScript, from foundational concepts to advanced techniques. By the end, you'll have the skills to create immersive, interactive 3D scenes that run directly in the browser.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2483,9 +2483,9 @@
     {
       "title": "WordPress Masterclass: The Complete Beginner Website Course",
       "url": "https://www.youtube.com/playlist?list=PLEYVoi7MEVtGBSWdiUKw1yChuYVkxDgbZ",
-      "description": "Learn how to build beautiful, functional websites using WordPress—no coding required. This beginner-friendly masterclass walks you through everything you need to create a professional website from scratch.",
+      "description": "Learn how to build beautiful, functional websites using WordPress\u2014no coding required. This beginner-friendly masterclass walks you through everything you need to create a professional website from scratch.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2495,7 +2495,7 @@
       "url": "https://www.youtube.com/playlist?list=PL2Kd-KQLppEFbfdJHywOu6b_GAjn3LxE1",
       "description": "Learn web development from scratch with comprehensive video lessons in Telugu, complete with detailed notes for every topic. Gain hands-on knowledge of essential web technologies, reinforced by quizzes and supplementary resources to solidify your understanding.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2505,7 +2505,7 @@
       "url": "https://www.youtube.com/playlist?list=PLryYKs02mpdIMPfxxN29PjIFktQMuiHUm",
       "description": "Master full-stack web development using Python, covering both frontend and backend technologies alongside Data Structures and Algorithms. This complete course equips learners with the skills to build dynamic, fully functional websites from scratch.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2515,7 +2515,7 @@
       "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUULvVL0SoVmiS1kTiC87W_AG",
       "description": "Gain a solid foundation in Google Cloud Platform by exploring its core services, including storage, compute, and deployment. Designed for beginners, this course equips you with practical knowledge to start building and managing cloud-based solutions confidently.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "Beginner",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2525,7 +2525,7 @@
       "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUUJ-lLsBkEt1CckzIagYNq9S",
       "description": "Master Microsoft Azure's core services, including virtual machines, storage, networking, and security, through this comprehensive full course. Gain hands-on expertise in Azure DevOps, equipping you with the skills needed to build, manage, and secure cloud-based solutions confidently.",
       "platform": "YouTube",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2535,7 +2535,7 @@
       "url": "https://ocw.mit.edu/courses/6-831-user-interface-design-and-implementation-spring-2011/",
       "description": "Learn the core principles of user interface design, usability, and how to bring interactive web applications to life. This MIT course bridges design thinking and front-end implementation, equipping you with practical skills to build intuitive, user-centered web experiences.",
       "platform": "MIT OpenCourseWare",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2545,7 +2545,7 @@
       "url": "https://www.freecodecamp.org/learn/responsive-web-design-v9/",
       "description": "Learn to build visually appealing, mobile-friendly websites using HTML, CSS, Flexbox, and Grid. This free certification from freeCodeCamp also covers accessibility best practices, equipping you with well-rounded, industry-relevant web design skills.",
       "platform": "freeCodeCamp",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2553,9 +2553,9 @@
     {
       "title": "JavaScript Certification",
       "url": "https://www.freecodecamp.org/learn/javascript-v9/",
-      "description": "Master modern JavaScript through hands-on lessons covering ES6, object-oriented programming, and functional programming concepts. Build problem-solving skills by tackling real algorithm challenges and earn a recognized certification—completely free.",
+      "description": "Master modern JavaScript through hands-on lessons covering ES6, object-oriented programming, and functional programming concepts. Build problem-solving skills by tackling real algorithm challenges and earn a recognized certification\u2014completely free.",
       "platform": "freeCodeCamp",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2565,7 +2565,7 @@
       "url": "https://www.freecodecamp.org/learn/front-end-development-libraries-v9/",
       "description": "Master essential front-end libraries including Bootstrap, jQuery, Sass, React, and Redux through hands-on projects. This free freeCodeCamp certification program equips you with the modern tools needed to build dynamic, responsive web applications.",
       "platform": "freeCodeCamp",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2575,7 +2575,7 @@
       "url": "https://www.freecodecamp.org/learn/back-end-development-and-apis-v9/",
       "description": "Learn back-end web development through hands-on projects using Node.js, Express, and MongoDB. You'll gain the skills to build and connect REST APIs, earning a free certification from freeCodeCamp upon completion.",
       "platform": "freeCodeCamp",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2585,7 +2585,7 @@
       "url": "https://www.freecodecamp.org/learn/full-stack-developer-v9/",
       "description": "Master front-end and back-end web development through freeCodeCamp's comprehensive full-stack curriculum. Gain hands-on experience with databases and deployment, earning a recognized certification to validate your skills.",
       "platform": "freeCodeCamp",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2595,7 +2595,7 @@
       "url": "https://skillbuilder.aws/learn/FU5WCYVGKY/aws-cloud-quest-cloud-practitioner/JF9TKU68GT",
       "description": "Learn AWS fundamentals through an engaging, gamified experience that simulates real-world cloud scenarios. Build and deploy actual cloud applications and web services hands-on, making it ideal for beginners entering cloud and web development.",
       "platform": "AWS Skill Builder",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "Beginner",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2605,7 +2605,7 @@
       "url": "https://skillbuilder.aws/learn/U89MJTNSM8/aws-wellarchitected-foundations/RCY5NFM8R9",
       "description": "Learn the core principles of the AWS Well-Architected Framework to design cloud architectures that are reliable, secure, and cost-efficient. Gain practical best practices for building robust AWS solutions that meet industry standards.",
       "platform": "AWS Skill Builder",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "Intermediate",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2615,7 +2615,7 @@
       "url": "https://skillbuilder.aws/learn/R44Y8PRVRW/building-your-agentic-applications-the-wellarchitected-way/8W5HD7KWJ4",
       "description": "Learn how to design and build AI agent applications on AWS using Well-Architected Framework best practices. Gain practical skills in creating reliable, secure agentic systems that meet industry standards for robust cloud-based architecture.",
       "platform": "AWS Skill Builder",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "Intermediate",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2623,9 +2623,9 @@
     {
       "title": "Cloud for Small Business Owners",
       "url": "https://skillbuilder.aws/learn/EMN6QJSA7Q/cloud-for-small-business-owners/7PXBKPD8RJ",
-      "description": "Discover how cloud computing can streamline and grow your small business with this beginner-friendly course. You'll explore key AWS services and gain practical knowledge to confidently get started with cloud solutions—no technical background required.",
+      "description": "Discover how cloud computing can streamline and grow your small business with this beginner-friendly course. You'll explore key AWS services and gain practical knowledge to confidently get started with cloud solutions\u2014no technical background required.",
       "platform": "AWS Skill Builder",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "Beginner",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2633,9 +2633,9 @@
     {
       "title": "CS50's Web Programming with Python and JavaScript",
       "url": "https://www.edx.org/learn/web-development/harvard-university-cs50-s-web-programming-with-python-and-javascript",
-      "description": "Master full-stack web development with Harvard's renowned CS50 course, covering Python, Django, JavaScript, and React. Gain hands-on experience with databases and Git while building real-world web applications—completely free to audit.",
+      "description": "Master full-stack web development with Harvard's renowned CS50 course, covering Python, Django, JavaScript, and React. Gain hands-on experience with databases and Git while building real-world web applications\u2014completely free to audit.",
       "platform": "edX",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "Intermediate",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2645,7 +2645,7 @@
       "url": "https://www.edx.org/learn/react-native/ibm-developing-front-end-apps-with-react",
       "description": "Learn to build dynamic, interactive web applications using React in this hands-on IBM course. You'll gain practical skills in components, state management, and hooks to create modern front-end experiences.",
       "platform": "edX",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "Intermediate",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2655,7 +2655,7 @@
       "url": "https://www.edx.org/learn/relational-databases/stanford-university-databases-relational-databases-and-sql",
       "description": "Learn the fundamentals of relational databases and SQL through Stanford's highly regarded curriculum. This self-paced course is essential for aspiring backend developers and is free to audit on edX.",
       "platform": "edX",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2665,7 +2665,7 @@
       "url": "https://online.stanford.edu/courses/xfm100-generative-ai-technology-business-and-society-program-preview",
       "description": "Explore how generative AI is reshaping technology, business, and society through Stanford's comprehensive program. Gain practical insights into real-world AI applications and understand the broader implications of this transformative technology.",
       "platform": "Stanford Online",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2675,7 +2675,7 @@
       "url": "https://students.yourlearning.ibm.com/activity/PLAN-43A030B97485?utm_source=skillsbuild.org",
       "description": "Master the core building blocks of web development, including HTML, CSS, and JavaScript, through hands-on practice. Gain practical experience with modern frameworks and the tools and processes used to build real websites.",
       "platform": "IBM SkillsBuild",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2685,7 +2685,7 @@
       "url": "https://students.yourlearning.ibm.com/activity/PLAN-58FA14F64C9B?utm_source=skillsbuild.org",
       "description": "Gain a solid foundation in cloud computing by exploring key service models and deployment strategies. Discover how businesses leverage cloud technology to drive efficiency and growth in today's digital landscape.",
       "platform": "IBM SkillsBuild",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2695,7 +2695,7 @@
       "url": "https://students.yourlearning.ibm.com/activity/PLAN-4EB23B51588C?utm_source=skillsbuild.org",
       "description": "Gain a solid understanding of core cloud computing concepts from both business and technical perspectives. This course builds the foundational knowledge needed to navigate and understand modern cloud infrastructure confidently.",
       "platform": "IBM SkillsBuild",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "Beginner",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2705,7 +2705,7 @@
       "url": "https://students.yourlearning.ibm.com/activity/PLAN-0F5CA76EE206?utm_source=skillsbuild.org",
       "description": "Gain a foundational understanding of IBM Cloud's core offerings and services designed for developers and enterprises. Explore one of the most open and secure public cloud platforms to build and scale modern applications confidently.",
       "platform": "IBM SkillsBuild",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2715,7 +2715,7 @@
       "url": "https://fullstackopen.com/en/",
       "description": "Master modern full-stack web development with this free, university-grade curriculum from the University of Helsinki. Covering React, Node.js, MongoDB, GraphQL, and TypeScript, you'll gain industry-standard skills to build complete, professional-grade web applications.",
       "platform": "Helsinki MOOC",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "Intermediate",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2725,7 +2725,7 @@
       "url": "https://www.udemy.com/course/css-flexbox-mastering-the-basics/",
       "description": "Learn the fundamentals of CSS Flexbox, including flex containers, alignment techniques, and responsive layout design. By the end, you'll be able to apply practical design patterns to build flexible, modern web layouts.",
       "platform": "Udemy",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "Beginner",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2735,7 +2735,7 @@
       "url": "https://www.udemy.com/course/how-to-build-a-website-using-wordpress/",
       "description": "Learn how to build professional websites from scratch using WordPress, covering essential topics like themes, plugins, and page creation. This beginner-friendly course gives you the practical skills to design and customize a fully functional website with confidence.",
       "platform": "Udemy",
-      "category": "Web Development",
+      "category": "Web Development / Cloud",
       "level": "Beginner",
       "free": true,
       "retrieved": "2026-05-06"
@@ -2801,7 +2801,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "English • UI/UX Design course • Tool + Theory • Full course",
+      "title": "English \u2022 UI/UX Design course \u2022 Tool + Theory \u2022 Full course",
       "url": "https://www.youtube.com/playlist?list=PL7ZIgV4R67IOMRiW_Q7vZqLulb0xyKDHD",
       "description": "Learn the fundamentals of UI/UX design through a comprehensive course that balances practical tool training with essential design theory. Gain the skills needed to create intuitive, user-centered interfaces and build a strong foundation for a career in UX design.",
       "platform": "YouTube",
@@ -2821,7 +2821,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Complete UI/UX Design Course 2026 – Figma, AI, Real Projects (Free)",
+      "title": "Complete UI/UX Design Course 2026 \u2013 Figma, AI, Real Projects (Free)",
       "url": "https://www.youtube.com/playlist?list=PLNziHjgjA2_YnHn6WSRLwIZP6zs2wVnnZ",
       "description": "Master UI/UX design principles and build real-world projects using Figma and AI-powered tools. This comprehensive course equips learners with the practical skills needed to design professional, user-centered digital experiences from scratch.",
       "platform": "YouTube",
@@ -2911,7 +2911,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Complete UX &amp; Design Systems Course (English) • All 18 Episodes",
+      "title": "Complete UX &amp; Design Systems Course (English) \u2022 All 18 Episodes",
       "url": "https://www.youtube.com/playlist?list=PLlHtucAD9KT3wgeeVqILeW-0rYoQgR1Rh",
       "description": "Master UX/UI design from the ground up with this comprehensive, industry-ready course covering all 18 episodes. Gain practical skills in user experience and design systems to prepare for a professional career in the field.",
       "platform": "YouTube",
@@ -2951,7 +2951,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Complete UX &amp; Design Systems Course (Hindi) • All 18 Episodes",
+      "title": "Complete UX &amp; Design Systems Course (Hindi) \u2022 All 18 Episodes",
       "url": "https://www.youtube.com/playlist?list=PLlHtucAD9KT2VKBwCZooIvDAiJQZ0Hrur",
       "description": "Master UX/UI design concepts through a comprehensive, industry-level curriculum taught entirely in Hindi. Across 18 episodes, learners gain practical design systems knowledge, making professional UX education accessible to Hindi-speaking audiences for free.",
       "platform": "YouTube",
@@ -3093,7 +3093,7 @@
     {
       "title": "Google Cybersecurity Certificate",
       "url": "https://www.youtube.com/playlist?list=PLTZYG7bZ1u6ocTMdhDwwmfjaNv134KcWn",
-      "description": "Gain the foundational skills needed to launch a career in cybersecurity through Google's professional training program—no prior degree or experience required. Learn to identify threats, protect networks, and respond to incidents using industry-standard tools and practices.",
+      "description": "Gain the foundational skills needed to launch a career in cybersecurity through Google's professional training program\u2014no prior degree or experience required. Learn to identify threats, protect networks, and respond to incidents using industry-standard tools and practices.",
       "platform": "YouTube",
       "category": "IT / Cybersecurity",
       "level": "All Levels",
@@ -3123,7 +3123,7 @@
     {
       "title": "Free Cyber Security &amp; Ethical Hacking Popular Courses: Beginner to Pro",
       "url": "https://www.youtube.com/playlist?list=PLwO5-rumi8A7vbU7dcbgsZYcYl2ONWNb5",
-      "description": "Here is a 2-sentence summary:\n\nGain foundational to advanced cybersecurity skills through a curated collection of popular ethical hacking courses designed for all experience levels. Learn to identify vulnerabilities, defend systems, and think like a hacker—building practical, job-ready skills from beginner basics to professional techniques.",
+      "description": "Here is a 2-sentence summary:\n\nGain foundational to advanced cybersecurity skills through a curated collection of popular ethical hacking courses designed for all experience levels. Learn to identify vulnerabilities, defend systems, and think like a hacker\u2014building practical, job-ready skills from beginner basics to professional techniques.",
       "platform": "YouTube",
       "category": "IT / Cybersecurity",
       "level": "All Levels",
@@ -3151,9 +3151,9 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Malware Analysis Complete Beginner’s Guide | Free Cybersecurity Training Course (2025)",
+      "title": "Malware Analysis Complete Beginner\u2019s Guide | Free Cybersecurity Training Course (2025)",
       "url": "https://www.youtube.com/playlist?list=PLi7nO4x0eJouwnJ3Z1oUXYvRnkc604yj-",
-      "description": "Learn the fundamentals of malware analysis in this beginner-friendly cybersecurity course designed to build practical skills from the ground up. You'll gain the knowledge needed to identify, examine, and understand malicious software — a critical skill for launching a career in cybersecurity.",
+      "description": "Learn the fundamentals of malware analysis in this beginner-friendly cybersecurity course designed to build practical skills from the ground up. You'll gain the knowledge needed to identify, examine, and understand malicious software \u2014 a critical skill for launching a career in cybersecurity.",
       "platform": "YouTube",
       "category": "IT / Cybersecurity",
       "level": "All Levels",
@@ -3291,7 +3291,7 @@
       "retrieved": "2026-05-06"
     },
     {
-      "title": "Free Cybersecurity Awareness Training – Full Course with Certificate",
+      "title": "Free Cybersecurity Awareness Training \u2013 Full Course with Certificate",
       "url": "https://www.youtube.com/playlist?list=PLsTFCMTqVua10EQbQCVc2QBXuB1AKteyA",
       "description": "Learn essential cybersecurity awareness skills in this free course taught by cybersecurity professional Carl B. from ComputerSecurity.us. Gain practical knowledge to protect yourself and your organization from digital threats, and earn a certificate upon completion.",
       "platform": "YouTube",
@@ -3783,7 +3783,7 @@
     {
       "title": "Introduction to Internet of Things",
       "url": "https://online.stanford.edu/courses/xee100-introduction-internet-things",
-      "description": "Explore the fundamentals of Internet of Things technology, including sensors, connectivity, and embedded systems design, through Stanford's beginner-friendly course. Gain practical knowledge of how IoT devices work and how they're built—completely free.",
+      "description": "Explore the fundamentals of Internet of Things technology, including sensors, connectivity, and embedded systems design, through Stanford's beginner-friendly course. Gain practical knowledge of how IoT devices work and how they're built\u2014completely free.",
       "platform": "Stanford Online",
       "category": "IT / Cybersecurity",
       "level": "All Levels",
@@ -4173,7 +4173,7 @@
     {
       "title": "Simpliaxis Webinars",
       "url": "https://www.youtube.com/playlist?list=PLOsSeAlKvhfaCoK_Jn6t2YZKm8TRtsy4S",
-      "description": "Gain expertise in high-demand professional skills through Simpliaxis's 2025 Masterclass Webinar series. Covering Agile/Scrum, SAFe, PMP®, and more, these free sessions help learners advance their project management and career development knowledge.",
+      "description": "Gain expertise in high-demand professional skills through Simpliaxis's 2025 Masterclass Webinar series. Covering Agile/Scrum, SAFe, PMP\u00ae, and more, these free sessions help learners advance their project management and career development knowledge.",
       "platform": "YouTube",
       "category": "Project Management / Agile / Career Skills",
       "level": "All Levels",
@@ -4513,7 +4513,7 @@
     {
       "title": "PRDV003: Word Processing",
       "url": "https://learn.saylor.org/course/view.php?id=890",
-      "description": "Master essential word processing skills, from document formatting and templates to advanced features used in professional settings. This beginner-friendly course equips you with practical tools to create polished, workplace-ready documents—and includes a free certificate upon completion.",
+      "description": "Master essential word processing skills, from document formatting and templates to advanced features used in professional settings. This beginner-friendly course equips you with practical tools to create polished, workplace-ready documents\u2014and includes a free certificate upon completion.",
       "platform": "Saylor Academy",
       "category": "Project Management / Agile / Career Skills",
       "level": "Beginner",
@@ -4533,7 +4533,7 @@
     {
       "title": "PRDV006: Spreadsheets II - Formatting and Functions",
       "url": "https://learn.saylor.org/course/view.php?id=876",
-      "description": "Build on your spreadsheet foundations by mastering advanced formatting techniques, logical functions, and data validation. This beginner-friendly course equips you with practical skills to create cleaner, smarter spreadsheets—and includes a free certificate upon completion.",
+      "description": "Build on your spreadsheet foundations by mastering advanced formatting techniques, logical functions, and data validation. This beginner-friendly course equips you with practical skills to create cleaner, smarter spreadsheets\u2014and includes a free certificate upon completion.",
       "platform": "Saylor Academy",
       "category": "Project Management / Agile / Career Skills",
       "level": "Beginner",
@@ -4603,7 +4603,7 @@
     {
       "title": "AI Fluency: Framework & Foundations",
       "url": "https://anthropic.skilljar.com/ai-fluency-framework-foundations",
-      "description": "Develop the skills to work with AI systems effectively, ethically, and safely using Anthropic's foundational AI fluency framework. Ideal for professionals looking to build confident, responsible AI collaboration habits—with a free certificate upon completion.",
+      "description": "Develop the skills to work with AI systems effectively, ethically, and safely using Anthropic's foundational AI fluency framework. Ideal for professionals looking to build confident, responsible AI collaboration habits\u2014with a free certificate upon completion.",
       "platform": "Anthropic",
       "category": "Project Management / Agile / Career Skills",
       "level": "All Levels",
@@ -4643,7 +4643,7 @@
     {
       "title": "Teaching AI Fluency",
       "url": "https://anthropic.skilljar.com/teaching-ai-fluency",
-      "description": "Learn how to effectively teach and assess AI fluency in instructor-led academic settings. Designed for faculty and instructional designers, this course builds practical skills for integrating AI literacy into curricula—and includes a free certificate upon completion.",
+      "description": "Learn how to effectively teach and assess AI fluency in instructor-led academic settings. Designed for faculty and instructional designers, this course builds practical skills for integrating AI literacy into curricula\u2014and includes a free certificate upon completion.",
       "platform": "Anthropic",
       "category": "Project Management / Agile / Career Skills",
       "level": "All Levels",
@@ -4669,6 +4669,526 @@
       "level": "All Levels",
       "free": true,
       "retrieved": "2026-05-06"
+    },
+    {
+      "title": "Algorithms",
+      "url": "https://algs4.cs.princeton.edu/home/",
+      "description": "Explore foundational algorithms and data structures through Princeton University's comprehensive companion to their renowned algorithms course. Master sorting, searching, graphs, and strings using Java \u2014 essential knowledge for every serious programmer.",
+      "platform": "Princeton University",
+      "category": "Programming & Computer Science",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Mouse and Keyboard Fundamentals",
+      "url": "https://www.open.edu/openlearncreate/mod/book/view.php?id=181144&chapterid=24658",
+      "description": "Build confidence with the essential tools of computing \u2014 the mouse and keyboard \u2014 through this beginner OpenLearn module. Develop practical skills for navigating a computer efficiently and comfortably from the ground up.",
+      "platform": "OpenLearn",
+      "category": "Programming & Computer Science",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Computer Software Overview",
+      "url": "https://www.open.edu/openlearncreate/mod/book/view.php?id=181144&chapterid=24657",
+      "description": "Get a clear, accessible introduction to computer software, covering the types of programs that make computers useful and how they work together. This OpenLearn module is the perfect starting point for anyone new to computing.",
+      "platform": "OpenLearn",
+      "category": "Programming & Computer Science",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Breaking into Cybersecurity: Careers, Business and Freelance Success",
+      "url": "https://www.open.edu/openlearncreate/course/view.php?id=13195",
+      "description": "Chart your path into the cybersecurity field with this OpenLearn course covering career options, business skills, and freelance opportunities. Gain practical insight into the industry landscape and what it takes to build a successful cybersecurity career.",
+      "platform": "OpenLearn",
+      "category": "IT / Cybersecurity",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Linux - Quick Tutorial for Beginners",
+      "url": "https://www.youtube.com/watch?v=BMGixkvJ-6w",
+      "description": "Get up and running with Linux fast through this beginner-friendly YouTube tutorial covering essential commands, file navigation, and system basics. A great starting point for anyone new to the Linux command line.",
+      "platform": "YouTube",
+      "category": "IT / Cybersecurity",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Mastering Command Prompt Basics (Windows Users)",
+      "url": "https://www.youtube.com/watch?v=QBWX_4ho8D4",
+      "description": "Learn the essential Windows Command Prompt commands every tech user should know, from navigating directories to running basic system tasks. This beginner tutorial builds confidence working in a text-based environment on Windows.",
+      "platform": "YouTube",
+      "category": "IT / Cybersecurity",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Absolute Beginner Guide to the Terminal (Mac Users)",
+      "url": "https://www.youtube.com/watch?v=aKRYQsKR46I",
+      "description": "Take your first steps with the Mac Terminal through this approachable beginner guide covering navigation, file management, and basic commands. Build the command-line confidence that opens the door to programming and system administration.",
+      "platform": "YouTube",
+      "category": "IT / Cybersecurity",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Programming for Kids and Beginners: Learn to Code in Scratch 3.0",
+      "url": "https://www.youtube.com/playlist?list=PLzfGEQoIYHPZwuy7flA5vr5Ky-Fj3qwVs",
+      "description": "Introduce children and absolute beginners to programming through Scratch 3.0, a visual, block-based coding environment designed for creativity and fun. Build games, animations, and interactive stories while learning core programming concepts.",
+      "platform": "YouTube",
+      "category": "Programming & Computer Science",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Coding is Easy, Actually",
+      "url": "https://www.youtube.com/watch?v=qkFYqY3vr84",
+      "description": "Break through the intimidation of learning to code with this encouraging YouTube video that demystifies programming for complete beginners. Discover that with the right mindset and approach, coding is more accessible than you think.",
+      "platform": "YouTube",
+      "category": "Programming & Computer Science",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Computer Basics",
+      "url": "https://www.learnfree.org/series/computer-basics",
+      "description": "Get started with computers through this beginner LearnFree series covering hardware, software, operating systems, and essential day-to-day computer skills. Perfect for anyone just beginning their journey with technology.",
+      "platform": "LearnFree",
+      "category": "Programming & Computer Science",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Computer Science (Basics)",
+      "url": "https://www.learnfree.org/series/computer-science",
+      "description": "Explore core computer science concepts through this approachable LearnFree series designed for beginners with no prior experience. Build a foundational understanding of how computers think, process, and solve problems.",
+      "platform": "LearnFree",
+      "category": "Programming & Computer Science",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Windows Basics",
+      "url": "https://www.learnfree.org/series/windows-basics",
+      "description": "Learn to navigate and use the Windows operating system with confidence through this beginner LearnFree series. Covers the desktop, file management, settings, and everyday tasks every Windows user should know.",
+      "platform": "LearnFree",
+      "category": "Programming & Computer Science",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "macOS Basics",
+      "url": "https://www.learnfree.org/series/macos-basics",
+      "description": "Get comfortable with macOS through this beginner LearnFree series covering the desktop, Finder, system preferences, and essential Mac skills. A friendly starting point for new Mac users.",
+      "platform": "LearnFree",
+      "category": "Programming & Computer Science",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Internet Basics",
+      "url": "https://www.learnfree.org/series/internet-basics",
+      "description": "Understand how the internet works and how to use it effectively through this beginner LearnFree series. Covers browsers, web navigation, email, and the fundamentals of staying connected online.",
+      "platform": "LearnFree",
+      "category": "IT / Cybersecurity",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Internet Tips",
+      "url": "https://www.learnfree.org/series/internet-tips",
+      "description": "Sharpen your online skills with practical tips and tricks from this beginner LearnFree series. Learn to browse smarter, manage your digital footprint, and get more out of everyday internet use.",
+      "platform": "LearnFree",
+      "category": "IT / Cybersecurity",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Internet Safety",
+      "url": "https://www.learnfree.org/series/internet-safety",
+      "description": "Learn how to protect yourself online through this beginner LearnFree series covering phishing, passwords, privacy, and safe browsing habits. Essential knowledge for anyone using the internet today.",
+      "platform": "LearnFree",
+      "category": "IT / Cybersecurity",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Search Better",
+      "url": "https://www.learnfree.org/series/search-better",
+      "description": "Improve your ability to find accurate, reliable information online with this beginner LearnFree series on effective search strategies. Learn to evaluate sources, use search operators, and cut through digital noise.",
+      "platform": "LearnFree",
+      "category": "IT / Cybersecurity",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Basic CSS",
+      "url": "https://www.learnfree.org/explore/skills-for-today-tutorials",
+      "description": "Start styling the web with this beginner LearnFree introduction to CSS, covering selectors, properties, colors, and layout basics. A practical first step for anyone learning to build and design web pages.",
+      "platform": "LearnFree",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Basic HTML",
+      "url": "https://www.learnfree.org/series/basic-html",
+      "description": "Learn the building blocks of the web with this beginner LearnFree HTML series covering tags, structure, links, images, and forms. Everything you need to create your first web page from scratch.",
+      "platform": "LearnFree",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Google Docs",
+      "url": "https://www.learnfree.org/series/google-docs",
+      "description": "Master Google Docs for creating, formatting, sharing, and collaborating on documents through this beginner LearnFree series. A practical guide for students, professionals, and anyone working in a modern digital workspace.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Google Slides",
+      "url": "https://www.learnfree.org/series/google-slides",
+      "description": "Learn to create polished, engaging presentations using Google Slides through this beginner LearnFree series. Covers slides, themes, transitions, and sharing \u2014 everything you need for school, work, or personal projects.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Google Sheets",
+      "url": "https://www.learnfree.org/series/google-sheets",
+      "description": "Get started with spreadsheets using Google Sheets through this beginner LearnFree series covering data entry, formulas, charts, and sharing. Build the spreadsheet skills used every day in school and the workplace.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Word Foundations",
+      "url": "https://www.learnfree.org/series/word-foundations",
+      "description": "Build confidence with Microsoft Word through this beginner LearnFree series covering document creation, formatting, layout, and saving. Essential skills for anyone working with text documents in school or at work.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Excel Foundations",
+      "url": "https://www.learnfree.org/series/excel-foundations",
+      "description": "Develop foundational Excel skills through this beginner LearnFree series covering worksheets, formulas, formatting, and basic data organization. A great first step for anyone looking to work more effectively with data.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Introduction to Microsoft PowerPoint",
+      "url": "https://www.learnfree.org/series/introduction-to-microsoft-powerpoint",
+      "description": "Learn to create professional presentations with Microsoft PowerPoint through this beginner LearnFree series. Covers slides, layouts, design themes, and delivery tips to help you communicate ideas clearly and confidently.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Introduction to Microsoft Word",
+      "url": "https://www.learnfree.org/series/introduction-to-microsoft-word",
+      "description": "Start from scratch with Microsoft Word through this beginner LearnFree series covering the interface, text editing, formatting, and saving documents. Perfect for new users building everyday document skills.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Introduction to Microsoft Excel",
+      "url": "https://www.learnfree.org/series/introduction-to-microsoft-excel",
+      "description": "Take your first steps with Microsoft Excel through this beginner LearnFree series covering the interface, basic formulas, and data entry. Build the spreadsheet foundation used in virtually every professional environment.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Office for Macs",
+      "url": "https://www.learnfree.org/series/office-for-macs",
+      "description": "Learn to use Microsoft Office on a Mac through this beginner LearnFree series covering Word, Excel, and PowerPoint on macOS. Get comfortable with the Mac-specific interface while mastering the Office tools used everywhere.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Tech Savvy Tips and Tricks",
+      "url": "https://www.learnfree.org/series/tech-savvy-tips-and-tricks",
+      "description": "Level up your everyday tech skills with practical tips and tricks from this beginner LearnFree series. Covers shortcuts, productivity hacks, and smart habits that help you get more done with less effort.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Freelancing 101",
+      "url": "https://www.learnfree.org/series/freelancing-101",
+      "description": "Start your freelancing journey with this beginner LearnFree series covering how to find clients, set rates, manage projects, and build a sustainable independent career. Practical guidance for anyone going out on their own.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Communication Skills",
+      "url": "https://www.learnfree.org/series/communication-skills",
+      "description": "Strengthen your professional and personal communication through this beginner LearnFree series covering writing, speaking, listening, and workplace interaction. Skills that make a difference in every career and relationship.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Careers without College",
+      "url": "https://www.learnfree.org/series/careers-without-college",
+      "description": "Explore rewarding career paths that don't require a four-year degree through this beginner LearnFree series. Discover trades, certifications, and alternative routes to well-paying, in-demand jobs.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Career Planning and Salary",
+      "url": "https://www.learnfree.org/series/career-planning-and-salary",
+      "description": "Take control of your professional future with this beginner LearnFree series on career planning, salary research, and goal setting. Learn how to map out a career path and advocate for fair compensation.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Job Search and Networking",
+      "url": "https://www.learnfree.org/series/job-search-and-networking",
+      "description": "Navigate the job market with confidence through this beginner LearnFree series on job searching, LinkedIn, networking, and finding opportunities. Build the connections and strategies that lead to real career opportunities.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Workplace Basics",
+      "url": "https://www.learnfree.org/series/workplace-basics",
+      "description": "Get ready for the world of work with this beginner LearnFree series covering professional behavior, workplace culture, teamwork, and expectations. Essential preparation for students and anyone entering the workforce.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Resume Writing",
+      "url": "https://www.learnfree.org/series/resume-writing",
+      "description": "Craft a resume that gets noticed with this beginner LearnFree series covering formatting, content, and tailoring your resume for specific roles. Practical guidance for job seekers at every stage of their career.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Interviewing Skills",
+      "url": "https://www.learnfree.org/series/interviewing-skills",
+      "description": "Prepare for job interviews with confidence through this beginner LearnFree series covering common questions, body language, research strategies, and follow-up. Walk into your next interview ready to make a strong impression.",
+      "platform": "LearnFree",
+      "category": "Project Management / Agile / Career Skills",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Web Development Fundamentals",
+      "url": "https://skills.yourlearning.ibm.com/activity/PLAN-8749C02A78EC?utm_source=skillsbuild.org",
+      "description": "Learn the languages, tools, and processes used to build websites with hands-on practice covering HTML, CSS, JavaScript, and modern frameworks through IBM SkillsBuild. Earn a free certificate upon completion.",
+      "platform": "IBM SkillsBuild",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Google Cloud: Prompt Engineering",
+      "url": "https://www.skills.google/course_templates/1132",
+      "description": "Master the art of prompt engineering for Google Cloud AI tools through this beginner course from Google. Learn to craft effective prompts that get better results from generative AI \u2014 and earn a free certificate.",
+      "platform": "Google",
+      "category": "Data Science AI",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Google AI Educator Series",
+      "url": "https://educertifications.google/google-ai-educator-series",
+      "description": "Explore how to integrate AI tools into education through Google's comprehensive AI Educator Series designed for all experience levels. Earn a free certificate while building practical skills for the AI-powered classroom.",
+      "platform": "Google",
+      "category": "Data Science AI",
+      "level": "All Levels",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Introduction to Cloud Computing",
+      "url": "https://www.udemy.com/course/introduction-to-cloud-computing/",
+      "description": "Get a solid foundation in cloud computing concepts, service models, and deployment strategies through this beginner Udemy course. Understand the fundamentals that underpin AWS, Azure, Google Cloud, and modern infrastructure.",
+      "platform": "Udemy",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "DevOps 101",
+      "url": "https://www.udemy.com/course/devops-101-buddy/",
+      "description": "Take your first steps into DevOps with this beginner Udemy course covering the culture, practices, and tools that bridge development and operations teams. Learn the foundations of CI/CD, automation, and modern software delivery.",
+      "platform": "Udemy",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Cloud Computing Lab",
+      "url": "https://www.udemy.com/course/cloud-computing-lab-programs/",
+      "description": "Get hands-on cloud computing experience through this beginner Udemy lab course with practical exercises and real-world scenarios. Reinforce your understanding of cloud concepts through applied, project-based learning.",
+      "platform": "Udemy",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Describe Azure Cloud Concepts",
+      "url": "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/",
+      "description": "Build your foundational understanding of cloud computing and Microsoft Azure through this beginner Microsoft Learn path. Covers core cloud concepts, benefits, and service models as part of the AZ-900 certification pathway.",
+      "platform": "Microsoft Learn",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Introduction to Azure Cloud Infrastructure",
+      "url": "https://learn.microsoft.com/en-us/training/courses/az-900t00",
+      "description": "Get a comprehensive introduction to Microsoft Azure's cloud infrastructure, services, and core architectural concepts through this beginner Microsoft Learn course. Aligned with the AZ-900 Azure Fundamentals certification.",
+      "platform": "Microsoft Learn",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Describe Azure Architecture and Services",
+      "url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals-describe-azure-architecture-services/",
+      "description": "Explore the architecture and core services of Microsoft Azure including compute, networking, and storage through this beginner Microsoft Learn path. Part of the AZ-900 Azure Fundamentals certification learning journey.",
+      "platform": "Microsoft Learn",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Describe Azure Management and Governance",
+      "url": "https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/",
+      "description": "Learn how to manage and govern Azure resources using tools for cost management, compliance, and policy through this beginner Microsoft Learn path. Covers the governance concepts tested in the AZ-900 certification exam.",
+      "platform": "Microsoft Learn",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Manage Identities and Governance in Azure",
+      "url": "https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/",
+      "description": "Master Azure identity management, role-based access control, and governance strategies through this beginner Microsoft Learn path. Core content for the AZ-104 Azure Administrator certification.",
+      "platform": "Microsoft Learn",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Implement and Manage Storage in Azure",
+      "url": "https://learn.microsoft.com/en-us/training/paths/az-104-manage-storage/",
+      "description": "Learn to configure and manage Azure storage solutions including blobs, files, and redundancy options through this beginner Microsoft Learn path. Essential skills for the AZ-104 Azure Administrator certification.",
+      "platform": "Microsoft Learn",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Deploy and Manage Azure Compute Resources",
+      "url": "https://learn.microsoft.com/en-us/training/paths/az-104-manage-compute-resources/",
+      "description": "Develop skills for deploying and managing virtual machines, containers, and Azure App Service through this beginner Microsoft Learn path. Covers the compute management topics in the AZ-104 Azure Administrator certification.",
+      "platform": "Microsoft Learn",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Configure and Manage Virtual Networks for Azure Administrators",
+      "url": "https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/",
+      "description": "Learn to configure Azure virtual networks, subnets, routing, and network security through this beginner Microsoft Learn path. Covers the networking skills required for the AZ-104 Azure Administrator certification.",
+      "platform": "Microsoft Learn",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
+    },
+    {
+      "title": "Monitor and Back Up Azure Resources",
+      "url": "https://learn.microsoft.com/en-us/training/paths/az-104-monitor-backup-resources/",
+      "description": "Learn to monitor Azure performance, set up alerts, and configure backup and recovery solutions through this beginner Microsoft Learn path. Covers the monitoring and backup skills tested in the AZ-104 Azure Administrator certification.",
+      "platform": "Microsoft Learn",
+      "category": "Web Development / Cloud",
+      "level": "Beginner",
+      "free": true,
+      "retrieved": "2026-05-31"
     }
   ]
 }

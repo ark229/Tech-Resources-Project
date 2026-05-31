@@ -15,6 +15,9 @@ Platforms covered:
   - AWS Skill Builder (public catalog)
   - Stanford Online (public course listings)
   - Harvard University (open courseware)
+  - LearnFree (curated free tutorials)
+  - OpenLearn (The Open University open courseware)
+  - Princeton University (open courseware)
 
 Categories:
   - Python / Programming
@@ -54,7 +57,7 @@ CONFIG = {
 CATEGORIES = [
     "Programming & Computer Science",
     "Data Science AI",
-    "Web Development",
+    "Web Development / Cloud",
     "UX Design",
     "IT / Cybersecurity",
     "Project Management / Agile / Career Skills",
@@ -150,12 +153,19 @@ YOUTUBE_CURATED = {
         {"title": "Introduction to ASP.NET [2026]", "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUUJ5JWyHUtFXhX6mfQwiVaBs", "description": "Introduction to ASP.NET web development covering MVC, APIs, authentication, and deploying .NET web applications.", "level": "All Levels"},
         {"title": "PHP Training Videos [2026]", "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUUIjP-QLfvICa1TvqTLFvn1b", "description": "PHP programming course covering core syntax, OOP, database integration, and building dynamic web applications.", "level": "All Levels"},
         {"title": "SQL Training Playlist [2026]", "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUUKL3yPbn8yWnatjUg0P0I-Z", "description": "Complete SQL training covering queries, joins, subqueries, stored procedures, and database design fundamentals.", "level": "All Levels"},
+        {"title": "Programming for Kids and Beginners: Learn to Code in Scratch 3.0", "url": "https://www.youtube.com/playlist?list=PLzfGEQoIYHPZwuy7flA5vr5Ky-Fj3qwVs", "description": "Introduce children and absolute beginners to programming through Scratch 3.0, a visual block-based coding environment.", "level": "Beginner"},
+        {"title": "Coding is Easy, Actually", "url": "https://www.youtube.com/watch?v=qkFYqY3vr84", "description": "Encouraging video demystifying programming for complete beginners and showing that coding is more accessible than it seems.", "level": "Beginner"},
+    ],
+    "IT / Cybersecurity": [
+        {"title": "Linux - Quick Tutorial for Beginners", "url": "https://www.youtube.com/watch?v=BMGixkvJ-6w", "description": "Beginner-friendly tutorial covering essential Linux commands, file navigation, and system basics.", "level": "Beginner"},
+        {"title": "Mastering Command Prompt Basics (Windows Users)", "url": "https://www.youtube.com/watch?v=QBWX_4ho8D4", "description": "Essential Windows Command Prompt commands covering directory navigation and basic system tasks for beginners.", "level": "Beginner"},
+        {"title": "Absolute Beginner Guide to the Terminal (Mac Users)", "url": "https://www.youtube.com/watch?v=aKRYQsKR46I", "description": "Approachable beginner guide to the Mac Terminal covering navigation, file management, and basic commands.", "level": "Beginner"},
     ],
     "Data Science AI": [
         {"title": "TensorFlow Introduction Course [2026]", "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUUK1Gw2Cj7-M0mhk0oLE6jzk", "description": "Hands-on TensorFlow course covering neural networks, model training, deep learning pipelines, and deployment.", "level": "All Levels"},
         {"title": "Business Analytics [2026]", "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUUIhyGLSiEzotDRF0hc1xbiN", "description": "Business analytics course covering data-driven decision making, statistical analysis, visualization, and BI tools.", "level": "All Levels"},
     ],
-    "Web Development": [
+    "Web Development / Cloud": [
         {"title": "Introduction to Google Cloud Platform [2026]", "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUULvVL0SoVmiS1kTiC87W_AG", "description": "Beginner-friendly introduction to Google Cloud Platform covering core services, storage, compute, and deployment.", "level": "Beginner"},
         {"title": "Microsoft Azure Full Course [2026]", "url": "https://www.youtube.com/playlist?list=PLEiEAq2VkUUJ-lLsBkEt1CckzIagYNq9S", "description": "Comprehensive Azure cloud course covering virtual machines, storage, networking, security, and Azure DevOps.", "level": "All Levels"},
     ],
@@ -232,7 +242,7 @@ MITOCW_CURATED = {
         {"title": "Probabilistic Systems Analysis and Applied Probability", "url": "https://ocw.mit.edu/courses/6-041-probabilistic-systems-analysis-and-applied-probability-fall-2010/", "description": "Rigorous MIT course on probability theory, random variables, and statistical inference — essential for data science."},
         {"title": "Statistics for Applications", "url": "https://ocw.mit.edu/courses/18-650-statistics-for-applications-fall-2016/", "description": "MIT statistics course covering estimation, hypothesis testing, regression, and machine learning fundamentals."},
     ],
-    "Web Development": [
+    "Web Development / Cloud": [
         {"title": "User Interface Design and Implementation", "url": "https://ocw.mit.edu/courses/6-831-user-interface-design-and-implementation-spring-2011/", "description": "MIT course on UI design principles, usability, and front-end implementation for interactive web applications."},
     ],
     "IT / Cybersecurity": [
@@ -279,7 +289,7 @@ FCC_CURATED = {
         {"title": "Data Analysis with Python", "url": "https://www.freecodecamp.org/learn/data-analysis-with-python/", "description": "freeCodeCamp's free data analysis certification covering NumPy, Pandas, Matplotlib, and data visualization techniques."},
         {"title": "Machine Learning with Python", "url": "https://www.freecodecamp.org/learn/machine-learning-with-python/", "description": "freeCodeCamp's free machine learning certification covering TensorFlow, neural networks, NLP, and reinforcement learning."},
     ],
-    "Web Development": [
+    "Web Development / Cloud": [
         {"title": "Responsive Web Design", "url": "https://www.freecodecamp.org/learn/responsive-web-design-v9/", "description": "freeCodeCamp's free web design certification covering HTML, CSS, Flexbox, Grid, and accessibility best practices."},
         {"title": "JavaScript Certification", "url": "https://www.freecodecamp.org/learn/javascript-v9/", "description": "freeCodeCamp's free JavaScript certification covering ES6, OOP, functional programming, and algorithm challenges."},
         {"title": "Front End Development Libraries", "url": "https://www.freecodecamp.org/learn/front-end-development-libraries-v9/", "description": "Learn Bootstrap, jQuery, Sass, React, and Redux through freeCodeCamp's free front-end certification program."},
@@ -321,7 +331,7 @@ def fetch_freecodecamp(category: str) -> list:
 MS_KEYWORD_MAP = {
     "Programming & Computer Science":        "python programming",
     "Data Science AI":           "artificial intelligence machine learning",
-    "Web Development":           "web development javascript",
+    "Web Development / Cloud":           "web development javascript",
     "IT / Cybersecurity":          "cybersecurity network security",
     "Project Management / Agile / Career Skills":  "project management agile scrum",
 }
@@ -330,7 +340,7 @@ MS_KEYWORD_MAP = {
 MS_SUBJECT_MAP = {
     "Programming & Computer Science":        "application-development",
     "Data Science AI":           "artificial-intelligence",
-    "Web Development":           "application-development",
+    "Web Development / Cloud":           "application-development",
     "IT / Cybersecurity":          "security",
     "UX Design":                    "design",
     "Project Management / Agile / Career Skills":  "business-applications",
@@ -342,6 +352,17 @@ MS_CURATED = {
     "Data Science AI": [
         {"title": "Get Started with SQL Server 2025", "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-sql-server-2022/", "description": "Microsoft Learn's beginner introduction to SQL Server 2025 covering installation, tools, databases, and basic querying. Completely free.", "level": "Beginner"},
         {"title": "Introduction to Transact-SQL", "url": "https://learn.microsoft.com/en-us/training/modules/introduction-to-transact-sql/", "description": "Microsoft Learn's beginner guide to Transact-SQL covering SELECT statements, filtering, sorting, and working with SQL Server data. Completely free.", "level": "Beginner"},
+    ],
+    "Web Development / Cloud": [
+        {"title": "Describe Azure Cloud Concepts", "url": "https://learn.microsoft.com/en-us/training/paths/microsoft-azure-fundamentals-describe-cloud-concepts/", "description": "Foundational Microsoft Learn path covering core cloud computing concepts, benefits, and service models as part of the AZ-900 certification pathway.", "level": "Beginner"},
+        {"title": "Introduction to Azure Cloud Infrastructure", "url": "https://learn.microsoft.com/en-us/training/courses/az-900t00", "description": "Comprehensive introduction to Microsoft Azure's cloud infrastructure, services, and core architectural concepts aligned with the AZ-900 certification.", "level": "Beginner"},
+        {"title": "Describe Azure Architecture and Services", "url": "https://learn.microsoft.com/en-us/training/paths/azure-fundamentals-describe-azure-architecture-services/", "description": "Microsoft Learn path exploring Azure architecture and core services including compute, networking, and storage. Part of the AZ-900 learning journey.", "level": "Beginner"},
+        {"title": "Describe Azure Management and Governance", "url": "https://learn.microsoft.com/en-us/training/paths/describe-azure-management-governance/", "description": "Microsoft Learn path covering Azure cost management, compliance, and policy governance concepts tested in the AZ-900 certification exam.", "level": "Beginner"},
+        {"title": "Manage Identities and Governance in Azure", "url": "https://learn.microsoft.com/en-us/training/paths/az-104-manage-identities-governance/", "description": "Microsoft Learn path covering Azure identity management, role-based access control, and governance strategies for the AZ-104 certification.", "level": "Beginner"},
+        {"title": "Implement and Manage Storage in Azure", "url": "https://learn.microsoft.com/en-us/training/paths/az-104-manage-storage/", "description": "Microsoft Learn path covering Azure storage solutions including blobs, files, and redundancy options for the AZ-104 certification.", "level": "Beginner"},
+        {"title": "Deploy and Manage Azure Compute Resources", "url": "https://learn.microsoft.com/en-us/training/paths/az-104-manage-compute-resources/", "description": "Microsoft Learn path covering virtual machines, containers, and Azure App Service deployment for the AZ-104 certification.", "level": "Beginner"},
+        {"title": "Configure and Manage Virtual Networks for Azure Administrators", "url": "https://learn.microsoft.com/en-us/training/paths/az-104-manage-virtual-networks/", "description": "Microsoft Learn path covering Azure virtual networks, subnets, routing, and network security for the AZ-104 certification.", "level": "Beginner"},
+        {"title": "Monitor and Back Up Azure Resources", "url": "https://learn.microsoft.com/en-us/training/paths/az-104-monitor-backup-resources/", "description": "Microsoft Learn path covering Azure monitoring, alerts, backup, and recovery solutions for the AZ-104 certification.", "level": "Beginner"},
     ],
 }
 
@@ -360,7 +381,7 @@ def fetch_microsoft_learn(category: str) -> list:
     MS_RELEVANCE_KEYWORDS = {
         "Programming & Computer Science":        ["python", "programming", "coding", "developer", "script"],
         "Data Science AI":           ["ai", "artificial intelligence", "machine learning", "data science", "deep learning", "neural", "nlp"],
-        "Web Development":           ["web", "html", "css", "javascript", "frontend", "backend", "asp.net", "node"],
+        "Web Development / Cloud":           ["web", "html", "css", "javascript", "frontend", "backend", "asp.net", "node"],
         "IT / Cybersecurity":          ["security", "cybersecurity", "threat", "zero trust", "identity", "compliance", "defender"],
         "UX Design":                     ["UX design", "user experience design", "UI UX design", "wireframing", "usability"],
         "Project Management / Agile / Career Skills":  ["project management", "agile", "scrum", "career skills", "workplace skills", "leadership"],
@@ -439,7 +460,7 @@ AWS_CURATED = {
         {"title": "Data Engineering on AWS - Foundations", "url": "https://skillbuilder.aws/learn/6BP61KB1FJ/data-engineering-on-aws--foundations/KXCN4PJD9Y", "description": "Foundational data engineering concepts covering AWS data pipelines, storage, transformation, and analytics services.", "level": "Beginner"},
         {"title": "Data Analytics Learning Plan", "url": "https://skillbuilder.aws/learning-plan/J38YWQY59M/data-analytics-learning-plan-includes-labs/Z2QZR9T77Q", "description": "Comprehensive learning path for AWS data analytics covering data lakes, warehousing, visualization, and hands-on labs.", "level": "Beginner"},
     ],
-    "Web Development": [
+    "Web Development / Cloud": [
         {"title": "AWS Cloud Quest: Cloud Practitioner", "url": "https://skillbuilder.aws/learn/FU5WCYVGKY/aws-cloud-quest-cloud-practitioner/JF9TKU68GT", "description": "Gamified, hands-on cloud learning game for building and deploying cloud applications and web services on AWS.", "level": "Beginner"},
         {"title": "AWS Well-Architected Foundations", "url": "https://skillbuilder.aws/learn/U89MJTNSM8/aws-wellarchitected-foundations/RCY5NFM8R9", "description": "Best practices for designing reliable, secure, and cost-effective architectures using the AWS Well-Architected Framework.", "level": "Intermediate"},
         {"title": "Building Your Agentic Applications the Well-Architected Way", "url": "https://skillbuilder.aws/learn/R44Y8PRVRW/building-your-agentic-applications-the-wellarchitected-way/8W5HD7KWJ4", "description": "Design and build AI agent applications on AWS following Well-Architected best practices for reliability and security.", "level": "Intermediate"},
@@ -491,7 +512,7 @@ EDX_CURATED = {
     "Data Science AI": [
         {"title": "CS50's Introduction to Artificial Intelligence with Python", "url": "https://www.edx.org/learn/artificial-intelligence/harvard-university-cs50-s-introduction-to-artificial-intelligence-with-python", "description": "Harvard's AI course covering search algorithms, machine learning, neural networks, and NLP using Python. Free to audit.", "level": "Intermediate"},
     ],
-    "Web Development": [
+    "Web Development / Cloud": [
         {"title": "CS50's Web Programming with Python and JavaScript", "url": "https://www.edx.org/learn/web-development/harvard-university-cs50-s-web-programming-with-python-and-javascript", "description": "Harvard's full-stack web development course covering Django, JavaScript, React, Git, and databases. Free to audit.", "level": "Intermediate"},
         {"title": "IBM: Developing Front End Apps with React", "url": "https://www.edx.org/learn/react-native/ibm-developing-front-end-apps-with-react", "description": "IBM's hands-on React course covering components, state management, hooks, and building interactive web applications. Free to audit.", "level": "Intermediate"},
     ],
@@ -531,7 +552,7 @@ STANFORD_CURATED = {
         {"title": "Machine Learning — CS229", "url": "https://see.stanford.edu/course/cs229", "description": "Stanford's renowned machine learning course covering supervised learning, unsupervised learning, neural networks, and AI foundations."},
         {"title": "Statistical Learning with R", "url": "https://www.edx.org/learn/statistics/stanford-university-statistical-learning", "description": "Comprehensive introduction to statistical learning and data mining with R, based on the textbook ISLR. Free to audit.", "platform_override": "edX", "level": "Beginner"},
     ],
-    "Web Development": [
+    "Web Development / Cloud": [
         {"title": "Databases: Relational Databases and SQL", "url": "https://www.edx.org/learn/relational-databases/stanford-university-databases-relational-databases-and-sql", "description": "Stanford's self-paced SQL and relational databases course. Free to audit on edX — essential for backend web development.", "platform_override": "edX"},
         {"title": "Generative AI: Technology, Business and Society", "url": "https://online.stanford.edu/courses/xfm100-generative-ai-technology-business-and-society-program-preview", "description": "Stanford's program exploring generative AI's impact on technology, business, and society. Covers practical applications and implications."},
     ],
@@ -577,8 +598,9 @@ IBM_CURATED = {
         {"title": "Data Fundamentals", "url": "https://students.yourlearning.ibm.com/activity/PLAN-0EC2BCEA3C39?utm_source=skillsbuild.org", "description": "Learn data science concepts and methods with hands-on practice cleaning, refining, and visualizing data to discover meaningful insights.", "level": "Beginner"},
         {"title": "Data Science Foundations", "url": "https://students.yourlearning.ibm.com/activity/PLAN-F0DF852C4003?utm_source=skillsbuild.org", "description": "Comprehensive data science path covering analysis, visualization, and machine learning concepts through IBM's free learning platform.", "level": "All Levels"},
     ],
-    "Web Development": [
+    "Web Development / Cloud": [
         {"title": "Web Development Fundamentals", "url": "https://students.yourlearning.ibm.com/activity/PLAN-43A030B97485?utm_source=skillsbuild.org", "description": "Learn the languages, tools, and processes used to build websites with hands-on practice covering HTML, CSS, JavaScript, and modern frameworks.", "level": "All Levels"},
+        {"title": "Web Development Fundamentals", "url": "https://skills.yourlearning.ibm.com/activity/PLAN-8749C02A78EC?utm_source=skillsbuild.org", "description": "Learn the languages, tools, and processes used to build websites with hands-on practice covering HTML, CSS, JavaScript, and modern frameworks. Earn a free certificate upon completion.", "level": "Beginner"},
         {"title": "Cloud Computing Fundamentals", "url": "https://students.yourlearning.ibm.com/activity/PLAN-58FA14F64C9B?utm_source=skillsbuild.org", "description": "Learn cloud computing basics including service models, deployment models, and the many ways businesses benefit from cloud technology.", "level": "All Levels"},
         {"title": "Introduction to Cloud", "url": "https://students.yourlearning.ibm.com/activity/PLAN-4EB23B51588C?utm_source=skillsbuild.org", "description": "Core cloud computing concepts from both business and practitioner perspectives. Foundational knowledge for understanding modern cloud infrastructure.", "level": "Beginner"},
         {"title": "IBM Cloud Essentials", "url": "https://students.yourlearning.ibm.com/activity/PLAN-0F5CA76EE206?utm_source=skillsbuild.org", "description": "Introduction to IBM Cloud offerings and services — the most open and secure public cloud for developers and enterprises.", "level": "All Levels"},
@@ -630,6 +652,8 @@ GOOGLE_CURATED = {
         {"title": "Recommendation Systems", "url": "https://developers.google.com/machine-learning/recommendation", "description": "Google's advanced guide to building recommendation systems including collaborative filtering, content-based, and deep neural network approaches.", "level": "Advanced"},
         {"title": "Clustering", "url": "https://developers.google.com/machine-learning/clustering", "description": "Google's advanced course on unsupervised clustering algorithms including k-means, hierarchical clustering, and quality metrics.", "level": "Advanced"},
         {"title": "Generative Adversarial Networks (GANs)", "url": "https://developers.google.com/machine-learning/gan", "description": "Google's advanced course on GANs covering generator and discriminator networks, training challenges, and real-world applications.", "level": "Advanced"},
+        {"title": "Google Cloud: Prompt Engineering", "url": "https://www.skills.google/course_templates/1132", "description": "Master prompt engineering for Google Cloud AI tools, learning to craft effective prompts for better generative AI results. Free certificate included.", "level": "Beginner"},
+        {"title": "Google AI Educator Series", "url": "https://educertifications.google/google-ai-educator-series", "description": "Google's comprehensive series for educators covering AI integration in teaching and learning across all experience levels. Free certificate included.", "level": "All Levels"},
     ],
     "Project Management / Agile / Career Skills": [
         {"title": "Get Started Using Google Analytics", "url": "https://skillshop.docebosaas.com/learn/courses/8108/get-started-using-google-analytics", "description": "Google Skillshop's beginner course on setting up and navigating Google Analytics 4, understanding properties, and basic reporting.", "level": "Beginner"},
@@ -677,7 +701,7 @@ HELSINKI_CURATED = {
         {"title": "AI in Society", "url": "https://courses.mooc.fi/org/uh-cs/courses/ai-in-society", "description": "University of Helsinki course exploring how AI affects society, policy, ethics, and everyday life. No technical background required. Free.", "level": "All Levels"},
         {"title": "Ethics of AI", "url": "https://ethics-of-ai.mooc.fi/", "description": "University of Helsinki's dedicated course on the ethical dimensions of AI including fairness, accountability, and societal implications. Free.", "level": "All Levels"},
     ],
-    "Web Development": [
+    "Web Development / Cloud": [
         {"title": "Full Stack Open", "url": "https://fullstackopen.com/en/", "description": "University of Helsinki's comprehensive modern web dev curriculum: React, Node.js, MongoDB, GraphQL, and TypeScript. Industry-standard, completely free.", "level": "Intermediate"},
     ],
     "IT / Cybersecurity": [
@@ -836,9 +860,12 @@ UDEMY_CURATED = {
         {"title": "Programming 101", "url": "https://www.udemy.com/course/programming-101/", "description": "Beginner introduction to programming fundamentals covering variables, logic, loops, functions, and problem-solving concepts. Free on Udemy.", "level": "Beginner"},
         {"title": "Git & GitHub Crash Course: Create a Repository From Scratch", "url": "https://www.udemy.com/course/git-and-github-crash-course-creating-a-repository-from-scratch/", "description": "Beginner crash course on Git version control and GitHub covering commits, branches, merging, and remote repositories. Free on Udemy.", "level": "Beginner"},
     ],
-    "Web Development": [
+    "Web Development / Cloud": [
         {"title": "CSS Flexbox - Mastering the Basics", "url": "https://www.udemy.com/course/css-flexbox-mastering-the-basics/", "description": "Beginner CSS Flexbox course covering flex containers, alignment, responsive layouts, and practical design patterns. Free on Udemy.", "level": "Beginner"},
         {"title": "How To Build A Website Using WordPress", "url": "https://www.udemy.com/course/how-to-build-a-website-using-wordpress/", "description": "Beginner course on building professional websites with WordPress covering themes, plugins, pages, and customization. Free on Udemy.", "level": "Beginner"},
+        {"title": "Introduction to Cloud Computing", "url": "https://www.udemy.com/course/introduction-to-cloud-computing/", "description": "Beginner course covering cloud computing concepts, service models, and deployment strategies underpinning AWS, Azure, and Google Cloud. Free on Udemy.", "level": "Beginner"},
+        {"title": "DevOps 101", "url": "https://www.udemy.com/course/devops-101-buddy/", "description": "Beginner introduction to DevOps culture, practices, and tools that bridge development and operations teams. Covers CI/CD and automation fundamentals. Free on Udemy.", "level": "Beginner"},
+        {"title": "Cloud Computing Lab", "url": "https://www.udemy.com/course/cloud-computing-lab-programs/", "description": "Hands-on cloud computing lab course with practical exercises and real-world scenarios for applied, project-based learning. Free on Udemy.", "level": "Beginner"},
     ],
     "IT / Cybersecurity": [
         {"title": "Amazon Web Services (AWS) - Zero to Hero", "url": "https://www.udemy.com/course/amazon-web-services-aws-v/", "description": "Beginner-friendly AWS overview covering core cloud services, EC2, S3, IAM, and getting started with Amazon Web Services. Free on Udemy.", "level": "All Levels"},
@@ -955,6 +982,121 @@ def fetch_harvard(category: str) -> list:
     return results
 
 
+# ─────────────────────────────────────────────
+# SOURCE 16 — LEARNFREE (curated free tutorials)
+# Free, open-access tutorials — no login required
+# ─────────────────────────────────────────────
+LEARNFREE_CURATED = {
+    "Programming & Computer Science": [
+        {"title": "Computer Basics", "url": "https://www.learnfree.org/series/computer-basics", "description": "Beginner series covering hardware, software, operating systems, and essential day-to-day computer skills.", "level": "Beginner"},
+        {"title": "Computer Science (Basics)", "url": "https://www.learnfree.org/series/computer-science", "description": "Approachable introduction to core computer science concepts for beginners with no prior experience.", "level": "Beginner"},
+        {"title": "Windows Basics", "url": "https://www.learnfree.org/series/windows-basics", "description": "Learn to navigate Windows OS including the desktop, file management, settings, and everyday tasks.", "level": "Beginner"},
+        {"title": "macOS Basics", "url": "https://www.learnfree.org/series/macos-basics", "description": "Get comfortable with macOS covering the desktop, Finder, system preferences, and essential Mac skills.", "level": "Beginner"},
+    ],
+    "IT / Cybersecurity": [
+        {"title": "Internet Basics", "url": "https://www.learnfree.org/series/internet-basics", "description": "Understand how the internet works and how to use it effectively, covering browsers, email, and web navigation.", "level": "Beginner"},
+        {"title": "Internet Tips", "url": "https://www.learnfree.org/series/internet-tips", "description": "Practical tips for browsing smarter, managing your digital footprint, and getting more out of the internet.", "level": "Beginner"},
+        {"title": "Internet Safety", "url": "https://www.learnfree.org/series/internet-safety", "description": "Learn to protect yourself online covering phishing, passwords, privacy, and safe browsing habits.", "level": "Beginner"},
+        {"title": "Search Better", "url": "https://www.learnfree.org/series/search-better", "description": "Improve your ability to find accurate, reliable information online using effective search strategies.", "level": "Beginner"},
+    ],
+    "Web Development / Cloud": [
+        {"title": "Basic CSS", "url": "https://www.learnfree.org/explore/skills-for-today-tutorials", "description": "Introduction to CSS covering selectors, properties, colors, and layout basics for beginner web learners.", "level": "Beginner"},
+        {"title": "Basic HTML", "url": "https://www.learnfree.org/series/basic-html", "description": "Learn the building blocks of the web covering tags, structure, links, images, and forms from scratch.", "level": "Beginner"},
+    ],
+    "Project Management / Agile / Career Skills": [
+        {"title": "Google Docs", "url": "https://www.learnfree.org/series/google-docs", "description": "Master Google Docs for creating, formatting, sharing, and collaborating on documents.", "level": "Beginner"},
+        {"title": "Google Slides", "url": "https://www.learnfree.org/series/google-slides", "description": "Create polished presentations using Google Slides covering slides, themes, transitions, and sharing.", "level": "Beginner"},
+        {"title": "Google Sheets", "url": "https://www.learnfree.org/series/google-sheets", "description": "Get started with spreadsheets using Google Sheets covering data entry, formulas, charts, and sharing.", "level": "Beginner"},
+        {"title": "Word Foundations", "url": "https://www.learnfree.org/series/word-foundations", "description": "Build confidence with Microsoft Word covering document creation, formatting, layout, and saving.", "level": "Beginner"},
+        {"title": "Excel Foundations", "url": "https://www.learnfree.org/series/excel-foundations", "description": "Develop foundational Excel skills covering worksheets, formulas, formatting, and basic data organization.", "level": "Beginner"},
+        {"title": "Introduction to Microsoft PowerPoint", "url": "https://www.learnfree.org/series/introduction-to-microsoft-powerpoint", "description": "Learn to create professional presentations covering slides, layouts, design themes, and delivery tips.", "level": "Beginner"},
+        {"title": "Introduction to Microsoft Word", "url": "https://www.learnfree.org/series/introduction-to-microsoft-word", "description": "Start from scratch with Microsoft Word covering the interface, text editing, formatting, and saving documents.", "level": "Beginner"},
+        {"title": "Introduction to Microsoft Excel", "url": "https://www.learnfree.org/series/introduction-to-microsoft-excel", "description": "Take first steps with Microsoft Excel covering the interface, basic formulas, and data entry.", "level": "Beginner"},
+        {"title": "Office for Macs", "url": "https://www.learnfree.org/series/office-for-macs", "description": "Learn to use Microsoft Office on a Mac covering Word, Excel, and PowerPoint on macOS.", "level": "Beginner"},
+        {"title": "Tech Savvy Tips and Tricks", "url": "https://www.learnfree.org/series/tech-savvy-tips-and-tricks", "description": "Level up everyday tech skills with shortcuts, productivity hacks, and smart digital habits.", "level": "Beginner"},
+        {"title": "Freelancing 101", "url": "https://www.learnfree.org/series/freelancing-101", "description": "Start your freelancing journey covering how to find clients, set rates, manage projects, and build independence.", "level": "Beginner"},
+        {"title": "Communication Skills", "url": "https://www.learnfree.org/series/communication-skills", "description": "Strengthen professional and personal communication covering writing, speaking, listening, and workplace interaction.", "level": "Beginner"},
+        {"title": "Careers without College", "url": "https://www.learnfree.org/series/careers-without-college", "description": "Explore rewarding career paths that don't require a four-year degree including trades and certifications.", "level": "Beginner"},
+        {"title": "Career Planning and Salary", "url": "https://www.learnfree.org/series/career-planning-and-salary", "description": "Take control of your professional future with guidance on career planning, salary research, and goal setting.", "level": "Beginner"},
+        {"title": "Job Search and Networking", "url": "https://www.learnfree.org/series/job-search-and-networking", "description": "Navigate the job market with strategies for job searching, LinkedIn, networking, and finding opportunities.", "level": "Beginner"},
+        {"title": "Workplace Basics", "url": "https://www.learnfree.org/series/workplace-basics", "description": "Get ready for the world of work covering professional behavior, workplace culture, teamwork, and expectations.", "level": "Beginner"},
+        {"title": "Resume Writing", "url": "https://www.learnfree.org/series/resume-writing", "description": "Craft a resume that gets noticed covering formatting, content, and tailoring for specific roles.", "level": "Beginner"},
+        {"title": "Interviewing Skills", "url": "https://www.learnfree.org/series/interviewing-skills", "description": "Prepare for job interviews covering common questions, body language, research strategies, and follow-up.", "level": "Beginner"},
+    ],
+}
+
+def fetch_learnfree(category: str) -> list:
+    log.info(f"[LearnFree] Fetching: {category}")
+    results = []
+    for item in LEARNFREE_CURATED.get(category, []):
+        clean = clean_description(item["title"], item["description"], category)
+        results.append(build_resource(
+            title=item["title"],
+            url=item["url"],
+            description=clean,
+            platform="LearnFree",
+            category=category,
+            level=item.get("level", "All Levels"),
+        ))
+    return results
+
+
+# ─────────────────────────────────────────────
+# SOURCE 17 — OPENLEARN (The Open University)
+# Free, open-access courseware — no login required
+# ─────────────────────────────────────────────
+OPENLEARN_CURATED = {
+    "Programming & Computer Science": [
+        {"title": "Mouse and Keyboard Fundamentals", "url": "https://www.open.edu/openlearncreate/mod/book/view.php?id=181144&chapterid=24658", "description": "Beginner OpenLearn module building confidence with mouse and keyboard navigation for new computer users.", "level": "Beginner"},
+        {"title": "Computer Software Overview", "url": "https://www.open.edu/openlearncreate/mod/book/view.php?id=181144&chapterid=24657", "description": "Accessible introduction to computer software types and how programs work together on a computer system.", "level": "Beginner"},
+    ],
+    "IT / Cybersecurity": [
+        {"title": "Breaking into Cybersecurity: Careers, Business and Freelance Success", "url": "https://www.open.edu/openlearncreate/course/view.php?id=13195", "description": "OpenLearn course covering cybersecurity career options, business skills, and freelance opportunities in the field.", "level": "Beginner"},
+    ],
+}
+
+def fetch_openlearn(category: str) -> list:
+    log.info(f"[OpenLearn] Fetching: {category}")
+    results = []
+    for item in OPENLEARN_CURATED.get(category, []):
+        clean = clean_description(item["title"], item["description"], category)
+        results.append(build_resource(
+            title=item["title"],
+            url=item["url"],
+            description=clean,
+            platform="OpenLearn",
+            category=category,
+            level=item.get("level", "All Levels"),
+        ))
+    return results
+
+
+# ─────────────────────────────────────────────
+# SOURCE 18 — PRINCETON UNIVERSITY (open courseware)
+# Free, open-access materials — no login required
+# ─────────────────────────────────────────────
+PRINCETON_CURATED = {
+    "Programming & Computer Science": [
+        {"title": "Algorithms", "url": "https://algs4.cs.princeton.edu/home/", "description": "Princeton's companion to their renowned algorithms course covering sorting, searching, graphs, and strings in Java.", "level": "Beginner"},
+    ],
+}
+
+def fetch_princeton(category: str) -> list:
+    log.info(f"[Princeton University] Fetching: {category}")
+    results = []
+    for item in PRINCETON_CURATED.get(category, []):
+        clean = clean_description(item["title"], item["description"], category)
+        results.append(build_resource(
+            title=item["title"],
+            url=item["url"],
+            description=clean,
+            platform="Princeton University",
+            category=category,
+            level=item.get("level", "All Levels"),
+        ))
+    return results
+
+
 FETCHERS = [
     fetch_youtube,
     fetch_mit_ocw,
@@ -971,6 +1113,9 @@ FETCHERS = [
     fetch_udemy,
     fetch_anthropic,
     fetch_harvard,
+    fetch_learnfree,
+    fetch_openlearn,
+    fetch_princeton,
 ]
 
 def run_scraper():

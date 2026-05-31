@@ -293,7 +293,7 @@
 
     .pill[data-cat="Programming &amp; Computer Science"].active  { background: var(--python); border-color: var(--python); }
     .pill[data-cat="Data Science AI"].active      { background: var(--data);   border-color: var(--data);   }
-    .pill[data-cat="Web Development"].active      { background: var(--web);    border-color: var(--web);    }
+    .pill[data-cat="Web Development / Cloud"].active      { background: var(--web);    border-color: var(--web);    }
     .pill[data-cat="IT / Cybersecurity"].active     { background: var(--cyber);  border-color: var(--cyber);  }
     .pill[data-cat="Project Management / Agile / Career Skills"].active { background: var(--career); border-color: var(--career); }
     .pill[data-cat="UX Design"].active            { background: var(--ux);     border-color: var(--ux);     }
@@ -1122,7 +1122,7 @@
         <button class="pill active" data-cat="All">All</button>
         <button class="pill" data-cat="Programming &amp; Computer Science">Programming</button>
         <button class="pill" data-cat="Data Science AI">Data / AI</button>
-        <button class="pill" data-cat="Web Development">Web Dev</button>
+        <button class="pill" data-cat="Web Development / Cloud">Web Dev / Cloud</button>
         <button class="pill" data-cat="UX Design">UX Design</button>
         <button class="pill" data-cat="IT / Cybersecurity">IT / Cyber</button>
         <button class="pill" data-cat="Project Management / Agile / Career Skills">PM / Career</button>
@@ -1183,7 +1183,7 @@
 
       <p><strong>TechLearn Resources</strong> is a free, curated directory of high-quality tech education, built for learners looking for a budget-friendly way to grow their skills.</p>
 
-      <p>Whether you're just starting out or leveling up, TechLearn brings together the best free courses from platforms like MIT OpenCourseWare, edX, IBM SkillsBuild, Khan Academy, AWS Skill Builder, and more; all in one searchable place.</p>
+      <p>Whether you're just starting out or leveling up, TechLearn brings together the best free courses from platforms like MIT OpenCourseWare, Harvard University, Princeton University, edX, IBM SkillsBuild, Khan Academy, LearnFree, OpenLearn, AWS Skill Builder, and more; all in one searchable place.</p>
 
       <hr class="about-divider">
 
@@ -1333,7 +1333,7 @@
     const CATEGORY_COLORS = {
       "Programming & Computer Science":       { dot: '#3b82f6', cls: 'card-python' },
       "Data Science AI":          { dot: '#8b5cf6', cls: 'card-data'   },
-      "Web Development":          { dot: '#10b981', cls: 'card-web'    },
+      "Web Development / Cloud":  { dot: '#10b981', cls: 'card-web'    },
       "IT / Cybersecurity":         { dot: '#ef4444', cls: 'card-cyber'  },
       "Project Management / Agile / Career Skills": { dot: '#f97316', cls: 'card-career' },
       "UX Design":                  { dot: '#ec4899', cls: 'card-ux'     },
@@ -1426,7 +1426,7 @@
       emptyState.style.display = 'none';
 
       const catOrder = [
-        'Programming & Computer Science', 'Data Science AI', 'Web Development', 'UX Design',
+        'Programming & Computer Science', 'Data Science AI', 'Web Development / Cloud', 'UX Design',
         'IT / Cybersecurity', 'Project Management / Agile / Career Skills'
       ];
 
@@ -1459,7 +1459,7 @@
             <span class="platform-badge">${escHtml(r.platform)}</span>
             <span class="free-badge">FREE</span>
             ${r.platform === 'edX' ? '<span class="audit-badge">AUDIT ONLY</span>' : ''}
-            ${(r.platform === 'Saylor Academy' || r.platform === 'Anthropic' || r.title === 'AI-Powered Performance Ads Certification' || r.title === 'Google Analytics Certification' || r.title === 'Foundational C# with Microsoft' || r.title === 'Python Certification' || r.title === 'Relational Databases' || r.title === 'Responsive Web Design' || r.title === 'JavaScript Certification' || r.title === 'Front End Development Libraries' || r.title === 'Back End Development and APIs' || r.title === 'Certified Full-Stack Developer') ? '<span class="cert-badge">FREE CERT</span>' : ''}
+            ${(r.platform === 'Saylor Academy' || r.platform === 'Anthropic' || r.title === 'AI-Powered Performance Ads Certification' || r.title === 'Google Analytics Certification' || r.title === 'Foundational C# with Microsoft' || r.title === 'Python Certification' || r.title === 'Relational Databases' || r.title === 'Responsive Web Design' || r.title === 'JavaScript Certification' || r.title === 'Front End Development Libraries' || r.title === 'Back End Development and APIs' || r.title === 'Certified Full-Stack Developer' || r.title === 'Web Development Fundamentals' && r.platform === 'IBM SkillsBuild' || r.title === 'Google Cloud: Prompt Engineering' || r.title === 'Google AI Educator Series') ? '<span class="cert-badge">FREE CERT</span>' : ''}
           </div>
           <div class="card-title">${highlight(r.title, searchTerm)}</div>
           <div class="card-desc">${highlight(r.description, searchTerm)}</div>
