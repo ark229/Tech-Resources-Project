@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5YV3VVJZVS"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5YV3VVJZVS');
+</script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy — TechLearn Resources</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/css/bootstrap.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --bg:       #0a0e17;
+      --surface:  #111827;
+      --surface2: #1a2235;
+      --border:   #1f2d45;
+      --accent:   #00e5ff;
+      --accent2:  #ff6b35;
+      --text:     #e2e8f0;
+      --muted:    #64748b;
+      --gold:     #ffc107;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      font-family: 'DM Sans', sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+    }
+
+    body::before {
+      content: '';
+      position: fixed;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(0,229,255,0.03) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(0,229,255,0.03) 1px, transparent 1px);
+      background-size: 40px 40px;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ── HEADER ── */
+    header {
+      position: relative;
+      z-index: 10;
+      padding: 2.5rem 0 2rem;
+      border-bottom: 1px solid var(--border);
+      background: linear-gradient(180deg, rgba(0,229,255,0.04) 0%, transparent 100%);
+    }
+
+    .header-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .logo {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text);
+      text-decoration: none;
+      letter-spacing: -0.5px;
+    }
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      text-decoration: none;
+    }
+    .logo:hover { text-decoration: none !important; }
+    .logo-img {
+      width: 94px;
+      height: 94px;
+      object-fit: contain;
+      flex-shrink: 0;
+    }
+    .logo-text {
+      font-family: 'Space Mono', monospace;
+      font-size: 1.4rem;
+      font-weight: 700;
+      color: var(--text);
+      letter-spacing: -0.5px;
+    }
+    .logo span { color: var(--accent); }
+    .logo .colon { color: #ffc107; }
+    @media (max-width: 400px) {
+      .logo-img { width: 28px; height: 28px; }
+      .logo-text { font-size: 1.1rem; }
+    }
+
+    .back-link {
+      font-size: 0.85rem;
+      color: var(--muted);
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+    .back-link:hover { color: var(--accent); }
+
+    /* ── MAIN CONTENT ── */
+    main {
+      position: relative;
+      z-index: 1;
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 3rem 2rem 5rem;
+    }
+
+    /* Page title block */
+    .page-title-block {
+      margin-bottom: 3rem;
+      padding-bottom: 2rem;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .page-eyebrow {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin-bottom: 0.75rem;
+    }
+
+    .page-title {
+      font-size: 2.2rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.5rem;
+      line-height: 1.2;
+    }
+
+    .page-meta {
+      font-size: 0.875rem;
+      color: var(--muted);
+    }
+
+    /* ── SECTION HEADINGS ── */
+    .section-heading {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.75rem;
+      color: var(--accent);
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      margin: 2.5rem 0 0.75rem;
+    }
+
+    h2 {
+      font-size: 1.15rem;
+      font-weight: 600;
+      color: var(--text);
+      margin: 1.75rem 0 0.5rem;
+    }
+
+    /* ── BODY TEXT ── */
+    p {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      line-height: 1.75;
+      margin-bottom: 1rem;
+    }
+
+    ul {
+      margin: 0.5rem 0 1rem 1.25rem;
+    }
+
+    ul li {
+      font-size: 0.95rem;
+      color: #94a3b8;
+      line-height: 1.75;
+      margin-bottom: 0.35rem;
+    }
+
+    ul li::marker {
+      color: var(--accent);
+    }
+
+    a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+    a:hover { text-decoration: underline; }
+
+    /* ── SECTION CARDS ── */
+    .policy-section {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .policy-section h2:first-child {
+      margin-top: 0;
+    }
+
+    /* ── HIGHLIGHT BOX ── */
+    .highlight-box {
+      background: rgba(0, 229, 255, 0.05);
+      border: 1px solid rgba(0, 229, 255, 0.2);
+      border-radius: 10px;
+      padding: 1.25rem 1.5rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .highlight-box p {
+      margin-bottom: 0;
+      color: #cbd5e1;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      position: relative;
+      z-index: 10;
+      border-top: 1px solid var(--border);
+      padding: 2rem 0;
+      text-align: center;
+    }
+
+    .footer-inner {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .footer-links {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .footer-links a {
+      font-size: 0.8rem;
+      color: var(--muted);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .footer-links a:hover { color: var(--accent); }
+
+    .footer-copy {
+      font-size: 0.75rem;
+      color: var(--muted);
+    }
+
+    .footer-copy span { color: #00e5ff; }
+
+    /* ── TOC ── */
+    .toc {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 1.5rem;
+      margin-bottom: 2.5rem;
+    }
+
+    .toc-title {
+      font-family: 'Space Mono', monospace;
+      font-size: 0.7rem;
+      color: var(--muted);
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+    }
+
+    .toc ol {
+      margin: 0;
+      padding-left: 1.25rem;
+    }
+
+    .toc ol li {
+      font-size: 0.9rem;
+      color: #94a3b8;
+      margin-bottom: 0.4rem;
+      line-height: 1.5;
+    }
+
+    .toc ol li a {
+      color: #94a3b8;
+      text-decoration: none;
+    }
+    .toc ol li a:hover { color: var(--accent); }
+
+    /* ── SERVICE BADGES ── */
+    .service-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin: 0.75rem 0 1rem;
+    }
+
+    .service-badge {
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 0.3rem 0.75rem;
+      font-size: 0.8rem;
+      color: #94a3b8;
+      font-family: 'Space Mono', monospace;
+    }
+
+    @media (max-width: 600px) {
+      .page-title { font-size: 1.6rem; }
+      main { padding: 2rem 1.25rem 4rem; }
+      .policy-section { padding: 1.25rem; }
+    }
+
+    /* ── CONTACT MODAL ── */
+    .contact-modal-overlay {
+      display: none; position: fixed; inset: 0;
+      background: rgba(0,0,0,0.7); backdrop-filter: blur(4px);
+      z-index: 1000; align-items: center; justify-content: center;
+    }
+    .contact-modal-overlay.open { display: flex; }
+    .contact-modal {
+      background: var(--surface); border: 1px solid var(--border);
+      border-radius: 12px; padding: 2rem; width: 100%;
+      max-width: 480px; margin: 1rem; position: relative;
+    }
+    .contact-modal h2 {
+      font-family: 'Space Mono', monospace; font-size: 0.85rem;
+      letter-spacing: 0.15em; text-transform: uppercase;
+      color: var(--accent); margin: 0 0 0.4rem 0;
+    }
+    .contact-modal p { font-size: 0.8rem; color: var(--muted); margin: 0 0 1.5rem 0; }
+    .contact-modal-close {
+      position: absolute; top: 1rem; right: 1rem; background: none;
+      border: none; color: var(--muted); cursor: pointer; font-size: 1.2rem;
+      line-height: 1; padding: 0.2rem 0.4rem; border-radius: 4px; transition: color 0.2s;
+    }
+    .contact-modal-close:hover { color: var(--text); }
+    .contact-form-group { margin-bottom: 1rem; }
+    .contact-form-group label {
+      display: block; font-family: 'Space Mono', monospace; font-size: 0.6rem;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.4rem;
+    }
+    .contact-form-group select,
+    .contact-form-group input,
+    .contact-form-group textarea {
+      width: 100%; background: var(--surface2); border: 1px solid var(--border);
+      border-radius: 6px; color: var(--text); font-family: 'Space Mono', monospace;
+      font-size: 0.75rem; padding: 0.6rem 0.8rem; box-sizing: border-box;
+      transition: border-color 0.2s; outline: none;
+    }
+    .contact-form-group select:focus,
+    .contact-form-group input:focus,
+    .contact-form-group textarea:focus { border-color: var(--accent); }
+    .contact-form-group textarea { resize: vertical; min-height: 90px; }
+    .contact-submit {
+      width: 100%; background: var(--accent); color: #000; border: none;
+      border-radius: 6px; font-family: 'Space Mono', monospace; font-size: 0.7rem;
+      letter-spacing: 0.12em; text-transform: uppercase; padding: 0.75rem;
+      cursor: pointer; font-weight: 700; transition: opacity 0.2s; margin-top: 0.5rem;
+    }
+    .contact-submit:hover { opacity: 0.85; }
+    .contact-success { display: none; text-align: center; padding: 1rem 0; }
+    .contact-success svg { color: #10b981; margin-bottom: 0.75rem; }
+    .contact-success h3 {
+      font-family: 'Space Mono', monospace; font-size: 0.8rem;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--text); margin: 0 0 0.5rem 0;
+    }
+    .contact-success p { font-size: 0.78rem; color: var(--muted); margin: 0; }
+    .contact-trigger-btn {
+      background: none; border: none; padding: 0;
+      color: var(--muted); font-family: 'DM Sans', sans-serif; font-size: 0.8rem;
+      cursor: pointer; transition: color 0.2s; text-decoration: none;
+    }
+    .contact-trigger-btn:hover { color: var(--accent); }
+    .contact-trigger-inline {
+      background: none; border: 1px solid var(--border); border-radius: 6px;
+      color: var(--muted); font-family: 'Space Mono', monospace; font-size: 0.7rem;
+      letter-spacing: 0.1em; text-transform: uppercase; padding: 0.4rem 0.9rem;
+      cursor: pointer; transition: border-color 0.2s, color 0.2s;
+    }
+    .contact-trigger-inline:hover { border-color: var(--accent); color: var(--accent); }
+  </style>
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="header-inner">
+      <a href="https://techlearnresources.com" class="logo">
+        <!-- <img src="../techLearnLogo.png" alt="TechLearn Resources logo" class="logo-img" /> -->
+        <span class="logo-text"><span style="color:var(--text)">TLR</span><span class="colon">:</span><span>TechLearn</span></span>
+      </a>
+      <a href="https://techlearnresources.com" class="back-link">
+        ← Back to TechLearn Resources
+      </a>
+    </div>
+  </header>
+
+  <!-- MAIN -->
+  <main>
+
+    <!-- Page title -->
+    <div class="page-title-block">
+      <p class="page-eyebrow">Legal</p>
+      <h1 class="page-title">Privacy Policy</h1>
+      <p class="page-meta">
+        TechLearn Resources &nbsp;·&nbsp; Effective date: June 11, 2026 &nbsp;·&nbsp; Built by Knight Development
+      </p>
+    </div>
+
+    <!-- Intro highlight -->
+    <div class="highlight-box">
+      <p>
+        TechLearn Resources is a free tech education directory. We collect minimal data, never sell it,
+        and only use it to improve the site and send our newsletter (if you subscribe).
+        This policy explains exactly what we collect and why.
+      </p>
+    </div>
+
+    <!-- Table of contents -->
+    <div class="toc">
+      <p class="toc-title">Contents</p>
+      <ol>
+        <li><a href="#s1">Information we collect</a></li>
+        <li><a href="#s2">How we use your information</a></li>
+        <li><a href="#s3">Third-party services</a></li>
+        <li><a href="#s4">Cookies and tracking</a></li>
+        <li><a href="#s5">External links</a></li>
+        <li><a href="#s6">Your rights and choices</a></li>
+        <li><a href="#s7">Children's privacy</a></li>
+        <li><a href="#s8">Data security</a></li>
+        <li><a href="#s9">Changes to this policy</a></li>
+        <li><a href="#s10">Contact us</a></li>
+      </ol>
+    </div>
+
+    <!-- Section 1 -->
+    <p class="section-heading" id="s1">1. Information We Collect</p>
+    <div class="policy-section">
+      <h2>1.1 Information You Provide</h2>
+      <p>TechLearn Resources does not require you to create an account or log in. The only personal information we collect is what you voluntarily provide:</p>
+      <ul>
+        <li><strong>Email address</strong>: if you subscribe to the TechLearn Digest newsletter using the signup form on the site. This is entirely optional.</li>
+        <li><strong>Contact form submissions</strong>: if you use the "Suggest a resource or report an issue" form, we receive any information you include in your message.</li>
+      </ul>
+
+      <h2>1.2 Analytics Data (Automatically Collected)</h2>
+      <p>When you visit TechLearn Resources, Google Analytics 4 (GA4) automatically collects anonymous usage data, including:</p>
+      <ul>
+        <li>Pages visited and time spent on the site</li>
+        <li>Search terms used within the site's course search</li>
+        <li>Buttons and links clicked (including "View Course" clicks)</li>
+        <li>Device type, browser, operating system, and screen size</li>
+        <li>Country or region (not precise location)</li>
+        <li>Referral source (how you arrived at the site)</li>
+      </ul>
+      <p>This data is aggregated and anonymous. It does not identify you personally.</p>
+
+      <h2>1.3 Information We Do Not Collect</h2>
+      <ul>
+        <li>We do not collect payment information (the site is free)</li>
+        <li>We do not collect passwords (no accounts exist)</li>
+        <li>We do not collect precise location data</li>
+        <li>We do not collect or store the course content from linked platforms</li>
+      </ul>
+    </div>
+
+    <!-- Section 2 -->
+    <p class="section-heading" id="s2">2. How We Use Your Information</p>
+    <div class="policy-section">
+      <p>We use the information we collect for the following purposes only:</p>
+      <ul>
+        <li><strong>Newsletter delivery</strong>: your email address is used solely to send the TechLearn Digest newsletter. We do not use it for any other purpose.</li>
+        <li><strong>Site improvement</strong>: analytics data helps us understand which categories and platforms are most useful, fix broken links, and prioritize new content.</li>
+        <li><strong>Resource curation</strong>: contact form submissions may inform which new courses or platforms we add to the directory.</li>
+      </ul>
+      <p>We do not use your information for advertising, profiling, or any automated decision-making.</p>
+    </div>
+
+    <!-- Section 3 -->
+    <p class="section-heading" id="s3">3. Third-Party Services</p>
+    <div class="policy-section">
+      <p>TechLearn Resources uses the following third-party services. Each has its own privacy policy that governs their data practices.</p>
+
+      <h2>Google Analytics 4</h2>
+      <p>Used for anonymous site analytics. GA4 may set cookies and collect device and usage data as described in Section 1.2.</p>
+      <p><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy →</a></p>
+
+      <h2>Mailchimp</h2>
+      <p>Used to store newsletter subscriber email addresses and send the TechLearn Digest. Mailchimp processes your email address on our behalf.</p>
+      <p><a href="https://mailchimp.com/legal/privacy/" target="_blank" rel="noopener">Mailchimp Privacy Policy →</a></p>
+
+      <h2>Beehiiv</h2>
+      <p>Used for newsletter archiving and issue hosting. Beehiiv may store subscriber data for newsletter delivery purposes.</p>
+      <p><a href="https://www.beehiiv.com/privacy" target="_blank" rel="noopener">Beehiiv Privacy Policy →</a></p>
+
+      <h2>Zapier</h2>
+      <p>Used to automate the flow of newsletter signup data between Netlify forms, Beehiiv, and Mailchimp. Zapier processes form submission data in transit.</p>
+      <p><a href="https://zapier.com/privacy" target="_blank" rel="noopener">Zapier Privacy Policy →</a></p>
+
+      <h2>Netlify</h2>
+      <p>TechLearn Resources is hosted on Netlify. Netlify may collect server logs, IP addresses, and form submission data as part of normal hosting operations.</p>
+      <p><a href="https://www.netlify.com/privacy/" target="_blank" rel="noopener">Netlify Privacy Policy →</a></p>
+
+      <p style="margin-top:1.25rem;">The platforms listed in our directory (YouTube, Khan Academy, freeCodeCamp, IBM SkillsBuild, LearnFree, edX, MIT OpenCourseWare, AWS Skill Builder, Microsoft Learn, Saylor Academy, and others) have their own privacy policies that apply when you visit them. We are not responsible for their data practices.</p>
+
+      <div class="service-list">
+        <span class="service-badge">Google Analytics</span>
+        <span class="service-badge">Mailchimp</span>
+        <span class="service-badge">Beehiiv</span>
+        <span class="service-badge">Zapier</span>
+        <span class="service-badge">Netlify</span>
+      </div>
+    </div>
+
+    <!-- Section 4 -->
+    <p class="section-heading" id="s4">4. Cookies and Tracking</p>
+    <div class="policy-section">
+      <p>TechLearn Resources uses cookies set by Google Analytics 4 to track anonymous usage patterns. These cookies typically include:</p>
+      <ul>
+        <li><code>_ga</code> — distinguishes unique users (expires after 2 years)</li>
+        <li><code>_ga_[ID]</code> — maintains session state (expires after 2 years)</li>
+      </ul>
+      <p>We do not use advertising cookies, tracking pixels, or any cookies that identify you personally.</p>
+      <p>You can control or block cookies through your browser settings. Blocking analytics cookies will not affect your ability to use the site.</p>
+    </div>
+
+    <!-- Section 5 -->
+    <p class="section-heading" id="s5">5. External Links</p>
+    <div class="policy-section">
+      <p>Every "View Course" link on TechLearn Resources opens an external website operated by a third party. When you click a link and visit that platform, you leave our site and their privacy policy applies.</p>
+      <p>We do not track your activity on external platforms and do not receive any data about your interactions there. We include <code>rel="noopener noreferrer"</code> on all external links as a security measure.</p>
+    </div>
+
+    <!-- Section 6 -->
+    <p class="section-heading" id="s6">6. Your Rights and Choices</p>
+    <div class="policy-section">
+      <h2>Unsubscribe from the newsletter</h2>
+      <p>Every TechLearn Digest email includes an unsubscribe link at the bottom. Clicking it removes you from all future mailings. You can also email us directly to request removal.</p>
+
+      <h2>Opt out of Google Analytics</h2>
+      <p>You can prevent GA4 from collecting data about your visit by:</p>
+      <ul>
+        <li>Installing the <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">Google Analytics Opt-out Browser Add-on</a></li>
+        <li>Using a browser with tracking protection enabled (Firefox, Brave)</li>
+        <li>Enabling "Do Not Track" in your browser settings</li>
+      </ul>
+
+      <h2>Request data deletion</h2>
+      <p>If you have subscribed to our newsletter and would like your email address removed from all systems (Mailchimp, Beehiiv), contact us at the address in Section 10 and we will process your request within 14 days.</p>
+
+      <h2>California residents (CCPA)</h2>
+      <p>We do not sell personal information. California residents have the right to know what personal information we collect and to request deletion. Contact us to exercise these rights.</p>
+
+      <h2>EU/UK residents (GDPR)</h2>
+      <p>If you are located in the EU or UK, you have rights under GDPR including the right to access, correct, or delete your personal data. Our legal basis for processing newsletter email addresses is consent (you opted in). Contact us to exercise any GDPR rights.</p>
+    </div>
+
+    <!-- Section 7 -->
+    <p class="section-heading" id="s7">7. Children's Privacy</p>
+    <div class="policy-section">
+      <p>TechLearn Resources is not directed to children under the age of 13. We do not knowingly collect personal information from children under 13. If you believe a child has submitted their email address through our newsletter form, please contact us and we will delete it immediately.</p>
+    </div>
+
+    <!-- Section 8 -->
+    <p class="section-heading" id="s8">8. Data Security</p>
+    <div class="policy-section">
+      <p>We take reasonable measures to protect the information associated with our site:</p>
+      <ul>
+        <li>The site is served over HTTPS (TLS encryption in transit)</li>
+        <li>Netlify form submissions are transmitted securely</li>
+        <li>Newsletter subscriber data is stored in Mailchimp and Beehiiv's secured infrastructure</li>
+        <li>We do not store email addresses ourselves. They live in Mailchimp and Beehiiv's systems</li>
+      </ul>
+      <p>No system is completely secure. We cannot guarantee the absolute security of information transmitted to or stored by third-party services.</p>
+    </div>
+
+    <!-- Section 9 -->
+    <p class="section-heading" id="s9">9. Changes to This Policy</p>
+    <div class="policy-section">
+      <p>We may update this Privacy Policy periodically. When we do, we will update the effective date at the top of this page. For significant changes, we may notify newsletter subscribers directly. Continued use of TechLearn Resources after changes are posted constitutes your acceptance of the updated policy.</p>
+      <p>We recommend checking this page occasionally if you are a regular visitor.</p>
+    </div>
+
+    <!-- Section 10 -->
+    <p class="section-heading" id="s10">10. Contact Us</p>
+    <div class="policy-section">
+      <p>Questions about this policy, data deletion requests, newsletter unsubscribe help, or GDPR/CCPA rights requests, contact us and we'll respond within 14 days.</p>
+      <ul style="margin-top:0.75rem; margin-bottom:1.25rem;">
+        <li><strong>Website:</strong> <a href="https://techlearnresources.com">techlearnresources.com</a></li>
+        <li><strong>Developer:</strong> <a href="https://knightdevonline.com">Knight Development</a></li>
+        <li><strong>PathwayIQ app privacy:</strong> <a href="https://pathwayiq.app/privacy">pathwayiq.app/privacy</a></li>
+      </ul>
+      <button class="contact-trigger-inline" id="contactTrigger2">
+        📬 Send a Privacy Question or Request →
+      </button>
+      <p style="margin-top:1.25rem;">This policy applies to the TechLearn Resources website only. The PathwayIQ mobile app has a separate privacy policy accessible within the app and at the link above.</p>
+    </div>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="footer-inner">
+      <div class="footer-links">
+        <a href="/">← Back to TechLearn</a>
+        <a href="/privacy/">Privacy Policy</a>
+        <a href="https://pathwayiq.app" target="_blank" rel="noopener">PathwayIQ App</a>
+        <button class="contact-trigger-btn" id="contactTrigger">Contact</button>
+      </div>
+      <p class="footer-copy">
+        © <span>2026</span> TechLearn Resources. Built by Knight Development.
+      </p>
+    </div>
+  </footer>
+
+  <!-- CONTACT MODAL -->
+  <div class="contact-modal-overlay" id="contactOverlay">
+    <div class="contact-modal" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+      <button class="contact-modal-close" id="contactClose" aria-label="Close">&times;</button>
+      <div id="contactFormWrap">
+        <h2 id="contactTitle">Privacy Questions</h2>
+        <p>Questions about this policy, data deletion requests, or newsletter unsubscribe help, we'll get back to you.</p>
+        <form name="contact" method="POST" data-netlify="true" netlify-honeypot="bot-field" id="contactForm">
+          <input type="hidden" name="form-name" value="contact" />
+          <p style="display:none;"><input name="bot-field" /></p>
+          <div class="contact-form-group">
+            <label for="feedbackType">Type of request</label>
+            <select name="type" id="feedbackType" required>
+              <option value="" disabled selected>Select one...</option>
+              <option value="privacy-question">Privacy Policy Question</option>
+              <option value="data-deletion">Data Deletion Request</option>
+              <option value="newsletter-unsubscribe">Newsletter Unsubscribe Help</option>
+              <option value="gdpr-ccpa">GDPR / CCPA Rights Request</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="contact-form-group">
+            <label for="feedbackDetail">Details</label>
+            <textarea name="details" id="feedbackDetail" placeholder="Describe your question or request..." required></textarea>
+          </div>
+          <div class="contact-form-group">
+            <label for="feedbackEmail">Your email <span style="opacity:0.5;">(required)</span></label>
+            <input type="email" name="email" id="feedbackEmail" placeholder="you@example.com" required />
+          </div>
+          <button type="submit" class="contact-submit">Send Message</button>
+        </form>
+      </div>
+      <div class="contact-success" id="contactSuccess">
+        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+          <circle cx="12" cy="12" r="10"/><path d="M8 12l3 3 5-5"/>
+        </svg>
+        <h3>Message Sent!</h3>
+        <p>We'll review your request and respond within 14 days.</p>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.2/js/bootstrap.bundle.min.js"></script>
+  <script>
+    const overlay  = document.getElementById('contactOverlay');
+    const trigger  = document.getElementById('contactTrigger');
+    const closeBtn = document.getElementById('contactClose');
+    const form     = document.getElementById('contactForm');
+    const formWrap = document.getElementById('contactFormWrap');
+    const successMsg = document.getElementById('contactSuccess');
+
+    trigger.addEventListener('click', () => overlay.classList.add('open'));
+    document.getElementById('contactTrigger2').addEventListener('click', () => overlay.classList.add('open'));
+    closeBtn.addEventListener('click', () => overlay.classList.remove('open'));
+    overlay.addEventListener('click', e => { if (e.target === overlay) overlay.classList.remove('open'); });
+    document.addEventListener('keydown', e => { if (e.key === 'Escape') overlay.classList.remove('open'); });
+
+    form.addEventListener('submit', async e => {
+      e.preventDefault();
+      const data = new FormData(form);
+      try {
+        const response = await fetch(window.location.pathname, {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+          body: new URLSearchParams(data).toString()
+        });
+        if (response.ok) {
+          formWrap.style.display = 'none';
+          successMsg.style.display = 'block';
+          setTimeout(() => {
+            overlay.classList.remove('open');
+            setTimeout(() => {
+              formWrap.style.display = '';
+              successMsg.style.display = 'none';
+              form.reset();
+            }, 300);
+          }, 2500);
+        } else {
+          alert('Something went wrong. Please try again or email contact@techlearnresources.com');
+        }
+      } catch(err) {
+        alert('Something went wrong. Please try again or email contact@techlearnresources.com');
+      }
+    });
+  </script>
+</body>
+</html>
